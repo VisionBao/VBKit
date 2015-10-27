@@ -42,4 +42,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (AppDelegate *)shareDelegate
+{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return appDelegate;
+}
 @end
