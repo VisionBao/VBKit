@@ -10,5 +10,9 @@
 #define VBManagers_h
 
 #import "VBColorManager.h"
-
+#import "VBLocationManager.h"
+#import "VBFileManager.h"
+#import "VBHTTPHelper.h"
+#import "VBHttpUrlManager.h"
+#import "VBHTTPModels.h"
 #endif /* VBManagers_h */
