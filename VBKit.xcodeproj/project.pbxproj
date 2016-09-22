@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26511DC3337D5FEEC4335044 /* libPods-VBKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */; };
+		59DCAFEBE2015B76DC780508 /* libPods-VBKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6A1F107C13DEBE15F2DAFB /* libPods-VBKit.a */; };
+		9D66E3FF703BE292E4D20DBB /* libPods-VBKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D53075C7CA7CD1F3C615AB6 /* libPods-VBKitUITests.a */; };
 		A20A9D211D94024800A475D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D201D94024800A475D6 /* main.m */; };
 		A20A9D241D94024800A475D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D231D94024800A475D6 /* AppDelegate.m */; };
 		A20A9D271D94024800A475D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D261D94024800A475D6 /* ViewController.m */; };
@@ -15,6 +18,18 @@
 		A20A9D2F1D94024800A475D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D2D1D94024800A475D6 /* LaunchScreen.storyboard */; };
 		A20A9D3A1D94024800A475D6 /* VBKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D391D94024800A475D6 /* VBKitTests.m */; };
 		A20A9D451D94024800A475D6 /* VBKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D441D94024800A475D6 /* VBKitUITests.m */; };
+		A20A9D6E1D9403C800A475D6 /* UIView+VBMotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D551D9403C800A475D6 /* UIView+VBMotionEffect.m */; };
+		A20A9D6F1D9403C800A475D6 /* VBLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D5A1D9403C800A475D6 /* VBLog.m */; };
+		A20A9D701D9403C800A475D6 /* VBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D5C1D9403C800A475D6 /* VBObject.m */; };
+		A20A9D711D9403C800A475D6 /* VBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D601D9403C800A475D6 /* VBNavigationBar.m */; };
+		A20A9D721D9403C800A475D6 /* VBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D621D9403C800A475D6 /* VBNavigationController.m */; };
+		A20A9D731D9403C800A475D6 /* VBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D641D9403C800A475D6 /* VBTabBarController.m */; };
+		A20A9D741D9403C800A475D6 /* VBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D661D9403C800A475D6 /* VBTableView.m */; };
+		A20A9D751D9403C800A475D6 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D681D9403C800A475D6 /* VBTableViewCell.m */; };
+		A20A9D761D9403C800A475D6 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D6B1D9403C800A475D6 /* VBView.m */; };
+		A20A9D771D9403C800A475D6 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D6D1D9403C800A475D6 /* VBViewController.m */; };
+		A20A9D891D940B3A00A475D6 /* VBColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D871D940B3A00A475D6 /* VBColorManager.m */; };
+		A20A9D8C1D940D4400A475D6 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D8B1D940D4400A475D6 /* UIColor+HEX.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3CBCAC22B065325D537BDF /* Pods-VBKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKit/Pods-VBKit.debug.xcconfig"; sourceTree = "<group>"; };
+		329B7835CD661D36C858488E /* Pods-VBKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DB09AAE8EAF8BBF52A97A52 /* Pods-VBKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKit/Pods-VBKit.release.xcconfig"; sourceTree = "<group>"; };
+		7C6A1F107C13DEBE15F2DAFB /* libPods-VBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D53075C7CA7CD1F3C615AB6 /* libPods-VBKitUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF3199607366EF788394269 /* Pods-VBKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A20A9D1C1D94024800A475D6 /* VBKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20A9D201D94024800A475D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A20A9D221D94024800A475D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +72,40 @@
 		A20A9D401D94024800A475D6 /* VBKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20A9D441D94024800A475D6 /* VBKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBKitUITests.m; sourceTree = "<group>"; };
 		A20A9D461D94024800A475D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20A9D541D9403C800A475D6 /* UIView+VBMotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VBMotionEffect.h"; sourceTree = "<group>"; };
+		A20A9D551D9403C800A475D6 /* UIView+VBMotionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VBMotionEffect.m"; sourceTree = "<group>"; };
+		A20A9D561D9403C800A475D6 /* VBCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBCategories.h; sourceTree = "<group>"; };
+		A20A9D581D9403C800A475D6 /* VBFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFoundation.h; sourceTree = "<group>"; };
+		A20A9D591D9403C800A475D6 /* VBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBLog.h; sourceTree = "<group>"; };
+		A20A9D5A1D9403C800A475D6 /* VBLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBLog.m; sourceTree = "<group>"; };
+		A20A9D5B1D9403C800A475D6 /* VBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBObject.h; sourceTree = "<group>"; };
+		A20A9D5C1D9403C800A475D6 /* VBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBObject.m; sourceTree = "<group>"; };
+		A20A9D5F1D9403C800A475D6 /* VBNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNavigationBar.h; sourceTree = "<group>"; };
+		A20A9D601D9403C800A475D6 /* VBNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNavigationBar.m; sourceTree = "<group>"; };
+		A20A9D611D9403C800A475D6 /* VBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNavigationController.h; sourceTree = "<group>"; };
+		A20A9D621D9403C800A475D6 /* VBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNavigationController.m; sourceTree = "<group>"; };
+		A20A9D631D9403C800A475D6 /* VBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTabBarController.h; sourceTree = "<group>"; };
+		A20A9D641D9403C800A475D6 /* VBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTabBarController.m; sourceTree = "<group>"; };
+		A20A9D651D9403C800A475D6 /* VBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableView.h; sourceTree = "<group>"; };
+		A20A9D661D9403C800A475D6 /* VBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableView.m; sourceTree = "<group>"; };
+		A20A9D671D9403C800A475D6 /* VBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewCell.h; sourceTree = "<group>"; };
+		A20A9D681D9403C800A475D6 /* VBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewCell.m; sourceTree = "<group>"; };
+		A20A9D6A1D9403C800A475D6 /* VBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBView.h; sourceTree = "<group>"; };
+		A20A9D6B1D9403C800A475D6 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
+		A20A9D6C1D9403C800A475D6 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
+		A20A9D6D1D9403C800A475D6 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
+		A20A9D791D94082200A475D6 /* VBKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKit-Prefix.pch"; sourceTree = "<group>"; };
+		A20A9D7B1D94092F00A475D6 /* VBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBConstants.h; sourceTree = "<group>"; };
+		A20A9D7C1D94093800A475D6 /* VBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBKit.h; sourceTree = "<group>"; };
+		A20A9D7D1D9409C800A475D6 /* VBUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBUI.h; sourceTree = "<group>"; };
+		A20A9D861D940B3A00A475D6 /* VBColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBColorManager.h; sourceTree = "<group>"; };
+		A20A9D871D940B3A00A475D6 /* VBColorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBColorManager.m; sourceTree = "<group>"; };
+		A20A9D881D940B3A00A475D6 /* VBManagers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBManagers.h; sourceTree = "<group>"; };
+		A20A9D8A1D940D4400A475D6 /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		A20A9D8B1D940D4400A475D6 /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
+		ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DCAFEBE2015B76DC780508 /* libPods-VBKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26511DC3337D5FEEC4335044 /* libPods-VBKitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +129,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D66E3FF703BE292E4D20DBB /* libPods-VBKitUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		329051E97DB101461B331EE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CBCAC22B065325D537BDF /* Pods-VBKit.debug.xcconfig */,
+				4DB09AAE8EAF8BBF52A97A52 /* Pods-VBKit.release.xcconfig */,
+				ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */,
+				329B7835CD661D36C858488E /* Pods-VBKitTests.release.xcconfig */,
+				9CF3199607366EF788394269 /* Pods-VBKitUITests.debug.xcconfig */,
+				DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86EB31F964F8B13F4CB74CE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C6A1F107C13DEBE15F2DAFB /* libPods-VBKit.a */,
+				BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */,
+				8D53075C7CA7CD1F3C615AB6 /* libPods-VBKitUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A20A9D131D94024800A475D6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +166,8 @@
 				A20A9D381D94024800A475D6 /* VBKitTests */,
 				A20A9D431D94024800A475D6 /* VBKitUITests */,
 				A20A9D1D1D94024800A475D6 /* Products */,
+				329051E97DB101461B331EE6 /* Pods */,
+				86EB31F964F8B13F4CB74CE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +188,7 @@
 				A20A9D231D94024800A475D6 /* AppDelegate.m */,
 				A20A9D251D94024800A475D6 /* ViewController.h */,
 				A20A9D261D94024800A475D6 /* ViewController.m */,
+				A20A9D521D9403C800A475D6 /* VBKit */,
 				A20A9D281D94024800A475D6 /* Main.storyboard */,
 				A20A9D2B1D94024800A475D6 /* Assets.xcassets */,
 				A20A9D2D1D94024800A475D6 /* LaunchScreen.storyboard */,
@@ -118,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A20A9D201D94024800A475D6 /* main.m */,
+				A20A9D791D94082200A475D6 /* VBKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +225,91 @@
 			path = VBKitUITests;
 			sourceTree = "<group>";
 		};
+		A20A9D521D9403C800A475D6 /* VBKit */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D7C1D94093800A475D6 /* VBKit.h */,
+				A20A9D7B1D94092F00A475D6 /* VBConstants.h */,
+				A20A9D841D940B3A00A475D6 /* VBManagers */,
+				A20A9D5D1D9403C800A475D6 /* VBUI */,
+				A20A9D531D9403C800A475D6 /* VBCategories */,
+				A20A9D571D9403C800A475D6 /* VBFoundation */,
+			);
+			path = VBKit;
+			sourceTree = "<group>";
+		};
+		A20A9D531D9403C800A475D6 /* VBCategories */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D561D9403C800A475D6 /* VBCategories.h */,
+				A20A9D541D9403C800A475D6 /* UIView+VBMotionEffect.h */,
+				A20A9D551D9403C800A475D6 /* UIView+VBMotionEffect.m */,
+				A20A9D8A1D940D4400A475D6 /* UIColor+HEX.h */,
+				A20A9D8B1D940D4400A475D6 /* UIColor+HEX.m */,
+			);
+			path = VBCategories;
+			sourceTree = "<group>";
+		};
+		A20A9D571D9403C800A475D6 /* VBFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D581D9403C800A475D6 /* VBFoundation.h */,
+				A20A9D591D9403C800A475D6 /* VBLog.h */,
+				A20A9D5A1D9403C800A475D6 /* VBLog.m */,
+				A20A9D5B1D9403C800A475D6 /* VBObject.h */,
+				A20A9D5C1D9403C800A475D6 /* VBObject.m */,
+			);
+			path = VBFoundation;
+			sourceTree = "<group>";
+		};
+		A20A9D5D1D9403C800A475D6 /* VBUI */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D7D1D9409C800A475D6 /* VBUI.h */,
+				A20A9D5E1D9403C800A475D6 /* Base */,
+			);
+			path = VBUI;
+			sourceTree = "<group>";
+		};
+		A20A9D5E1D9403C800A475D6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D5F1D9403C800A475D6 /* VBNavigationBar.h */,
+				A20A9D601D9403C800A475D6 /* VBNavigationBar.m */,
+				A20A9D611D9403C800A475D6 /* VBNavigationController.h */,
+				A20A9D621D9403C800A475D6 /* VBNavigationController.m */,
+				A20A9D631D9403C800A475D6 /* VBTabBarController.h */,
+				A20A9D641D9403C800A475D6 /* VBTabBarController.m */,
+				A20A9D651D9403C800A475D6 /* VBTableView.h */,
+				A20A9D661D9403C800A475D6 /* VBTableView.m */,
+				A20A9D671D9403C800A475D6 /* VBTableViewCell.h */,
+				A20A9D681D9403C800A475D6 /* VBTableViewCell.m */,
+				A20A9D6A1D9403C800A475D6 /* VBView.h */,
+				A20A9D6B1D9403C800A475D6 /* VBView.m */,
+				A20A9D6C1D9403C800A475D6 /* VBViewController.h */,
+				A20A9D6D1D9403C800A475D6 /* VBViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A20A9D841D940B3A00A475D6 /* VBManagers */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D881D940B3A00A475D6 /* VBManagers.h */,
+				A20A9D851D940B3A00A475D6 /* VBColorManager */,
+			);
+			path = VBManagers;
+			sourceTree = "<group>";
+		};
+		A20A9D851D940B3A00A475D6 /* VBColorManager */ = {
+			isa = PBXGroup;
+			children = (
+				A20A9D861D940B3A00A475D6 /* VBColorManager.h */,
+				A20A9D871D940B3A00A475D6 /* VBColorManager.m */,
+			);
+			path = VBColorManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D491D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKit" */;
 			buildPhases = (
+				9B413D6607A71D82B76D507B /* 📦 Check Pods Manifest.lock */,
 				A20A9D181D94024800A475D6 /* Sources */,
 				A20A9D191D94024800A475D6 /* Frameworks */,
 				A20A9D1A1D94024800A475D6 /* Resources */,
+				C234173543159143060836A6 /* 📦 Embed Pods Frameworks */,
+				27470BFEBF7647B94D57D64D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +337,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D4C1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitTests" */;
 			buildPhases = (
+				8D7C80AB8C3C8EFC1A09F272 /* 📦 Check Pods Manifest.lock */,
 				A20A9D311D94024800A475D6 /* Sources */,
 				A20A9D321D94024800A475D6 /* Frameworks */,
 				A20A9D331D94024800A475D6 /* Resources */,
+				56CDD975006C72F648CE1493 /* 📦 Embed Pods Frameworks */,
+				49F82CFB5A509722DD437B4C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D4F1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitUITests" */;
 			buildPhases = (
+				4E426B53A7A072AB08B3FFFD /* 📦 Check Pods Manifest.lock */,
 				A20A9D3C1D94024800A475D6 /* Sources */,
 				A20A9D3D1D94024800A475D6 /* Frameworks */,
 				A20A9D3E1D94024800A475D6 /* Resources */,
+				566E34CEEE1EB2EBD33D1A0D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,14 +446,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27470BFEBF7647B94D57D64D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKit/Pods-VBKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F82CFB5A509722DD437B4C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E426B53A7A072AB08B3FFFD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		566E34CEEE1EB2EBD33D1A0D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56CDD975006C72F648CE1493 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7C80AB8C3C8EFC1A09F272 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B413D6607A71D82B76D507B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C234173543159143060836A6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKit/Pods-VBKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A20A9D181D94024800A475D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20A9D711D9403C800A475D6 /* VBNavigationBar.m in Sources */,
 				A20A9D271D94024800A475D6 /* ViewController.m in Sources */,
+				A20A9D761D9403C800A475D6 /* VBView.m in Sources */,
+				A20A9D751D9403C800A475D6 /* VBTableViewCell.m in Sources */,
+				A20A9D8C1D940D4400A475D6 /* UIColor+HEX.m in Sources */,
+				A20A9D6E1D9403C800A475D6 /* UIView+VBMotionEffect.m in Sources */,
+				A20A9D741D9403C800A475D6 /* VBTableView.m in Sources */,
+				A20A9D701D9403C800A475D6 /* VBObject.m in Sources */,
+				A20A9D731D9403C800A475D6 /* VBTabBarController.m in Sources */,
+				A20A9D6F1D9403C800A475D6 /* VBLog.m in Sources */,
 				A20A9D241D94024800A475D6 /* AppDelegate.m in Sources */,
+				A20A9D771D9403C800A475D6 /* VBViewController.m in Sources */,
 				A20A9D211D94024800A475D6 /* main.m in Sources */,
+				A20A9D721D9403C800A475D6 /* VBNavigationController.m in Sources */,
+				A20A9D891D940B3A00A475D6 /* VBColorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +735,10 @@
 		};
 		A20A9D4A1D94024800A475D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A3CBCAC22B065325D537BDF /* Pods-VBKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKit/VBKit-Prefix.pch";
 				INFOPLIST_FILE = VBKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VisionBao.VBKit;
@@ -433,8 +748,10 @@
 		};
 		A20A9D4B1D94024800A475D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB09AAE8EAF8BBF52A97A52 /* Pods-VBKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKit/VBKit-Prefix.pch";
 				INFOPLIST_FILE = VBKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VisionBao.VBKit;
@@ -444,6 +761,7 @@
 		};
 		A20A9D4D1D94024800A475D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = VBKitTests/Info.plist;
@@ -456,6 +774,7 @@
 		};
 		A20A9D4E1D94024800A475D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329B7835CD661D36C858488E /* Pods-VBKitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = VBKitTests/Info.plist;
@@ -468,6 +787,7 @@
 		};
 		A20A9D501D94024800A475D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF3199607366EF788394269 /* Pods-VBKitUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = VBKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -479,6 +799,7 @@
 		};
 		A20A9D511D94024800A475D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = VBKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -507,6 +828,7 @@
 				A20A9D4B1D94024800A475D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20A9D4C1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +837,7 @@
 				A20A9D4E1D94024800A475D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20A9D4F1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +846,7 @@
 				A20A9D511D94024800A475D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
