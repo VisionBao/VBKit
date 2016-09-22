@@ -1,6 +1,6 @@
 //
 //  VBDBManager.m
-//  VBMusic
+//  VBKit
 //
 //  Created by Vision on 15/12/23.
 //  Copyright © 2015年 VisionBao. All rights reserved.
@@ -9,7 +9,7 @@
 #import "VBDBManager.h"
 #import "VBFileManager.h"
 
-static NSString *VBFMDbName = @"VBMusic.db.sqlite";
+static NSString *VBFMDbName = @"VBKit.db.sqlite";
 
 @implementation VBDBManager
 + (id)defaultMgr {

@@ -8,7 +8,7 @@
 
 #ifndef VBUI_h
 #define VBUI_h
-
+//base
 #import "VBView.h"
 #import "VBViewController.h"
 #import "VBNavigationController.h"
@@ -16,5 +16,7 @@
 #import "VBTableView.h"
 #import "VBTableViewCell.h"
 #import "VBTabBarController.h"
+
+#import "VBAlertView.h"
 
 #endif /* VBUI_h */
