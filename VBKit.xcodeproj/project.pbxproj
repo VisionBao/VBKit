@@ -11,7 +11,6 @@
 		59DCAFEBE2015B76DC780508 /* libPods-VBKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6A1F107C13DEBE15F2DAFB /* libPods-VBKit.a */; };
 		9D66E3FF703BE292E4D20DBB /* libPods-VBKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D53075C7CA7CD1F3C615AB6 /* libPods-VBKitUITests.a */; };
 		A20A9D211D94024800A475D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D201D94024800A475D6 /* main.m */; };
-		A20A9D241D94024800A475D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D231D94024800A475D6 /* AppDelegate.m */; };
 		A20A9D271D94024800A475D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D261D94024800A475D6 /* ViewController.m */; };
 		A20A9D2A1D94024800A475D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D281D94024800A475D6 /* Main.storyboard */; };
 		A20A9D2C1D94024800A475D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D2B1D94024800A475D6 /* Assets.xcassets */; };
@@ -51,6 +50,9 @@
 		A2B1300D1D9451F2003F582A /* VBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1300A1D9451F2003F582A /* VBAlertView.m */; };
 		A2B1300E1D9451F2003F582A /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B1300B1D9451F2003F582A /* VBerror@2x.png */; };
 		A2B1300F1D9451F2003F582A /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B1300C1D9451F2003F582A /* VBsuccess@2x.png */; };
+		A2B130121D94CA29003F582A /* VBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130111D94CA29003F582A /* VBAppDelegate.m */; };
+		A2B130181D94CCD7003F582A /* VBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130171D94CCD7003F582A /* VBBaseViewController.m */; };
+		A2B1301E1D94CD15003F582A /* VBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +81,6 @@
 		9CF3199607366EF788394269 /* Pods-VBKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A20A9D1C1D94024800A475D6 /* VBKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20A9D201D94024800A475D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A20A9D221D94024800A475D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A20A9D231D94024800A475D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A20A9D251D94024800A475D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A20A9D261D94024800A475D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A20A9D291D94024800A475D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +168,12 @@
 		A2B1300A1D9451F2003F582A /* VBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAlertView.m; sourceTree = "<group>"; };
 		A2B1300B1D9451F2003F582A /* VBerror@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VBerror@2x.png"; sourceTree = "<group>"; };
 		A2B1300C1D9451F2003F582A /* VBsuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VBsuccess@2x.png"; sourceTree = "<group>"; };
+		A2B130101D94CA29003F582A /* VBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAppDelegate.h; sourceTree = "<group>"; };
+		A2B130111D94CA29003F582A /* VBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAppDelegate.m; sourceTree = "<group>"; };
+		A2B130161D94CCD7003F582A /* VBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseViewController.h; sourceTree = "<group>"; };
+		A2B130171D94CCD7003F582A /* VBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseViewController.m; sourceTree = "<group>"; };
+		A2B1301C1D94CD15003F582A /* VBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseTableViewController.h; sourceTree = "<group>"; };
+		A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseTableViewController.m; sourceTree = "<group>"; };
 		ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,8 +257,8 @@
 		A20A9D1E1D94024800A475D6 /* VBKit */ = {
 			isa = PBXGroup;
 			children = (
-				A20A9D221D94024800A475D6 /* AppDelegate.h */,
-				A20A9D231D94024800A475D6 /* AppDelegate.m */,
+				A2B130101D94CA29003F582A /* VBAppDelegate.h */,
+				A2B130111D94CA29003F582A /* VBAppDelegate.m */,
 				A20A9D251D94024800A475D6 /* ViewController.h */,
 				A20A9D261D94024800A475D6 /* ViewController.m */,
 				A20A9D521D9403C800A475D6 /* VBKit */,
@@ -356,6 +362,10 @@
 				A20A9D6B1D9403C800A475D6 /* VBView.m */,
 				A20A9D6C1D9403C800A475D6 /* VBViewController.h */,
 				A20A9D6D1D9403C800A475D6 /* VBViewController.m */,
+				A2B130161D94CCD7003F582A /* VBBaseViewController.h */,
+				A2B130171D94CCD7003F582A /* VBBaseViewController.m */,
+				A2B1301C1D94CD15003F582A /* VBBaseTableViewController.h */,
+				A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -499,12 +509,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D491D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKit" */;
 			buildPhases = (
-				9B413D6607A71D82B76D507B /* 📦 Check Pods Manifest.lock */,
+				9B413D6607A71D82B76D507B /* [CP] Check Pods Manifest.lock */,
 				A20A9D181D94024800A475D6 /* Sources */,
 				A20A9D191D94024800A475D6 /* Frameworks */,
 				A20A9D1A1D94024800A475D6 /* Resources */,
-				C234173543159143060836A6 /* 📦 Embed Pods Frameworks */,
-				27470BFEBF7647B94D57D64D /* 📦 Copy Pods Resources */,
+				C234173543159143060836A6 /* [CP] Embed Pods Frameworks */,
+				27470BFEBF7647B94D57D64D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,12 +529,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D4C1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitTests" */;
 			buildPhases = (
-				8D7C80AB8C3C8EFC1A09F272 /* 📦 Check Pods Manifest.lock */,
+				8D7C80AB8C3C8EFC1A09F272 /* [CP] Check Pods Manifest.lock */,
 				A20A9D311D94024800A475D6 /* Sources */,
 				A20A9D321D94024800A475D6 /* Frameworks */,
 				A20A9D331D94024800A475D6 /* Resources */,
-				56CDD975006C72F648CE1493 /* 📦 Embed Pods Frameworks */,
-				49F82CFB5A509722DD437B4C /* 📦 Copy Pods Resources */,
+				56CDD975006C72F648CE1493 /* [CP] Embed Pods Frameworks */,
+				49F82CFB5A509722DD437B4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -540,11 +550,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A20A9D4F1D94024800A475D6 /* Build configuration list for PBXNativeTarget "VBKitUITests" */;
 			buildPhases = (
-				4E426B53A7A072AB08B3FFFD /* 📦 Check Pods Manifest.lock */,
+				4E426B53A7A072AB08B3FFFD /* [CP] Check Pods Manifest.lock */,
 				A20A9D3C1D94024800A475D6 /* Sources */,
 				A20A9D3D1D94024800A475D6 /* Frameworks */,
 				A20A9D3E1D94024800A475D6 /* Resources */,
-				566E34CEEE1EB2EBD33D1A0D /* 📦 Copy Pods Resources */,
+				566E34CEEE1EB2EBD33D1A0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,14 +641,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27470BFEBF7647B94D57D64D /* 📦 Copy Pods Resources */ = {
+		27470BFEBF7647B94D57D64D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,14 +656,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKit/Pods-VBKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49F82CFB5A509722DD437B4C /* 📦 Copy Pods Resources */ = {
+		49F82CFB5A509722DD437B4C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,14 +671,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4E426B53A7A072AB08B3FFFD /* 📦 Check Pods Manifest.lock */ = {
+		4E426B53A7A072AB08B3FFFD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,14 +686,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		566E34CEEE1EB2EBD33D1A0D /* 📦 Copy Pods Resources */ = {
+		566E34CEEE1EB2EBD33D1A0D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,14 +701,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		56CDD975006C72F648CE1493 /* 📦 Embed Pods Frameworks */ = {
+		56CDD975006C72F648CE1493 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,14 +716,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D7C80AB8C3C8EFC1A09F272 /* 📦 Check Pods Manifest.lock */ = {
+		8D7C80AB8C3C8EFC1A09F272 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,14 +731,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9B413D6607A71D82B76D507B /* 📦 Check Pods Manifest.lock */ = {
+		9B413D6607A71D82B76D507B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,14 +746,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C234173543159143060836A6 /* 📦 Embed Pods Frameworks */ = {
+		C234173543159143060836A6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +770,7 @@
 			files = (
 				A20A9DCB1D944FF800A475D6 /* VBDBManagerFactory.m in Sources */,
 				A20A9D711D9403C800A475D6 /* VBNavigationBar.m in Sources */,
+				A2B130121D94CA29003F582A /* VBAppDelegate.m in Sources */,
 				A20A9D271D94024800A475D6 /* ViewController.m in Sources */,
 				A20A9D761D9403C800A475D6 /* VBView.m in Sources */,
 				A20A9D751D9403C800A475D6 /* VBTableViewCell.m in Sources */,
@@ -769,18 +780,19 @@
 				A20A9D741D9403C800A475D6 /* VBTableView.m in Sources */,
 				A20A9D701D9403C800A475D6 /* VBObject.m in Sources */,
 				A20A9DAB1D944E4400A475D6 /* VBFileConfig.m in Sources */,
+				A2B1301E1D94CD15003F582A /* VBBaseTableViewController.m in Sources */,
 				A20A9D731D9403C800A475D6 /* VBTabBarController.m in Sources */,
 				A20A9D6F1D9403C800A475D6 /* VBLog.m in Sources */,
 				A20A9DB41D944E4400A475D6 /* VBLocationManager.m in Sources */,
 				A20A9DC71D944FF800A475D6 /* VBDBManager.m in Sources */,
 				A20A9DC61D944FF800A475D6 /* VBConfigDBManager.mm in Sources */,
-				A20A9D241D94024800A475D6 /* AppDelegate.m in Sources */,
 				A20A9DB21D944E4400A475D6 /* VBHTTPModels.m in Sources */,
 				A20A9DAC1D944E4400A475D6 /* VBHTTPErrorManager.m in Sources */,
 				A20A9D771D9403C800A475D6 /* VBViewController.m in Sources */,
 				A20A9D211D94024800A475D6 /* main.m in Sources */,
 				A20A9DC81D944FF800A475D6 /* VBFMEncryptDatabase.m in Sources */,
 				A20A9DAF1D944E4400A475D6 /* NSString+VBBase64.m in Sources */,
+				A2B130181D94CCD7003F582A /* VBBaseViewController.m in Sources */,
 				A20A9DB31D944E4400A475D6 /* VBHttpUrlManager.m in Sources */,
 				A20A9DAE1D944E4400A475D6 /* NSData+VBBase64.m in Sources */,
 				A2B1300D1D9451F2003F582A /* VBAlertView.m in Sources */,

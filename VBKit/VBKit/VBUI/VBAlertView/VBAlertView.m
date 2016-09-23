@@ -40,13 +40,13 @@
 //普通提示弹窗
 - (void)showTipAlert:(NSString *)message
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TIPTITLE message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:VBTIPTITLE message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alert show];
 }
 
 - (void)showTipAlert:(NSString *)message completion:(choiceCompletionBlock)completion
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TIPTITLE message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:VBTIPTITLE message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
     objc_setAssociatedObject(alert, VBChoiceAlertViewKey, completion, OBJC_ASSOCIATION_COPY);
     [alert show];
 }
@@ -58,7 +58,7 @@
 }
 - (void)showChoiceAlert:(NSString *)message doneTitle:(NSString *)doneTitile completion:(choiceCompletionBlock)completion
 {
-    [self showChoiceAlert:message title:TIPTITLE doneTitle:doneTitile completion:completion];
+    [self showChoiceAlert:message title:VBTIPTITLE doneTitle:doneTitile completion:completion];
 }
 - (void)showChoiceAlert:(NSString *)message title:(NSString *)title doneTitle:(NSString *)doneTitle completion:(choiceCompletionBlock)completion {
     
@@ -70,7 +70,7 @@
 // 可自定义Title
 - (void)showChoiceAlert:(NSString *)message button1Title:(NSString *)title1 button2Title:(NSString *)title2 completion:(choiceCompletionBlock)completion
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TIPTITLE message:message delegate:self cancelButtonTitle:nil otherButtonTitles:title1, title2, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:VBTIPTITLE message:message delegate:self cancelButtonTitle:nil otherButtonTitles:title1, title2, nil];
     objc_setAssociatedObject(alert, VBChoiceAlertViewKey, completion, OBJC_ASSOCIATION_COPY);
     [alert show];
 }
@@ -85,7 +85,7 @@
 //三选择弹窗
 - (void)showChoiceAlert:(NSString *)message button1Title:(NSString *)title1 button2Title:(NSString *)title2 button3Title:(NSString *)title3 completion:(choiceCompletionBlock)completion
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TIPTITLE message:message delegate:self cancelButtonTitle:nil otherButtonTitles:title1, title2, title3, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:VBTIPTITLE message:message delegate:self cancelButtonTitle:nil otherButtonTitles:title1, title2, title3, nil];
     objc_setAssociatedObject(alert, VBChoiceAlertViewKey, completion, OBJC_ASSOCIATION_COPY);
     [alert show];
 }

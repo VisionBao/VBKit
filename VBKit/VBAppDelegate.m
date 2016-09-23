@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  VBAppDelegate.m
 //  VBKit
 //
 //  Created by Vision on 9/22/16.
 //  Copyright © 2016 VisionBao. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "VBAppDelegate.h"
 
-@interface AppDelegate ()
+@interface VBAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation VBAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

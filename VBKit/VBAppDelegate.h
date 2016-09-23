@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  VBAppDelegate.h
 //  VBKit
 //
 //  Created by Vision on 9/22/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface VBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

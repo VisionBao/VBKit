@@ -16,7 +16,7 @@ pod 'Reachability'
 pod 'ZipArchive'
 pod 'BFKit'
 pod 'Masonry'
-
+pod 'WSProgressHUD'
 
   target 'VBKitTests' do
     inherit! :search_paths
