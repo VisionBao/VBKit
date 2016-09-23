@@ -32,4 +32,6 @@
 
 + (UIColor *)colorWithViewBackground;       //
 
++ (UIColor *)colorWithWhiteColor;   //白色
+
 @end

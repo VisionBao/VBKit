@@ -12,25 +12,33 @@
 
 @interface VBBaseViewController : UIViewController
 
-@property (nonatomic, strong) VBBaseNavigationBar *navBar;
-@property (nonatomic, strong) UINavigationItem *navItem;
+@property (nonatomic, strong, readonly) VBBaseNavigationBar *navBar;
+@property (nonatomic, strong, readonly) UINavigationItem *navItem;
 
-//@property (nonatomic, strong) VBView *bottomBarView;
+@property (nonatomic, strong, readonly) UIButton *backUpButton;
+@property (nonatomic, strong, readonly) UIButton *rightMenuButton;
 
-@property (nonatomic, strong) UIButton *backUpButton;
-@property (nonatomic, strong) UIButton *rightMenuButton;
-
-
+#pragma mark -
+#pragma mark Navigation Control
+//nav
 - (void)initNavBar;
-
-- (void)backBtnItemClick;
-
-- (void)addBackUpBtn;
-- (void)addRightPlayButton;
-
-- (void)setNavBarTitle:(NSString *)string;
-
-- (void)addLeftBtn:(NSString *)title backImg:(NSString *)backImg;
-- (void)addRightBtn:(NSString *)title backImg:(NSString *)backImg;
+//info - View controller-based status bar appearance   NO
+- (void)settingStatusBarWhite:(BOOL)white;
+//title
+- (void)initNavBarWithTitle:(NSString *)title;
+- (void)initNavBarWithImage:(UIImage *)image;
+- (void)initNavBarWithTitle:(NSString *)title
+                   bgImage:(UIImage *)bgImage;
+//left
+- (void)addBackButtonItem;
+- (void)addBackButtonItemWithTitle:(NSString *)title
+                             image:(UIImage *)image;
+//right
+- (void)addRightButtonItem;
+- (void)addRightButtonItemWithTitle:(NSString *)title
+                              image:(UIImage *)image;
+//hide
+- (void)hideNavigationBar;
+- (void)autoHidehideNavigationBar;
 
 @end

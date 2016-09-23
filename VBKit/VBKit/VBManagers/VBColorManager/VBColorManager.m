@@ -11,7 +11,7 @@
 @implementation VBColorManager
 
 + (UIColor *)colorWithHomeColor {
-    return [UIColor colorWithHexString:@"2CBAEF"];
+    return [UIColor colorWithHexString:@"00aded"];
 }
 
 + (UIColor *)colorWithlittleGray{
@@ -23,7 +23,7 @@
 }
 
 + (UIColor *)colorWithBlueColor {
-    return [UIColor colorWithHex:0x305f79];
+    return [UIColor colorWithHex:0x00aded];
 }
 
 + (UIColor *)colorWithLightGrayColor {
@@ -55,6 +55,10 @@
 }
 
 + (UIColor *)colorWithViewBackground {
+    return [UIColor whiteColor];
+}
+
++ (UIColor *)colorWithWhiteColor {
     return [UIColor whiteColor];
 }
 

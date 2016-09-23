@@ -8,6 +8,8 @@
 
 #import "VBAppDelegate.h"
 #import "VBTableViewController.h"
+#import "ViewController.h"
+
 @interface VBAppDelegate ()
 
 @end
@@ -39,7 +41,7 @@
 - (void)makeWindowVisible:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    VBTableViewController *rootVC = [[VBTableViewController alloc] init];
+    ViewController *rootVC = [[ViewController alloc] init];
     UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootVC];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
