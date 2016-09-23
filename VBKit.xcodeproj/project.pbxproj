@@ -12,7 +12,6 @@
 		9D66E3FF703BE292E4D20DBB /* libPods-VBKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D53075C7CA7CD1F3C615AB6 /* libPods-VBKitUITests.a */; };
 		A20A9D211D94024800A475D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D201D94024800A475D6 /* main.m */; };
 		A20A9D271D94024800A475D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D261D94024800A475D6 /* ViewController.m */; };
-		A20A9D2A1D94024800A475D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D281D94024800A475D6 /* Main.storyboard */; };
 		A20A9D2C1D94024800A475D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D2B1D94024800A475D6 /* Assets.xcassets */; };
 		A20A9D2F1D94024800A475D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20A9D2D1D94024800A475D6 /* LaunchScreen.storyboard */; };
 		A20A9D3A1D94024800A475D6 /* VBKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D391D94024800A475D6 /* VBKitTests.m */; };
@@ -20,13 +19,6 @@
 		A20A9D6E1D9403C800A475D6 /* UIView+VBMotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D551D9403C800A475D6 /* UIView+VBMotionEffect.m */; };
 		A20A9D6F1D9403C800A475D6 /* VBLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D5A1D9403C800A475D6 /* VBLog.m */; };
 		A20A9D701D9403C800A475D6 /* VBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D5C1D9403C800A475D6 /* VBObject.m */; };
-		A20A9D711D9403C800A475D6 /* VBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D601D9403C800A475D6 /* VBNavigationBar.m */; };
-		A20A9D721D9403C800A475D6 /* VBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D621D9403C800A475D6 /* VBNavigationController.m */; };
-		A20A9D731D9403C800A475D6 /* VBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D641D9403C800A475D6 /* VBTabBarController.m */; };
-		A20A9D741D9403C800A475D6 /* VBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D661D9403C800A475D6 /* VBTableView.m */; };
-		A20A9D751D9403C800A475D6 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D681D9403C800A475D6 /* VBTableViewCell.m */; };
-		A20A9D761D9403C800A475D6 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D6B1D9403C800A475D6 /* VBView.m */; };
-		A20A9D771D9403C800A475D6 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D6D1D9403C800A475D6 /* VBViewController.m */; };
 		A20A9D891D940B3A00A475D6 /* VBColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D871D940B3A00A475D6 /* VBColorManager.m */; };
 		A20A9D8C1D940D4400A475D6 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D8B1D940D4400A475D6 /* UIColor+HEX.m */; };
 		A20A9DAA1D944E4400A475D6 /* VBFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A9D8F1D944E4400A475D6 /* VBFileManager.m */; };
@@ -53,6 +45,13 @@
 		A2B130121D94CA29003F582A /* VBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130111D94CA29003F582A /* VBAppDelegate.m */; };
 		A2B130181D94CCD7003F582A /* VBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130171D94CCD7003F582A /* VBBaseViewController.m */; };
 		A2B1301E1D94CD15003F582A /* VBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */; };
+		A2B130211D950DF2003F582A /* VBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130201D950DF2003F582A /* VBTableViewController.m */; };
+		A2B130241D9512B9003F582A /* VBBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130231D9512B9003F582A /* VBBaseView.m */; };
+		A2B130271D951376003F582A /* VBBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130261D951376003F582A /* VBBaseTableView.m */; };
+		A2B1302A1D95138F003F582A /* VBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130291D95138F003F582A /* VBBaseTableViewCell.m */; };
+		A2B1302D1D9513E2003F582A /* VBBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1302C1D9513E2003F582A /* VBBaseNavigationBar.m */; };
+		A2B130301D951404003F582A /* VBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1302F1D951404003F582A /* VBBaseNavigationController.m */; };
+		A2B130331D95143B003F582A /* VBBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B130321D95143B003F582A /* VBBaseTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 		A20A9D201D94024800A475D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A20A9D251D94024800A475D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A20A9D261D94024800A475D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A20A9D291D94024800A475D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A20A9D2B1D94024800A475D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20A9D2E1D94024800A475D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A20A9D301D94024800A475D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,20 +99,6 @@
 		A20A9D5A1D9403C800A475D6 /* VBLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBLog.m; sourceTree = "<group>"; };
 		A20A9D5B1D9403C800A475D6 /* VBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBObject.h; sourceTree = "<group>"; };
 		A20A9D5C1D9403C800A475D6 /* VBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBObject.m; sourceTree = "<group>"; };
-		A20A9D5F1D9403C800A475D6 /* VBNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNavigationBar.h; sourceTree = "<group>"; };
-		A20A9D601D9403C800A475D6 /* VBNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNavigationBar.m; sourceTree = "<group>"; };
-		A20A9D611D9403C800A475D6 /* VBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNavigationController.h; sourceTree = "<group>"; };
-		A20A9D621D9403C800A475D6 /* VBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNavigationController.m; sourceTree = "<group>"; };
-		A20A9D631D9403C800A475D6 /* VBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTabBarController.h; sourceTree = "<group>"; };
-		A20A9D641D9403C800A475D6 /* VBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTabBarController.m; sourceTree = "<group>"; };
-		A20A9D651D9403C800A475D6 /* VBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableView.h; sourceTree = "<group>"; };
-		A20A9D661D9403C800A475D6 /* VBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableView.m; sourceTree = "<group>"; };
-		A20A9D671D9403C800A475D6 /* VBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewCell.h; sourceTree = "<group>"; };
-		A20A9D681D9403C800A475D6 /* VBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewCell.m; sourceTree = "<group>"; };
-		A20A9D6A1D9403C800A475D6 /* VBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBView.h; sourceTree = "<group>"; };
-		A20A9D6B1D9403C800A475D6 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
-		A20A9D6C1D9403C800A475D6 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
-		A20A9D6D1D9403C800A475D6 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
 		A20A9D791D94082200A475D6 /* VBKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKit-Prefix.pch"; sourceTree = "<group>"; };
 		A20A9D7B1D94092F00A475D6 /* VBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBConstants.h; sourceTree = "<group>"; };
 		A20A9D7C1D94093800A475D6 /* VBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBKit.h; sourceTree = "<group>"; };
@@ -174,6 +158,20 @@
 		A2B130171D94CCD7003F582A /* VBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseViewController.m; sourceTree = "<group>"; };
 		A2B1301C1D94CD15003F582A /* VBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseTableViewController.h; sourceTree = "<group>"; };
 		A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseTableViewController.m; sourceTree = "<group>"; };
+		A2B1301F1D950DF2003F582A /* VBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewController.h; sourceTree = "<group>"; };
+		A2B130201D950DF2003F582A /* VBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewController.m; sourceTree = "<group>"; };
+		A2B130221D9512B9003F582A /* VBBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseView.h; sourceTree = "<group>"; };
+		A2B130231D9512B9003F582A /* VBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseView.m; sourceTree = "<group>"; };
+		A2B130251D951376003F582A /* VBBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseTableView.h; sourceTree = "<group>"; };
+		A2B130261D951376003F582A /* VBBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseTableView.m; sourceTree = "<group>"; };
+		A2B130281D95138F003F582A /* VBBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseTableViewCell.h; sourceTree = "<group>"; };
+		A2B130291D95138F003F582A /* VBBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseTableViewCell.m; sourceTree = "<group>"; };
+		A2B1302B1D9513E2003F582A /* VBBaseNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseNavigationBar.h; sourceTree = "<group>"; };
+		A2B1302C1D9513E2003F582A /* VBBaseNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseNavigationBar.m; sourceTree = "<group>"; };
+		A2B1302E1D951404003F582A /* VBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseNavigationController.h; sourceTree = "<group>"; };
+		A2B1302F1D951404003F582A /* VBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseNavigationController.m; sourceTree = "<group>"; };
+		A2B130311D95143B003F582A /* VBBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBaseTabBarController.h; sourceTree = "<group>"; };
+		A2B130321D95143B003F582A /* VBBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBaseTabBarController.m; sourceTree = "<group>"; };
 		ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,8 +259,9 @@
 				A2B130111D94CA29003F582A /* VBAppDelegate.m */,
 				A20A9D251D94024800A475D6 /* ViewController.h */,
 				A20A9D261D94024800A475D6 /* ViewController.m */,
+				A2B1301F1D950DF2003F582A /* VBTableViewController.h */,
+				A2B130201D950DF2003F582A /* VBTableViewController.m */,
 				A20A9D521D9403C800A475D6 /* VBKit */,
-				A20A9D281D94024800A475D6 /* Main.storyboard */,
 				A20A9D2B1D94024800A475D6 /* Assets.xcassets */,
 				A20A9D2D1D94024800A475D6 /* LaunchScreen.storyboard */,
 				A20A9D301D94024800A475D6 /* Info.plist */,
@@ -348,24 +347,22 @@
 		A20A9D5E1D9403C800A475D6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				A20A9D5F1D9403C800A475D6 /* VBNavigationBar.h */,
-				A20A9D601D9403C800A475D6 /* VBNavigationBar.m */,
-				A20A9D611D9403C800A475D6 /* VBNavigationController.h */,
-				A20A9D621D9403C800A475D6 /* VBNavigationController.m */,
-				A20A9D631D9403C800A475D6 /* VBTabBarController.h */,
-				A20A9D641D9403C800A475D6 /* VBTabBarController.m */,
-				A20A9D651D9403C800A475D6 /* VBTableView.h */,
-				A20A9D661D9403C800A475D6 /* VBTableView.m */,
-				A20A9D671D9403C800A475D6 /* VBTableViewCell.h */,
-				A20A9D681D9403C800A475D6 /* VBTableViewCell.m */,
-				A20A9D6A1D9403C800A475D6 /* VBView.h */,
-				A20A9D6B1D9403C800A475D6 /* VBView.m */,
-				A20A9D6C1D9403C800A475D6 /* VBViewController.h */,
-				A20A9D6D1D9403C800A475D6 /* VBViewController.m */,
 				A2B130161D94CCD7003F582A /* VBBaseViewController.h */,
 				A2B130171D94CCD7003F582A /* VBBaseViewController.m */,
+				A2B130221D9512B9003F582A /* VBBaseView.h */,
+				A2B130231D9512B9003F582A /* VBBaseView.m */,
+				A2B130251D951376003F582A /* VBBaseTableView.h */,
+				A2B130261D951376003F582A /* VBBaseTableView.m */,
+				A2B130281D95138F003F582A /* VBBaseTableViewCell.h */,
+				A2B130291D95138F003F582A /* VBBaseTableViewCell.m */,
+				A2B1302B1D9513E2003F582A /* VBBaseNavigationBar.h */,
+				A2B1302C1D9513E2003F582A /* VBBaseNavigationBar.m */,
 				A2B1301C1D94CD15003F582A /* VBBaseTableViewController.h */,
 				A2B1301D1D94CD15003F582A /* VBBaseTableViewController.m */,
+				A2B1302E1D951404003F582A /* VBBaseNavigationController.h */,
+				A2B1302F1D951404003F582A /* VBBaseNavigationController.m */,
+				A2B130311D95143B003F582A /* VBBaseTabBarController.h */,
+				A2B130321D95143B003F582A /* VBBaseTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -620,7 +617,6 @@
 				A2B1300E1D9451F2003F582A /* VBerror@2x.png in Resources */,
 				A20A9D2C1D94024800A475D6 /* Assets.xcassets in Resources */,
 				A2B1300F1D9451F2003F582A /* VBsuccess@2x.png in Resources */,
-				A20A9D2A1D94024800A475D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,26 +765,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20A9DCB1D944FF800A475D6 /* VBDBManagerFactory.m in Sources */,
-				A20A9D711D9403C800A475D6 /* VBNavigationBar.m in Sources */,
+				A2B1302D1D9513E2003F582A /* VBBaseNavigationBar.m in Sources */,
 				A2B130121D94CA29003F582A /* VBAppDelegate.m in Sources */,
 				A20A9D271D94024800A475D6 /* ViewController.m in Sources */,
-				A20A9D761D9403C800A475D6 /* VBView.m in Sources */,
-				A20A9D751D9403C800A475D6 /* VBTableViewCell.m in Sources */,
+				A2B130241D9512B9003F582A /* VBBaseView.m in Sources */,
 				A20A9D8C1D940D4400A475D6 /* UIColor+HEX.m in Sources */,
 				A20A9DB01D944E4400A475D6 /* NSString+VBHash.m in Sources */,
+				A2B130331D95143B003F582A /* VBBaseTabBarController.m in Sources */,
 				A20A9D6E1D9403C800A475D6 /* UIView+VBMotionEffect.m in Sources */,
-				A20A9D741D9403C800A475D6 /* VBTableView.m in Sources */,
 				A20A9D701D9403C800A475D6 /* VBObject.m in Sources */,
 				A20A9DAB1D944E4400A475D6 /* VBFileConfig.m in Sources */,
+				A2B130301D951404003F582A /* VBBaseNavigationController.m in Sources */,
+				A2B1302A1D95138F003F582A /* VBBaseTableViewCell.m in Sources */,
 				A2B1301E1D94CD15003F582A /* VBBaseTableViewController.m in Sources */,
-				A20A9D731D9403C800A475D6 /* VBTabBarController.m in Sources */,
 				A20A9D6F1D9403C800A475D6 /* VBLog.m in Sources */,
 				A20A9DB41D944E4400A475D6 /* VBLocationManager.m in Sources */,
 				A20A9DC71D944FF800A475D6 /* VBDBManager.m in Sources */,
+				A2B130211D950DF2003F582A /* VBTableViewController.m in Sources */,
+				A2B130271D951376003F582A /* VBBaseTableView.m in Sources */,
 				A20A9DC61D944FF800A475D6 /* VBConfigDBManager.mm in Sources */,
 				A20A9DB21D944E4400A475D6 /* VBHTTPModels.m in Sources */,
 				A20A9DAC1D944E4400A475D6 /* VBHTTPErrorManager.m in Sources */,
-				A20A9D771D9403C800A475D6 /* VBViewController.m in Sources */,
 				A20A9D211D94024800A475D6 /* main.m in Sources */,
 				A20A9DC81D944FF800A475D6 /* VBFMEncryptDatabase.m in Sources */,
 				A20A9DAF1D944E4400A475D6 /* NSString+VBBase64.m in Sources */,
@@ -799,7 +796,6 @@
 				A20A9DAD1D944E4400A475D6 /* VBHTTPManager.m in Sources */,
 				A20A9DC91D944FF800A475D6 /* VBFMEncryptDatabaseQueue.m in Sources */,
 				A20A9DAA1D944E4400A475D6 /* VBFileManager.m in Sources */,
-				A20A9D721D9403C800A475D6 /* VBNavigationController.m in Sources */,
 				A20A9DCA1D944FF800A475D6 /* VBFMEncryptHelper.m in Sources */,
 				A20A9D891D940B3A00A475D6 /* VBColorManager.m in Sources */,
 				A20A9DB11D944E4400A475D6 /* NSString+VBUrlEncode.m in Sources */,
@@ -838,14 +834,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A20A9D281D94024800A475D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A20A9D291D94024800A475D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A20A9D2D1D94024800A475D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

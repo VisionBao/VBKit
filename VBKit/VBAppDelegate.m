@@ -7,7 +7,7 @@
 //
 
 #import "VBAppDelegate.h"
-
+#import "VBTableViewController.h"
 @interface VBAppDelegate ()
 
 @end
@@ -17,8 +17,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Basic setup
+    [self basicSetup];
+    
+    // Showing the App
+    [self makeWindowVisible:launchOptions];
+    
+    
     return YES;
 }
+
+- (void)basicSetup {
+    //basicSetup
+
+    
+}
+
+#pragma mark - Make window visible
+
+- (void)makeWindowVisible:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    VBTableViewController *rootVC = [[VBTableViewController alloc] init];
+    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    self.window.rootViewController = rootNav;
+    [self.window makeKeyAndVisible];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
