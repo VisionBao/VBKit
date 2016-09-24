@@ -22,23 +22,27 @@
 #pragma mark Navigation Control
 //nav
 - (void)initNavBar;
-//info - View controller-based status bar appearance   NO
-- (void)settingStatusBarWhite:(BOOL)white;
+
 //title
 - (void)initNavBarWithTitle:(NSString *)title;
-- (void)initNavBarWithImage:(UIImage *)image;
-- (void)initNavBarWithTitle:(NSString *)title
-                   bgImage:(UIImage *)bgImage;
+- (void)initNavBarWithImageName:(NSString *)imageName;
+- (void)initNavBarWithCustomView:(UIView *)view;
 //left
 - (void)addBackButtonItem;
 - (void)addBackButtonItemWithTitle:(NSString *)title
-                             image:(UIImage *)image;
+                             backImg:(NSString *)backImg;
 //right
 - (void)addRightButtonItem;
+- (void)addCheckButtonItem;
+- (void)addCloseButtonItem;
 - (void)addRightButtonItemWithTitle:(NSString *)title
-                              image:(UIImage *)image;
+                              backImg:(NSString *)backImg;
 //hide
-- (void)hideNavigationBar;
-- (void)autoHidehideNavigationBar;
+- (void)hideNavigationBar:(BOOL)hide
+                 animated:(BOOL)animated
+                   finish:(void(^)(void))finishBlock;
 
+//action
+- (void)backButtonItemClick;
+- (void)rightButtonItemClick;
 @end

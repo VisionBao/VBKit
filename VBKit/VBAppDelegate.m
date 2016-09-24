@@ -41,8 +41,9 @@
 - (void)makeWindowVisible:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    VBTableViewController *rootVC = [[VBTableViewController alloc] init];
     ViewController *rootVC = [[ViewController alloc] init];
-    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    VBBaseNavigationController *rootNav = [[VBBaseNavigationController alloc] initWithRootViewController:rootVC];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
 }

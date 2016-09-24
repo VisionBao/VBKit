@@ -23,7 +23,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -
+#pragma mark StatusBar
+//View controller-based status bar appearance = YES  (info.plist)
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return UIStatusBarAnimationFade;
+}
 /*
 #pragma mark - Navigation
 

@@ -20,6 +20,7 @@
 //    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭白板" style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnClick)];
 //    self.navigationItem.leftBarButtonItem = rightItem;
     [self initNavBar];
+
 }
 
 - (void)rightBtnClick {

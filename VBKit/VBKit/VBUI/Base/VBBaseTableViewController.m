@@ -43,14 +43,12 @@
         if (!_tableView) {
             _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT)];
             _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//            _tableView.backgroundColor = [VBColorManager colorWithViewBackground];
+            _tableView.backgroundColor = [VBColorManager colorWithViewBackground];
             _tableView.delegate = self;
             _tableView.dataSource = self;
             [self.view addSubview:_tableView];
-            
-//            [_tableView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:NULL]; // contentSize改变调整HeaderView和
-//            [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-            
+            [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+            _tableView.tableFooterView = [[UIView alloc] init];
             [self addRefreshHeaderView];
             [self addRefreshFooterView];
             

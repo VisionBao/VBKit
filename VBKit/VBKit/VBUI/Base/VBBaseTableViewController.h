@@ -12,7 +12,7 @@
 UITableViewDelegate,
 UITableViewDataSource
 >
-
+- (void)autoHidehideNavigationBar;
 /**
  *  默认的tableView
  */
