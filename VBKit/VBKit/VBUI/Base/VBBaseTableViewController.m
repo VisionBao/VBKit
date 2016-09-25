@@ -49,85 +49,13 @@
             [self.view addSubview:_tableView];
             [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
             _tableView.tableFooterView = [[UIView alloc] init];
-            [self addRefreshHeaderView];
-            [self addRefreshFooterView];
+//            [self addRefreshHeaderView];
+//            [self addRefreshFooterView];
             
         }
         
         return _tableView;
     }
-}
-
-/**
- *  重写headerView getter
- *
- */
-- (void)addRefreshHeaderView {
-    if (!self.enableHeaderRefresh) {
-        return;
-    }
-    
-//    if (!_refreshHeaderView) {
-//        _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
-//        [_tableView addSubview:_refreshHeaderView];
-//        _refreshHeaderView.delegate = self;
-//    } else {
-//        [_refreshHeaderView setFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
-//    }
-}
-
-/**
- *  移除refreshHeaderView
- */
--(void)removeHeaderView {
-//    [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
-    self.isRefreshing = NO;
-    [self.refreshHeaderView removeFromSuperview];
-    self.refreshHeaderView = nil;
-}
-
-
-/**
- *  重写footerView getter
- *
- */
-- (void)addRefreshFooterView {
-    if (!self.enableFooterRefresh) {
-        return;
-    }
-    
-//    CGFloat height=MAX(SCREEN_HEIGHT - BASE_TAB_BAR_HEIGHT, _tableView.contentSize.height);
-//    if (!_refreshFooterView) {
-//        _refreshFooterView = [[EGORefreshTableFooterView alloc] initWithFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height) arrowImageName:@"blackArrow.png" textColor:[UIColor colorWithHex:0x666666]];
-//        [_tableView addSubview:_refreshFooterView];
-//        _refreshFooterView.delegate = self;
-//    } else {
-//        [_refreshFooterView setFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height)];
-//    }
-}
-
-/**
- *  移除FooterView
- */
--(void)removeFooterView {
-//    [self.refreshFooterView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
-    self.isRefreshing = NO;
-    [self.refreshFooterView removeFromSuperview];
-    self.refreshFooterView = nil;
-}
-
-
-- (void)setScrollToTop:(BOOL)scrollToTop {
-    if (_tableView) {
-        _tableView.scrollsToTop = scrollToTop;
-    }
-}
-
-- (void)updateContentInset {
-    //调整位置
-    UIEdgeInsets contentInset = self.tableView.contentInset;
-    contentInset.bottom = BASE_TAB_BAR_HEIGHT;
-    [self.tableView setContentInset:contentInset];
 }
 
 #pragma mark - tableView的代理方法
