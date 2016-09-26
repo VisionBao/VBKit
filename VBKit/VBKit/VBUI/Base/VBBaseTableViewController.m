@@ -49,11 +49,7 @@
             [self.view addSubview:_tableView];
             [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
             _tableView.tableFooterView = [[UIView alloc] init];
-            [self addRefreshHeaderView];
-            [self addRefreshFooterView];
-            
         }
-        
         return _tableView;
     }
 }
