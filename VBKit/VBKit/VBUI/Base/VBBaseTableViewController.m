@@ -91,7 +91,9 @@
     if (!self.enableFooterRefresh) {
         return;
     }
-    
+    if (!_refreshHeaderView) {
+//        _refreshHeaderView = [mj]
+    }
 //    CGFloat height=MAX(SCREEN_HEIGHT - BASE_TAB_BAR_HEIGHT, _tableView.contentSize.height);
 //    if (!_refreshFooterView) {
 //        _refreshFooterView = [[EGORefreshTableFooterView alloc] initWithFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height) arrowImageName:@"blackArrow.png" textColor:[UIColor colorWithHex:0x666666]];
