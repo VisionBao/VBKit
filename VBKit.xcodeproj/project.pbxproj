@@ -60,6 +60,7 @@
 		A2B130481D9653FD003F582A /* VB_Nav_Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B130441D9653FD003F582A /* VB_Nav_Close@2x.png */; };
 		A2B130491D9653FD003F582A /* VB_Nav_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B130451D9653FD003F582A /* VB_Nav_Left@2x.png */; };
 		A2B1304A1D9653FD003F582A /* VB_Nav_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B130461D9653FD003F582A /* VB_Nav_Right@2x.png */; };
+		A2B130981D9BE4F5003F582A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B130971D9BE4F5003F582A /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 		A2B130441D9653FD003F582A /* VB_Nav_Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VB_Nav_Close@2x.png"; sourceTree = "<group>"; };
 		A2B130451D9653FD003F582A /* VB_Nav_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VB_Nav_Left@2x.png"; sourceTree = "<group>"; };
 		A2B130461D9653FD003F582A /* VB_Nav_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VB_Nav_Right@2x.png"; sourceTree = "<group>"; };
+		A2B130971D9BE4F5003F582A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABF330CF990D6F8603BE6AFC /* Pods-VBKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitTests/Pods-VBKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADA70FD3B6954996BFFD016 /* Pods-VBKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitUITests/Pods-VBKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B130981D9BE4F5003F582A /* UIKit.framework in Frameworks */,
 				A20A9DCD1D94502200A475D6 /* libsqlite3.tbd in Frameworks */,
 				59DCAFEBE2015B76DC780508 /* libPods-VBKit.a in Frameworks */,
 			);
@@ -238,6 +241,7 @@
 		86EB31F964F8B13F4CB74CE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2B130971D9BE4F5003F582A /* UIKit.framework */,
 				A20A9DCC1D94502200A475D6 /* libsqlite3.tbd */,
 				7C6A1F107C13DEBE15F2DAFB /* libPods-VBKit.a */,
 				BB5F304AD1DF15431DB2E552 /* libPods-VBKitTests.a */,
