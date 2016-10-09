@@ -7,14 +7,11 @@ target 'VBKitDemo' do
 
   # Pods for VBKit
 pod 'AFNetworking'
-pod 'SDWebImage'
-pod 'FMDB/SQLCipher'
-pod 'MJExtension'
+pod 'FMDB'
 pod 'MJRefresh'
 pod 'CocoaLumberjack'
 pod 'Reachability'
 pod 'ZipArchive'
-pod 'BFKit'
 pod 'Masonry'
 pod 'WSProgressHUD'
 
