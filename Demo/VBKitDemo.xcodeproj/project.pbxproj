@@ -979,7 +979,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQKKQ9452M;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKitDemo/VBKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKit-Prefix.pch";
 				INFOPLIST_FILE = VBKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -994,7 +994,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQKKQ9452M;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKitDemo/VBKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKit-Prefix.pch";
 				INFOPLIST_FILE = VBKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
