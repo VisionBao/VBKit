@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:VBKit.xcodeproj">
+      location = "self:VBKitDemo.xcodeproj">
    </FileRef>
 </Workspace>

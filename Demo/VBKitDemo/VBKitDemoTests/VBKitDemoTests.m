@@ -1,18 +1,18 @@
 //
-//  VBKitTests.m
-//  VBKitTests
+//  VBKitDemoTests.m
+//  VBKitDemoTests
 //
-//  Created by Vision on 9/22/16.
+//  Created by Vision on 09/10/2016.
 //  Copyright © 2016 VisionBao. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface VBKitTests : XCTestCase
+@interface VBKitDemoTests : XCTestCase
 
 @end
 
-@implementation VBKitTests
+@implementation VBKitDemoTests
 
 - (void)setUp {
     [super setUp];
