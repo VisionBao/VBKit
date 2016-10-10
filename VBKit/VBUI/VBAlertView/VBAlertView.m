@@ -6,9 +6,9 @@
 //  Copyright © 2015年 VisionBao. All rights reserved.
 //
 
-#import "VBAlertView.h"
+
 #import <objc/runtime.h>
-#import <WSProgressHUD/WSProgressHUD.h>
+#import "VBAlertView.h"
 
 #define VBChoiceAlertViewKey @"VBChoiceAlertViewKey"
 #define VBTextAlertViewKey   @"VBTextAlertViewKey"

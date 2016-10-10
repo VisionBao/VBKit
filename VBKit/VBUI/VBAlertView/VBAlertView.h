@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "VBAlertTextDefine.h"
+#import "WSProgressHUD/WSProgressHUD.h"
 
 typedef void (^choiceCompletionBlock)(NSInteger index);
 typedef void (^textCompletionBlock)(NSString *text);

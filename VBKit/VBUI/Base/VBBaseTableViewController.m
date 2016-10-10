@@ -8,7 +8,7 @@
 
 #import "VBBaseTableViewController.h"
 #import "VBColorManager.h"
-#import <MJRefresh/MJRefresh.h>
+#import "MJRefresh/MJRefresh.h"
 
 @interface VBBaseTableViewController ()
 /**
