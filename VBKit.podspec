@@ -91,9 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # s.source_files  = "VBKit/**/*.{h,m}"
-  s.source_files  = "VBKit/*" 
-  # s.exclude_files = "Demo/*"
+  s.source_files  = "VBKit/**/*.{h,m}"
+  # s.source_files  = "VBKit/*" 
+  s.exclude_files = "Demo/*"
 
   # s.public_header_files = "VBKit/**/*.h"
 
