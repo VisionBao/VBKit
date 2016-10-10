@@ -7,8 +7,8 @@
 //
 
 #import "VBAlertView.h"
-#import <WSProgressHUD.h>
 #import <objc/runtime.h>
+#import <WSProgressHUD/WSProgressHUD.h>
 
 #define VBChoiceAlertViewKey @"VBChoiceAlertViewKey"
 #define VBTextAlertViewKey   @"VBTextAlertViewKey"

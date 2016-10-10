@@ -7,6 +7,7 @@
 //
 
 #import "VBColorManager.h"
+#import "UIColor+HEX.h"
 
 @implementation VBColorManager
 
