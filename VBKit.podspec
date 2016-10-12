@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   # s.source_files  = "VBKit/*" 
   # s.exclude_files = "Demo/*"
 
-  s.public_header_files = "VBKit/VBKit.h"
+  s.public_header_files = "VBKit/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
