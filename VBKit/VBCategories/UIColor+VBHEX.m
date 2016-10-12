@@ -1,12 +1,13 @@
 //
-//  UIColor+HEX.m
-//  IOS-Categories
+//  UIColor+VBHEX.m
+//  VBKitExample
 //
-//  Created by Jakey on 14/12/15.
-//  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
+//  Created by Vision on 12/10/2016.
+//  Copyright © 2016 VisionBao. All rights reserved.
 //
 
-#import "UIColor+HEX.h"
+#import "UIColor+VBHEX.h"
+
 CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length) {
     NSString *substring = [string substringWithRange:NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat: @"%@%@", substring, substring];
@@ -17,43 +18,44 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
 }
 
 @implementation UIColor (HEX)
-+ (UIColor *)colorWithHex:(UInt32)hex{
-    return [UIColor colorWithHex:hex andAlpha:1];
+
++ (UIColor *)vb_colorWithHex:(UInt32)hex{
+    return [UIColor vb_colorWithHex:hex andAlpha:1];
 }
-+ (UIColor *)colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha{
++ (UIColor *)vb_colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha{
     return [UIColor colorWithRed:((hex >> 16) & 0xFF)/255.0
                            green:((hex >> 8) & 0xFF)/255.0
                             blue:(hex & 0xFF)/255.0
                            alpha:alpha];
 }
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString {
++ (UIColor *)vb_colorWithHexString:(NSString *)hexString {
     CGFloat alpha, red, blue, green;
     
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
     switch ([colorString length]) {
-        case 3: // #RGB
+            case 3: // #RGB
             alpha = 1.0f;
             red   = colorComponentFrom(colorString, 0, 1);
             green = colorComponentFrom(colorString, 1, 1);
             blue  = colorComponentFrom(colorString, 2, 1);
             break;
             
-        case 4: // #ARGB
+            case 4: // #ARGB
             alpha = colorComponentFrom(colorString, 0, 1);
             red   = colorComponentFrom(colorString, 1, 1);
             green = colorComponentFrom(colorString, 2, 1);
             blue  = colorComponentFrom(colorString, 3, 1);
             break;
             
-        case 6: // #RRGGBB
+            case 6: // #RRGGBB
             alpha = 1.0f;
             red   = colorComponentFrom(colorString, 0, 2);
             green = colorComponentFrom(colorString, 2, 2);
             blue  = colorComponentFrom(colorString, 4, 2);
             break;
             
-        case 8: // #AARRGGBB
+            case 8: // #AARRGGBB
             alpha = colorComponentFrom(colorString, 0, 2);
             red   = colorComponentFrom(colorString, 2, 2);
             green = colorComponentFrom(colorString, 4, 2);
@@ -66,7 +68,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (NSString *)HEXString{
+- (NSString *)vb_HEXString{
     UIColor* color = self;
     if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
         const CGFloat *components = CGColorGetComponents(color.CGColor);
@@ -82,4 +84,5 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
             (int)((CGColorGetComponents(color.CGColor))[1]*255.0),
             (int)((CGColorGetComponents(color.CGColor))[2]*255.0)];
 }
+
 @end

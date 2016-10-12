@@ -10,6 +10,6 @@
 #define VBCategories_h
 
 #import "UIView+VBMotionEffect.h"
-#import "UIColor+HEX.h"
+#import "UIColor+VBHEX.h"
 
 #endif /* VBCategories_h */

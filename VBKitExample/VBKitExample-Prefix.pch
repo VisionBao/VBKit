@@ -1,17 +1,16 @@
 //
-//  VBKit-Prefix.pch
-//  VBKit
+//  VBKitExample-Prefix.pch
+//  VBKitExample
 //
-//  Created by Vision on 9/22/16.
+//  Created by Vision on 12/10/2016.
 //  Copyright © 2016 VisionBao. All rights reserved.
 //
 
-#ifndef VBKit_Prefix_pch
-#define VBKit_Prefix_pch
+#ifndef VBKitExample_Prefix_pch
+#define VBKitExample_Prefix_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
 #import "VBKit.h"
 
-#endif /* VBKit_Prefix_pch */
+#endif /* VBKitExample_Prefix_pch */

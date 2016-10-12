@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "VBKit/**/*.{h,m}"
   # s.source_files  = "VBKit/*" 
-  s.exclude_files = "Demo/*"
+  # s.exclude_files = "Demo/*"
 
   # s.public_header_files = "VBKit/**/*.h"
 
@@ -141,6 +141,7 @@ Pod::Spec.new do |s|
   s.dependency "CocoaLumberjack"
   s.dependency "Reachability"
   s.dependency "Masonry"
+  s.dependency "ZipArchive"
   s.dependency "WSProgressHUD"
 
 end

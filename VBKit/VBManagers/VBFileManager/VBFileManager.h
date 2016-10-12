@@ -10,20 +10,20 @@
 
 typedef NS_ENUM(NSUInteger, VBFilePathType) {
     VBFilePATH_HOME,      // "~"
-    VBFilePATH_APP,       // "kwsing"
-    VBFilePATH_LIBRARY,   // "kwsing/library"
-    VBFilePATH_DUCUMENT,  // "kwsing/Document"
-    VBFilePATH_CACHE,     // "kwsing/cache
-    VBFilePATH_LOG,       // "kwsing/cache/Log"
-    VBFilePATH_LOCALMUSIC,// "kwsing/Document/LocalMusic"
-    VBFilePATH_LYRIC,     // "kwsing/Document/Lyric"
-    VBFilePATH_BKIMAGE,   // "kwsing/Cache/BKResource
-    VBFilePATH_OPUS,      // "kwsing/Document/MyOpus"
-    VBFilePATH_MYIMAGE,   // "kwsing/Cache/MyImage"
-    VBFilePATH_USER,      // "kwsing/Document/User"
-    VBFilePATH_GIFT,      // "kwsing/Document/gift"
-    VBFilePATH_HTTPCACHE, // "kwsing/Document/HttpCache
-    VBFilePATH_AltasLAB,  // "kwsing/Document/AltasLab
+    VBFilePATH_APP,       // "/"
+    VBFilePATH_LIBRARY,   // "/library"
+    VBFilePATH_DUCUMENT,  // "/Document"
+    VBFilePATH_CACHE,     // "/cache
+    VBFilePATH_LOG,       // "/cache/Log"
+    VBFilePATH_LOCALMUSIC,// "/Document/LocalMusic"
+    VBFilePATH_LYRIC,     // "/Document/Lyric"
+    VBFilePATH_BKIMAGE,   // "/Cache/BKResource
+    VBFilePATH_OPUS,      // "/Document/MyOpus"
+    VBFilePATH_MYIMAGE,   // "/Cache/MyImage"
+    VBFilePATH_USER,      // "/Document/User"
+    VBFilePATH_GIFT,      // "/Document/gift"
+    VBFilePATH_HTTPCACHE, // "/Document/HttpCache
+    VBFilePATH_AltasLAB,  // "/Document/AltasLab
 };
 
 @interface VBFileManager : NSObject

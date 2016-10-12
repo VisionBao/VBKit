@@ -7,52 +7,52 @@
 //
 
 #import "VBColorManager.h"
-#import "UIColor+HEX.h"
+#import "UIColor+VBHEX.h"
 
 @implementation VBColorManager
 
 + (UIColor *)colorWithHomeColor {
-    return [UIColor colorWithHexString:@"00aded"];
+    return [UIColor vb_colorWithHexString:@"00aded"];
 }
 
 + (UIColor *)colorWithlittleGray{
-    return [UIColor colorWithHexString:@"F4F5F6"];
+    return [UIColor vb_colorWithHexString:@"F4F5F6"];
 }
 
 + (UIColor *)colorWithRedColor {
-    return [UIColor colorWithHex:0xed1f52];
+    return [UIColor vb_colorWithHex:0xed1f52];
 }
 
 + (UIColor *)colorWithBlueColor {
-    return [UIColor colorWithHex:0x00aded];
+    return [UIColor vb_colorWithHex:0x00aded];
 }
 
 + (UIColor *)colorWithLightGrayColor {
-    return [UIColor colorWithHex:0xacacac];
+    return [UIColor vb_colorWithHex:0xacacac];
 }
 
 + (UIColor *)colorWithGrayColor {
-    return [UIColor colorWithHex:0x665f5c];
+    return [UIColor vb_colorWithHex:0x665f5c];
 }
 
 + (UIColor *)colorWithBlackColor {
-    return [UIColor colorWithHex:0x38322f];
+    return [UIColor vb_colorWithHex:0x38322f];
 }
 
 + (UIColor *)colorWithTLGrayColor {
-    return [UIColor colorWithHex:0xd8d8d8];
+    return [UIColor vb_colorWithHex:0xd8d8d8];
 }
 
 + (UIColor *)colorWithTGrayColor {
-    return [UIColor colorWithHex:0xa2b1ba];
+    return [UIColor vb_colorWithHex:0xa2b1ba];
 }
 
 + (UIColor *)colorWithTabbarColor {
-    return [UIColor colorWithHex:0x2F3442];
+    return [UIColor vb_colorWithHex:0x2F3442];
 }
 
 + (UIColor *)colorWithLineColor {
-    return [UIColor colorWithHex:0xd8d8d8];
+    return [UIColor vb_colorWithHex:0xd8d8d8];
 }
 
 + (UIColor *)colorWithViewBackground {
