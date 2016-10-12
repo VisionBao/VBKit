@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   # s.source_files  = "VBKit/*" 
   # s.exclude_files = "Demo/*"
 
-  s.public_header_files = "VBKit/**/*.h"
+  # s.public_header_files = "VBKit/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "VBKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
