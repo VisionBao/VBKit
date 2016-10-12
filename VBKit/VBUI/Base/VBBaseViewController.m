@@ -7,6 +7,7 @@
 //
 
 #import "VBBaseViewController.h"
+#import "VBConstants.h"
 
 @interface VBBaseViewController ()
 @property (nonatomic, strong) VBBaseNavigationBar *navBar;
