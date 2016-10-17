@@ -91,11 +91,22 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "VBKit/**/*.{h,m}"
+  s.source_files  = "VBKit/VBKit.h"
+  s.public_header_files = "VBKit/VBKit.h"
+  
+  s.subspec 'VBUI' do |ss|
+    ss.source_files = 'VBKit/VBUI/VBUI.h'
+    ss.public_header_files = 'VBKit/VBUI/VBUI.h'
+    ss.subspec 'Base' do |sss|
+      sss.source_files = 'VBKit/VBUI/Base/*.{h,m}'
+    ss.subspec 'VBAlertView' do |sss|
+      sss.source_files = 'VBKit/VBUI/VBAlertView/*.{h,m}'
+  end
+
   # s.source_files  = "VBKit/*" 
   # s.exclude_files = "Demo/*"
 
-  # s.public_header_files = "VBKit/**/*.h"
+
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
