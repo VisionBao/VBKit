@@ -24,9 +24,12 @@
 - (void)initNavBar;
 
 //title
-- (void)initNavBarWithTitle:(NSString *)title;
-- (void)initNavBarWithImageName:(NSString *)imageName;
-- (void)initNavBarWithCustomView:(UIView *)view;
+- (void)initNavBarWithTitle:(NSString *)title
+                  tintColor:(UIColor *)tintColor;
+- (void)initNavBarWithImageName:(NSString *)imageName
+                  tintColor:(UIColor *)tintColor;;
+- (void)initNavBarWithCustomView:(UIView *)view
+                  tintColor:(UIColor *)tintColor;;
 //left
 - (void)addBackButtonItem;
 - (void)addBackButtonItemWithTitle:(NSString *)title

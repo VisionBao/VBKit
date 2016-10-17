@@ -8,7 +8,6 @@
 
 #import "VBBaseViewController.h"
 #import "VBConstants.h"
-#import "VBColorManager.h"
 
 @interface VBBaseViewController ()
 @property (nonatomic, strong) VBBaseNavigationBar *navBar;
@@ -16,6 +15,8 @@
 
 @property (nonatomic, strong) UIButton *backUpButton;
 @property (nonatomic, strong) UIButton *rightMenuButton;
+
+@property (nonatomic, strong) UIColor *tintColor;
 @end
 
 @implementation VBBaseViewController
@@ -23,7 +24,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-
+        _tintColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -47,9 +48,9 @@
         [_navBar setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
         [_navBar setTranslucent:NO];
         [_navBar pushNavigationItem:_navItem animated:NO];
-        [_navBar setBarTintColor:[VBColorManager colorWithHomeColor]];
+        [_navBar setBarTintColor:_tintColor];
         [_navBar setTitleTextAttributes:
-                                        [NSDictionary dictionaryWithObjectsAndKeys:[VBColorManager colorWithWhiteColor],
+                                        [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],
                                          NSForegroundColorAttributeName,
                                          [UIFont fontWithName:@"Arial Rounded MT Bold" size:17],
                                          NSFontAttributeName,
@@ -64,23 +65,33 @@
 
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
-    [self initNavBarWithTitle:title];
+    [self initNavBarWithTitle:title
+        tintColor:_tintColor];
 }
 
-- (void)initNavBarWithTitle:(NSString *)title {
+- (void)initNavBarWithTitle:(NSString *)title
+                  tintColor:(UIColor *)tintColor{
     [self initNavBar];
+    _tintColor = tintColor;
+    [_navBar setBarTintColor:_tintColor];
     _navItem.title = title;
 }
 
-- (void)initNavBarWithImageName:(NSString *)imageName {
+- (void)initNavBarWithImageName:(NSString *)imageName
+                  tintColor:(UIColor *)tintColor{
     [self initNavBar];
+    _tintColor = tintColor;
+    [_navBar setBarTintColor:_tintColor];
     UIImage *image = [UIImage imageNamed:imageName];
     _navItem.titleView = [[UIImageView alloc] initWithImage:image];
     
 }
 
-- (void)initNavBarWithCustomView:(UIView *)view {
+- (void)initNavBarWithCustomView:(UIView *)view
+                  tintColor:(UIColor *)tintColor{
     [self initNavBar];
+    _tintColor = tintColor;
+    [_navBar setBarTintColor:_tintColor];
     _navItem.titleView = view;
 }
 

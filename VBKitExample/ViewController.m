@@ -21,7 +21,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"fuck" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-    [self initNavBarWithCustomView:button];
+    [self initNavBarWithCustomView:button tintColor:[UIColor blackColor]];
     [self addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
     [self addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
 //    [self addBackButtonItem];
