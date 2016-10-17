@@ -99,8 +99,10 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'VBKit/VBUI/VBUI.h'
     ss.subspec 'Base' do |sss|
       sss.source_files = 'VBKit/VBUI/Base/*.{h,m}'
+    end
     ss.subspec 'VBAlertView' do |sss|
       sss.source_files = 'VBKit/VBUI/VBAlertView/*.{h,m}'
+    end
   end
 
   # s.source_files  = "VBKit/*" 
