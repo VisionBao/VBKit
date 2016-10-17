@@ -91,82 +91,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "VBKit/**/*"
-  # s.public_header_files = "VBKit/**/*.h"
-  
-  # s.subspec 'VBUI' do |ss|
-
-  #   ss.source_files = 'VBKit/VBUI/VBUI.h'
-  #   ss.public_header_files = 'VBKit/VBUI/VBUI.h'
-  #   ss.subspec 'Base' do |sss|
-  #     sss.source_files = 'VBKit/VBUI/Base/*.{h,m}'
-  #   end
-
-  #   ss.subspec 'VBAlertView' do |sss|
-  #     sss.source_files = 'VBKit/VBUI/VBAlertView/*.{h,m}'
-  #   end
-
-  # end
-
-  # s.subspec 'VBManagers' do |ss|
-  #   ss.source_files = 'VBKit/VBManagers/VBManagers.h'
-  #   ss.public_header_files = 'VBKit/VBManagers/VBManagers.h'
-
-  #   ss.subspec 'VBColorManager' do |sss|
-  #     sss.source_files = 'VBKit/VBManagers/VBColorManager/*.{h,m}'
-  #   end
-
-  #   ss.subspec 'VBDBManager' do |sss|
-  #     sss.source_files = 'VBKit/VBManagers/VBDBManager/*.{h,m}'
-
-  #     sss.subspec 'VBDBManager' do |ssss|
-  #       ssss.source_files = 'VBKit/VBManagers/VBDBManager/VBDBManager/*.{h,m}'
-
-  #       ssss.subspec 'VBFMDBEncrypt' do |sssss|
-  #         sssss.source_files = 'VBKit/VBManagers/VBDBManager/VBDBManager/VBFMDBEncrypt/*.{h,m}'
-  #       end
-
-  #     end
-
-  #   end
-
-  #   ss.subspec 'VBFileManager' do |sss|
-  #     sss.source_files = 'VBKit/VBManagers/VBFileManager/*.{h,m}'
-  #   end
-  #   ss.subspec 'VBHTTPManager' do |sss|
-  #     sss.source_files = 'VBKit/VBManagers/VBHTTPManager/*.{h,m}'
-
-  #     sss.subspec 'VBHTTPManager' do |ssss|
-  #       ssss.source_files = 'VBKit/VBManagers/VBHTTPManager/VBHTTPManager/*.{h,m}'
-
-  #       ssss.subspec 'VBHTTPTools' do |sssss|
-  #         sssss.source_files = 'VBKit/VBManagers/VBHTTPManager/VBHTTPManager/VBHTTPTools/*.{h,m}'
-  #       end
-  #     end
-  #   end
-
-  #   ss.subspec 'VBLocationManager' do |sss|
-  #     sss.source_files = 'VBKit/VBManagers/VBLocationManager/*.{h,m}'
-  #   end
-
-  # end
-
-
-  # s.subspec 'VBFoundation' do |ss|
-
-  #   ss.source_files = 'VBKit/VBFoundation/*'
-  #   ss.public_header_files = 'VBKit/VBFoundation/VBFoundation.h'
-  # end
-
-  # s.subspec 'VBCategories' do |ss|
-
-  #   ss.source_files = 'VBKit/VBCategories/*'
-  #   ss.public_header_files = 'VBKit/VBCategories/VBCategories.h'
-  # end
+  s.source_files  = "VBKit/**/*.{h,m}"
   # s.source_files  = "VBKit/*" 
   # s.exclude_files = "Demo/*"
 
-
+  # s.public_header_files = "VBKit/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -192,7 +121,7 @@ Pod::Spec.new do |s|
   # s.framework  = "VBKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  s.library   = "sqlite3"
+  # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
 
