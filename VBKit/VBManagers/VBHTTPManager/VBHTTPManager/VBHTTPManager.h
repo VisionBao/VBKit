@@ -10,6 +10,13 @@
 #import <AFNetworking.h>
 @class VBFileConfig;
 
+typedef NS_ENUM(NSInteger, VBNetworkStatus) {
+    VBNetworkStatusUnknown          = -1,//未知网络
+    VBNetworkStatusNotReachable     = 0,//网络无连接
+    VBNetworkStatusReachableViaWWAN = 1,//2，3，4G网络
+    VBNetworkStatusReachableViaWiFi = 2,//WIFI网络
+};
+
 /**
  请求成功block
  */
@@ -33,7 +40,10 @@ typedef void (^progressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 @interface VBHTTPManager : NSObject
 
 + (id)defaultManager;
-
+//设置timeout 默认60s
+- (void)setTimeout:(NSTimeInterval)timeout;
+//设置header
+- (void)setCommonHttpHeaders:(NSDictionary *)httpHeaders;
 
 /**
  GET请求

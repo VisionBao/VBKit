@@ -20,7 +20,7 @@ static NSString *secretKey = @"7f3dd901ad3742e9abe60ded914fc9c0";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         httpModels = [[VBHTTPModels alloc] init];
-
+        
     });
     return httpModels;
 }

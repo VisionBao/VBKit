@@ -10,13 +10,17 @@
 #import "VBFileConfig.h"
 
 @interface VBHTTPManager ()
-@property (nonatomic, strong)AFHTTPSessionManager *sessionManager;
-@property (nonatomic, strong)AFNetworkReachabilityManager *reachabilityManager;
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
+@property (nonatomic, strong) AFNetworkReachabilityManager *reachabilityManager;
+
+@property (nonatomic, assign) NSTimeInterval vb_timeout; //超时
+@property (nonatomic, strong) NSDictionary *httpHeaders;//headers
+
 @end
 
 @implementation VBHTTPManager
 
-+ (id)defaultManager{
++ (id)defaultManager {
     static VBHTTPManager *httpManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -24,20 +28,40 @@
     });
     return httpManager;
 }
-- (id)init{
+
+- (id)init {
     self = [super init];
     if (self) {
+        
         _sessionManager = [AFHTTPSessionManager manager];
+        _sessionManager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
+        self.vb_timeout = 60.0f;
         _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+        
+        
+        
     }
     return self;
 }
 
+- (void)setTimeout:(NSTimeInterval)timeout {
+    _vb_timeout = timeout;
+    _sessionManager.requestSerializer.timeoutInterval = _vb_timeout;
+}
 
+//设置header
+- (void)setCommonHttpHeaders:(NSDictionary *)httpHeaders; {
+    _httpHeaders = httpHeaders;
+    for (NSString *key in _httpHeaders.allKeys) {
+        if (_httpHeaders[key] != nil) {
+            [_sessionManager.requestSerializer setValue:_httpHeaders[key] forHTTPHeaderField:key];
+        }
+    }
+}
 /**
  GET请求
  */
-- (void)getRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler{
+- (void)getRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
     
     [[[VBHTTPManager defaultManager] sessionManager] GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -52,7 +76,7 @@
 /**
  POST请求
  */
-- (void)postRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler{
+- (void)postRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
     [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -68,7 +92,7 @@
 /**
  PUT请求
  */
-- (void)putRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler{
+- (void)putRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
     [[[VBHTTPManager defaultManager] sessionManager] PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(successHandler);
@@ -80,7 +104,7 @@
 /**
  DELETE请求
  */
-- (void)deleteRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler{
+- (void)deleteRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
     [[[VBHTTPManager defaultManager] sessionManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(responseObject);
@@ -92,7 +116,7 @@
 /**
  下载文件，监听下载进度
  */
-- (void)downloadRequest:(NSString *)url filePath:(NSString *)filePath successAndProgress:(progressBlock)progressHandler complete:(responseBlock)completionHandler{
+- (void)downloadRequest:(NSString *)url filePath:(NSString *)filePath successAndProgress:(progressBlock)progressHandler complete:(responseBlock)completionHandler {
 
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
@@ -115,7 +139,7 @@
 /**
  文件上传
  */
-- (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler{
+- (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
     [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileConfig.fileData name:fileConfig.name fileName:fileConfig.fileName mimeType:fileConfig.mimeType];
@@ -129,7 +153,7 @@
 /**
  文件上传，监听上传进度
  */
-- (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig successAndProgress:(progressBlock)progressHandler complete:(responseBlock)completionHandler{
+- (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig successAndProgress:(progressBlock)progressHandler complete:(responseBlock)completionHandler {
 
     [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileConfig.fileData name:fileConfig.name fileName:fileConfig.fileName mimeType:fileConfig.mimeType];
