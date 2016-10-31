@@ -23,19 +23,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark -
-#pragma mark StatusBar
+
+#pragma mark - StatusBar
 //View controller-based status bar appearance = YES  (info.plist)
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+    return _vb_BarStyleLightContent ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return NO;
+    return _vb_barHidden;
 }
+
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
     return UIStatusBarAnimationFade;
 }
+
+#pragma mark - setter
+- (void)setVb_barStyleDefault:(BOOL)vb_barStyleDefault {
+    _vb_BarStyleLightContent = vb_barStyleDefault;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)setVb_barHidden:(BOOL)vb_barHidden {
+    _vb_barHidden = vb_barHidden;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
 /*
 #pragma mark - Navigation
 

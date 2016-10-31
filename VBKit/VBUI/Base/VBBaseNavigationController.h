@@ -10,4 +10,11 @@
 
 @interface VBBaseNavigationController : UINavigationController
 
+@property (nonatomic, assign) BOOL vb_BarStyleLightContent;
+
+@property (nonatomic, assign) BOOL vb_barHidden;
+
+@property (nonatomic, assign) UIStatusBarAnimation vb_barAnimation;
+
+
 @end
