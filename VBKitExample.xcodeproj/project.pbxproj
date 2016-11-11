@@ -58,6 +58,7 @@
 		A25A491C1DADCD02007D6B66 /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F61DADCD02007D6B66 /* VBerror@2x.png */; };
 		A25A491D1DADCD02007D6B66 /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */; };
 		A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */; };
+		A2E6EB1F1DC8ADE500BF11B8 /* VBStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E6EB1E1DC8ADE500BF11B8 /* VBStatusBarNotification.m */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +188,8 @@
 		A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VBHEX.h"; sourceTree = "<group>"; };
 		A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VBHEX.m"; sourceTree = "<group>"; };
 		A25A49211DADD055007D6B66 /* VBKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		A2E6EB1D1DC8ADE500BF11B8 /* VBStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBStatusBarNotification.h; sourceTree = "<group>"; };
+		A2E6EB1E1DC8ADE500BF11B8 /* VBStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBStatusBarNotification.m; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -521,6 +524,8 @@
 				A25A48F31DADCD02007D6B66 /* VBAlertTextDefine.h */,
 				A25A48F41DADCD02007D6B66 /* VBAlertView.h */,
 				A25A48F51DADCD02007D6B66 /* VBAlertView.m */,
+				A2E6EB1D1DC8ADE500BF11B8 /* VBStatusBarNotification.h */,
+				A2E6EB1E1DC8ADE500BF11B8 /* VBStatusBarNotification.m */,
 				A25A48F61DADCD02007D6B66 /* VBerror@2x.png */,
 				A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */,
 			);
@@ -840,6 +845,7 @@
 				A25A49061DADCD02007D6B66 /* VBHTTPErrorManager.m in Sources */,
 				A25A49121DADCD02007D6B66 /* VBBaseTableView.m in Sources */,
 				A25A49021DADCD02007D6B66 /* VBFMEncryptHelper.m in Sources */,
+				A2E6EB1F1DC8ADE500BF11B8 /* VBStatusBarNotification.m in Sources */,
 				A25A49161DADCD02007D6B66 /* VBBaseViewController.m in Sources */,
 				A25A49091DADCD02007D6B66 /* NSString+VBBase64.m in Sources */,
 				A25A490D1DADCD02007D6B66 /* VBHttpUrlManager.m in Sources */,

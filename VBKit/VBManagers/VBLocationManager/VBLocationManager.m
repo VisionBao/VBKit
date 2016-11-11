@@ -19,7 +19,7 @@
     void (^_failure)();
 }
 
-+ (id)shareManager
++ (id)sharedInstance
 {
     static id instance;
     static dispatch_once_t once;
