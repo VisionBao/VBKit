@@ -10,7 +10,7 @@
 
 @implementation VBDBManagerFactory
 
-+(id)sharedInstance {
++(id)shareInstance {
     static VBDBManagerFactory *s_factory = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

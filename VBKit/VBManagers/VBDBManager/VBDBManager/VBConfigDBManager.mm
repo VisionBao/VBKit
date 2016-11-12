@@ -9,7 +9,7 @@
 #import "VBConfigDBManager.h"
 
 @implementation VBConfigDBManager
-+ (id)sharedManager {
++ (id)shareManager {
     static VBConfigDBManager *s_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -21,7 +21,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _dbMgr = [VBDBManager defaultMgr];
+        _dbMgr = [VBDBManager shareManager];
         // 一定要先获取 dbMgr才能调用
         [self createTables];
     }

@@ -13,5 +13,5 @@
     VBDBManager *_dbMgr;
 }
 
-+ (id)sharedManager;
++ (id)shareManager;
 @end

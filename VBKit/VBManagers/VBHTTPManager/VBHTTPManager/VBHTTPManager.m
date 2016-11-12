@@ -20,7 +20,7 @@
 
 @implementation VBHTTPManager
 
-+ (id)defaultManager {
++ (id)shareManager {
     static VBHTTPManager *httpManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -63,7 +63,7 @@
  */
 - (void)getRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
     
-    [[[VBHTTPManager defaultManager] sessionManager] GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[[VBHTTPManager shareManager] sessionManager] GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(responseObject);
@@ -78,7 +78,7 @@
  */
 - (void)postRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
-    [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [[[VBHTTPManager shareManager] sessionManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(responseObject);
@@ -94,7 +94,7 @@
  */
 - (void)putRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
-    [[[VBHTTPManager defaultManager] sessionManager] PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[[VBHTTPManager shareManager] sessionManager] PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(successHandler);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failureHandler(error);
@@ -106,7 +106,7 @@
  */
 - (void)deleteRequest:(NSString *)url params:(NSDictionary *)params success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
-    [[[VBHTTPManager defaultManager] sessionManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[[VBHTTPManager shareManager] sessionManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failureHandler(error);
@@ -141,7 +141,7 @@
  */
 - (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig success:(requestSuccessBlock)successHandler failure:(requestFailureBlock)failureHandler {
 
-    [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[[VBHTTPManager shareManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileConfig.fileData name:fileConfig.name fileName:fileConfig.fileName mimeType:fileConfig.mimeType];
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandler(responseObject);
@@ -155,7 +155,7 @@
  */
 - (void)updateRequest:(NSString *)url params:(NSDictionary *)params fileConfig:(VBFileConfig *)fileConfig successAndProgress:(progressBlock)progressHandler complete:(responseBlock)completionHandler {
 
-    [[[VBHTTPManager defaultManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[[VBHTTPManager shareManager] sessionManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileConfig.fileData name:fileConfig.name fileName:fileConfig.fileName mimeType:fileConfig.mimeType];
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         progressHandler(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);

@@ -12,7 +12,7 @@
 static NSString *VBFMDbName = @"VBKit.db.sqlite";
 
 @implementation VBDBManager
-+ (id)defaultMgr {
++ (id)shareManager {
     static VBDBManager *s_dbManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

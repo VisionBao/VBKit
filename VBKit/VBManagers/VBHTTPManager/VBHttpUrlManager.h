@@ -10,7 +10,7 @@
 
 @interface VBHttpUrlManager : NSObject
 
-+ (id)defaultManager;
++ (id)shareManager;
 //判断是否为测试环境
 - (BOOL)isInTestMode;
 

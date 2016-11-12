@@ -13,6 +13,6 @@
 
 @interface VBHTTPModels : NSObject
 
-+ (id)defaultManager;
++ (id)shareManager;
 
 @end

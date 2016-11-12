@@ -20,7 +20,7 @@
     FMDatabaseQueue *_dbQueue;
 }
 
-+ (id)defaultMgr;
++ (id)shareManager;
 - (FMDatabaseQueue *)fmDabaseQueue;
 
 @end

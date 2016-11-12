@@ -39,7 +39,7 @@ typedef void (^progressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 
 @interface VBHTTPManager : NSObject
 
-+ (id)defaultManager;
++ (id)shareManager;
 //设置timeout 默认60s
 - (void)setTimeout:(NSTimeInterval)timeout;
 //设置header

@@ -22,7 +22,7 @@ static BOOL bInTestMode = NO;
 
 
 @implementation VBHttpUrlManager
-+ (id)defaultManager {
++ (id)shareManager {
     static id s_UrlUtilInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

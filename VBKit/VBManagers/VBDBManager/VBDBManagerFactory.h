@@ -10,6 +10,6 @@
 
 @interface VBDBManagerFactory : NSObject
 
-+(id)sharedInstance;
++(id)shareInstance;
 
 @end

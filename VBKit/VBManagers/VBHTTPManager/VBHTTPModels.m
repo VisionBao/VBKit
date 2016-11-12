@@ -15,7 +15,7 @@ static NSString *secretKey = @"7f3dd901ad3742e9abe60ded914fc9c0";
 
 @implementation VBHTTPModels
 
-+ (id)defaultManager{
++ (id)shareManager{
     static VBHTTPModels *httpModels = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -44,7 +44,7 @@ static NSString *secretKey = @"7f3dd901ad3742e9abe60ded914fc9c0";
                                  andUrl:(NSString *)url{
     
     NSMutableString *signature = [NSString stringWithFormat:@"%@?", url].mutableCopy;
-    NSRange hostRange = {0, [[[VBHttpUrlManager defaultManager] getHostUrl] length]};
+    NSRange hostRange = {0, [[[VBHttpUrlManager shareManager] getHostUrl] length]};
     [signature deleteCharactersInRange:hostRange];
     
     NSArray *dicKey = [paramsDic allKeys];

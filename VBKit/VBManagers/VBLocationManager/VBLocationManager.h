@@ -12,7 +12,7 @@
 
 @interface VBLocationManager : NSObject<CLLocationManagerDelegate>
 
-+ (id)sharedInstance;
++ (id)shareManager;
 
 - (BOOL)locationServiceEnabled;
 - (void)updateLocation;
