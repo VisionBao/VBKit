@@ -1,28 +1,25 @@
 //
-//  VBBaseTableViewController.m
-//  VBKit
+//  VBTableViewController.m
+//  VBKitExample
 //
-//  Created by Vision on 9/23/16.
-//  Copyright © 2016 VisionBao. All rights reserved.
+//  Created by Vision on 2016/11/12.
+//  Copyright © 2016年 VisionBao. All rights reserved.
 //
 
-#import "VBBaseTableViewController.h"
+#import "VBTableViewController.h"
 #import "VBColorManager.h"
 #import "MJRefresh/MJRefresh.h"
 #import "VBConstants.h"
 
-@interface VBBaseTableViewController ()
-/**
- *  上下拉刷新
- */
+@interface VBTableViewController ()
+
 @property (nonatomic, assign) BOOL isRefreshing;
 @property (nonatomic, strong) MJRefreshHeader *refreshHeaderView;
 @property (nonatomic, strong) MJRefreshFooter *refreshFooterView;
 
 @end
 
-@implementation VBBaseTableViewController
-
+@implementation VBTableViewController
 - (instancetype)init{
     
     if (self = [super init]) {
@@ -64,20 +61,20 @@
         return;
     }
     
-//    if (!_refreshHeaderView) {
-//        _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
-//        [_tableView addSubview:_refreshHeaderView];
-//        _refreshHeaderView.delegate = self;
-//    } else {
-//        [_refreshHeaderView setFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
-//    }
+    //    if (!_refreshHeaderView) {
+    //        _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
+    //        [_tableView addSubview:_refreshHeaderView];
+    //        _refreshHeaderView.delegate = self;
+    //    } else {
+    //        [_refreshHeaderView setFrame:CGRectMake(10.0f, - _tableView.height, _tableView.width, _tableView.height)];
+    //    }
 }
 
 /**
  *  移除refreshHeaderView
  */
 -(void)removeHeaderView {
-//    [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
+    //    [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
     self.isRefreshing = NO;
     [self.refreshHeaderView removeFromSuperview];
     self.refreshHeaderView = nil;
@@ -93,23 +90,23 @@
         return;
     }
     if (!_refreshHeaderView) {
-//        _refreshHeaderView = [mj]
+        //        _refreshHeaderView = [mj]
     }
-//    CGFloat height=MAX(SCREEN_HEIGHT - BASE_TAB_BAR_HEIGHT, _tableView.contentSize.height);
-//    if (!_refreshFooterView) {
-//        _refreshFooterView = [[EGORefreshTableFooterView alloc] initWithFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height) arrowImageName:@"blackArrow.png" textColor:[UIColor colorWithHex:0x666666]];
-//        [_tableView addSubview:_refreshFooterView];
-//        _refreshFooterView.delegate = self;
-//    } else {
-//        [_refreshFooterView setFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height)];
-//    }
+    //    CGFloat height=MAX(SCREEN_HEIGHT - BASE_TAB_BAR_HEIGHT, _tableView.contentSize.height);
+    //    if (!_refreshFooterView) {
+    //        _refreshFooterView = [[EGORefreshTableFooterView alloc] initWithFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height) arrowImageName:@"blackArrow.png" textColor:[UIColor colorWithHex:0x666666]];
+    //        [_tableView addSubview:_refreshFooterView];
+    //        _refreshFooterView.delegate = self;
+    //    } else {
+    //        [_refreshFooterView setFrame:CGRectMake(0.f, height, _tableView.width, _tableView.height)];
+    //    }
 }
 
 /**
  *  移除FooterView
  */
 -(void)removeFooterView {
-//    [self.refreshFooterView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
+    //    [self.refreshFooterView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableView];
     self.isRefreshing = NO;
     [self.refreshFooterView removeFromSuperview];
     self.refreshFooterView = nil;
@@ -146,13 +143,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

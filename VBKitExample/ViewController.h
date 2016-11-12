@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VBBaseViewController.h"
+#import "VBViewController.h"
 
-@interface ViewController : VBBaseViewController
+@interface ViewController : VBViewController
 
 
 @end

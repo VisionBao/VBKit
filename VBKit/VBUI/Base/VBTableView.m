@@ -1,14 +1,14 @@
 //
-//  VBBaseView.m
-//  VBKit
+//  VBTableView.m
+//  VBKitExample
 //
-//  Created by Vision on 9/23/16.
-//  Copyright © 2016 VisionBao. All rights reserved.
+//  Created by Vision on 2016/11/12.
+//  Copyright © 2016年 VisionBao. All rights reserved.
 //
 
-#import "VBBaseView.h"
+#import "VBTableView.h"
 
-@implementation VBBaseView
+@implementation VBTableView
 
 /*
 // Only override drawRect: if you perform custom drawing.

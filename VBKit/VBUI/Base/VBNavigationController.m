@@ -1,18 +1,18 @@
 //
-//  VBBaseNavigationController.m
-//  VBKit
+//  VBNavigationController.m
+//  VBKitExample
 //
-//  Created by Vision on 9/23/16.
-//  Copyright © 2016 VisionBao. All rights reserved.
+//  Created by Vision on 2016/11/12.
+//  Copyright © 2016年 VisionBao. All rights reserved.
 //
 
-#import "VBBaseNavigationController.h"
+#import "VBNavigationController.h"
 
-@interface VBBaseNavigationController ()
+@interface VBNavigationController ()
 
 @end
 
-@implementation VBBaseNavigationController
+@implementation VBNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,24 +31,27 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
+    
     return _vb_barHidden;
 }
 
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    
     return UIStatusBarAnimationFade;
 }
 
 #pragma mark - setter
 - (void)setVb_barStyleDefault:(BOOL)vb_barStyleDefault {
+    
     _vb_BarStyleLightContent = vb_barStyleDefault;
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)setVb_barHidden:(BOOL)vb_barHidden {
+    
     _vb_barHidden = vb_barHidden;
     [self setNeedsStatusBarAppearanceUpdate];
 }
-
 /*
 #pragma mark - Navigation
 

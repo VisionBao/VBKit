@@ -1,30 +1,22 @@
 //
-//  VBTableViewController.m
-//  VBKit
+//  VBTabBarController.m
+//  VBKitExample
 //
-//  Created by Vision on 9/23/16.
-//  Copyright © 2016 VisionBao. All rights reserved.
+//  Created by Vision on 2016/11/12.
+//  Copyright © 2016年 VisionBao. All rights reserved.
 //
 
-#import "VBTableViewController.h"
+#import "VBTabBarController.h"
 
-@interface VBTableViewController ()
+@interface VBTabBarController ()
 
 @end
 
-@implementation VBTableViewController
+@implementation VBTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭白板" style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnClick)];
-//    self.navigationItem.leftBarButtonItem = rightItem;
-    [self initNavBar];
-
-}
-
-- (void)rightBtnClick {
-
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,14 +1,14 @@
 //
-//  VBBaseTableViewCell.m
-//  VBKit
+//  VBTableViewCell.m
+//  VBKitExample
 //
-//  Created by Vision on 9/23/16.
-//  Copyright © 2016 VisionBao. All rights reserved.
+//  Created by Vision on 2016/11/12.
+//  Copyright © 2016年 VisionBao. All rights reserved.
 //
 
-#import "VBBaseTableViewCell.h"
+#import "VBTableViewCell.h"
 
-@implementation VBBaseTableViewCell
+@implementation VBTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

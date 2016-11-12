@@ -43,7 +43,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    VBTableViewController *rootVC = [[VBTableViewController alloc] init];
     ViewController *rootVC = [[ViewController alloc] init];
-    VBBaseNavigationController *rootNav = [[VBBaseNavigationController alloc] initWithRootViewController:rootVC];
+    VBNavigationController *rootNav = [[VBNavigationController alloc] initWithRootViewController:rootVC];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
 }

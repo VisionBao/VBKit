@@ -10,14 +10,14 @@
 #define VBUI_h
 //base
 
-#import "VBBaseView.h"
-#import "VBBaseTableView.h"
-#import "VBBaseNavigationBar.h"
-#import "VBBaseViewController.h"
-#import "VBBaseTableViewCell.h"
-#import "VBBaseTableViewController.h"
-#import "VBBaseNavigationController.h"
-#import "VBBaseTabBarController.h"
+#import "VBView.h"
+#import "VBTableView.h"
+#import "VBNavigationBar.h"
+#import "VBViewController.h"
+#import "VBTableViewCell.h"
+#import "VBTableViewController.h"
+#import "VBNavigationController.h"
+#import "VBTabBarController.h"
 
 //UI
 #import "VBAlertView.h"

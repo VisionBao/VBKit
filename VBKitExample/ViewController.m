@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 
-@interface VBBaseViewController ()
+@interface VBViewController ()
 
 @end
 
@@ -21,9 +21,9 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"fuck" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-    [self initNavBarWithCustomView:button tintColor:[UIColor blackColor]];
-    [self addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
-    [self addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
+    [self vb_initNavBarWithCustomView:button tintColor:[UIColor blackColor]];
+    [self vb_addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
+    [self vb_addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
 //    [self addBackButtonItem];
 }
 
