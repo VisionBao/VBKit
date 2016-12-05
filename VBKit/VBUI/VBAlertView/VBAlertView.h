@@ -9,8 +9,8 @@
 #import "VBAlertTextDefine.h"
 #import "WSProgressHUD/WSProgressHUD.h"
 
-typedef void (^choiceCompletionBlock)(NSInteger index);
-typedef void (^textCompletionBlock)(NSString *text);
+typedef void (^choiceCompletionBlock)(NSInteger selecteIndex, UIAlertAction *action);
+typedef void (^textCompletionBlock)(NSString *text, choiceCompletionBlock);
 
 typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
     VBProgressHUDMaskWithoutDefault, // default mask all
@@ -23,25 +23,63 @@ typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
 
 + (instancetype)shareAlertView;
 
-#pragma mark - 弹窗
-//普通提示弹窗
+#pragma mark - alert
+
+/**
+ 普通提示弹窗 - 消息
+ */
 - (void)showTipAlert:(NSString *)message;
-- (void)showTipAlert:(NSString *)message completion:(choiceCompletionBlock)completion;
+- (void)showTipAlert:(NSString *)message
+          completion:(choiceCompletionBlock)completion;
+/**
+ 带标题提示弹窗 - 消息 标题
+ */
+- (void)showTipAlert:(NSString *)message
+               title:(NSString *)title
+          completion:(choiceCompletionBlock)completion;
+/**
+ 自定义单按钮提示弹窗 - 消息 标题 按钮
+ */
+- (void)showTipAlert:(NSString *)message
+               title:(NSString *)title
+           cancelTitle:(NSString *)cancelTitle
+          completion:(choiceCompletionBlock)completion;
+/**
+ 双按钮提示弹窗 - 消息 标题 按钮
+ */
+- (void)showChoiceAlert:(NSString *)message
+               title:(NSString *)title
+           doneTitle:(NSString *)doneTitle
+          completion:(choiceCompletionBlock)completion;
+/**
+ 自定义双按钮提示弹窗 - 消息 标题 确认按钮 取消按钮
+ */
+- (void)showChoiceAlert:(NSString *)message
+                  title:(NSString *)title
+              doneTitle:(NSString *)doneTitle
+            cancelTitle:(NSString *)cancelTitle
+             completion:(choiceCompletionBlock)completion;
+/**
+ 三选择弹窗
+ */
+- (void)showChoiceAlert:(NSString *)message
+                  title:(NSString *)title
+           button1Title:(NSString *)title1
+           button2Title:(NSString *)title2
+           button3Title:(NSString *)title3
+             completion:(choiceCompletionBlock)completion;
+/**
+ <#Description#>
 
-//可以选择的弹窗
-- (void)showChoiceAlert:(NSString *)message completion:(choiceCompletionBlock)completion;
-- (void)showChoiceAlert:(NSString *)message doneTitle:(NSString *)doneTitile completion:(choiceCompletionBlock)completion;
-- (void)showChoiceAlert:(NSString *)message button1Title:(NSString *)title1 button2Title:(NSString *)title2 completion:(choiceCompletionBlock)completion;
-
-// 可自定义Title
-- (void)showChoiceAlert:(NSString *)message title:(NSString *)title doneTitle:(NSString *)doneTitle completion:(choiceCompletionBlock)completion;
-- (void)showChoiceAlert:(NSString *)message title:(NSString *)title button1Title:(NSString *)button1Title button2Title:(NSString *)button2Title completion:(choiceCompletionBlock)completion;
-
-//三选择弹窗
-- (void)showChoiceAlert:(NSString *)message button1Title:(NSString *)title1 button2Title:(NSString *)title2 button3Title:(NSString *)title3 completion:(choiceCompletionBlock)completion;
-
-//带输入框的弹窗
-- (void)showTextFiledAlert:(NSString *)message defaultText:(NSString *)defaultText completion:(textCompletionBlock)completion;
+ @param message <#message description#>
+ @param title <#title description#>
+ @param defaultText <#defaultText description#>
+ @param completion <#completion description#>
+ */
+- (void)showTextFiledAlert:(NSString *)message
+                     title:(NSString *)title
+               defaultText:(NSString *)defaultText
+                completion:(textCompletionBlock)completion;
 - (void)showTextFiledAlert:(NSString *)message doneTitle:(NSString *)doneTitle defaultText:(NSString *)defaultText completion:(textCompletionBlock)completion;
 
 #pragma mark - 提示窗

@@ -24,7 +24,7 @@
 }
 
 - (void)rightBtnClick {
-    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

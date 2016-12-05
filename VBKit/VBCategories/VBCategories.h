@@ -11,5 +11,5 @@
 
 #import "UIView+VBMotionEffect.h"
 #import "UIColor+VBHEX.h"
-
+#import "UIWindow+VBHierarchy.h"
 #endif /* VBCategories_h */

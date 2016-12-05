@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-
+#import "VBAppDelegate.h"
+#import "UIWindow+VBHierarchy.h"
 @interface VBViewController ()
 
 @end
@@ -19,19 +19,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"fuck" forState:UIControlStateNormal];
+    [button setTitle:@"今日吃什么" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
     [self vb_initNavBarWithCustomView:button tintColor:[UIColor blackColor]];
     [self vb_addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
     [self vb_addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
 //    [self addBackButtonItem];
+    
 }
 
-- (void)backButtonItemClick {
-
+- (void)vb_backButtonItemClick {
+    int x = arc4random() % 6;
+    NSArray *arr = @[@"拉面", @"饺子", @"米线", @"羊杂汤", @"咖啡厅", @"黄焖鸡"];
+    NSLog(@"%@", arr[x]);
+    [[VBAlertView shareAlertView] showTipAlert:arr[x] title:@"今日吃" completion:nil];
 }
-- (void)rightButtonItemClick {
-
+- (void)vb_rightButtonItemClick {
+//    [[VBAlertView shareAlertView] showChoiceAlert:@"fuck" title:@"fuck you" button1Title:@"1" button2Title:@"2" button3Title:@"3" completion:^(NSInteger index, UIAlertAction *action) {
+//            NSLog(@"%zd - %@", index, action.title);
+//    }];
+    [[VBAlertView shareAlertView] showTextFiledAlert:@"输入密码" title:@"提示" defaultText:@"账号" completion:^(NSString *text) {
+        
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

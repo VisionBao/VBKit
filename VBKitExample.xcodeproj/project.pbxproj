@@ -18,6 +18,7 @@
 		A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C91DD71026009D0350 /* VBViewController.m */; };
 		A242F0CD1DD711FD009D0350 /* VBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CC1DD711FD009D0350 /* VBTableViewController.m */; };
 		A242F0D01DD712A6009D0350 /* VBETbaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */; };
+		A25020A51DF1291200C0A0E3 /* UIWindow+VBHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */; };
 		A25A48561DADCC3D007D6B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A48551DADCC3D007D6B66 /* main.m */; };
 		A25A48611DADCC3D007D6B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A48601DADCC3D007D6B66 /* Assets.xcassets */; };
 		A25A48641DADCC3D007D6B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25A48621DADCC3D007D6B66 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		A25A491C1DADCD02007D6B66 /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F61DADCD02007D6B66 /* VBerror@2x.png */; };
 		A25A491D1DADCD02007D6B66 /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */; };
 		A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */; };
+		A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A26747C41DF11DE900854524 /* VBProgressHUD.m */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		A242F0CC1DD711FD009D0350 /* VBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewController.m; sourceTree = "<group>"; };
 		A242F0CE1DD712A6009D0350 /* VBETbaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBETbaleViewController.h; sourceTree = "<group>"; };
 		A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBETbaleViewController.m; sourceTree = "<group>"; };
+		A25020A31DF1291200C0A0E3 /* UIWindow+VBHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+VBHierarchy.h"; sourceTree = "<group>"; };
+		A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+VBHierarchy.m"; sourceTree = "<group>"; };
 		A25A48511DADCC3D007D6B66 /* VBKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25A48551DADCC3D007D6B66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A25A48601DADCC3D007D6B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VBHEX.h"; sourceTree = "<group>"; };
 		A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VBHEX.m"; sourceTree = "<group>"; };
 		A25A49211DADD055007D6B66 /* VBKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		A26747C31DF11DE900854524 /* VBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressHUD.h; sourceTree = "<group>"; };
+		A26747C41DF11DE900854524 /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -334,6 +340,8 @@
 				A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */,
 				A25A489D1DADCD02007D6B66 /* UIView+VBMotionEffect.h */,
 				A25A489E1DADCD02007D6B66 /* UIView+VBMotionEffect.m */,
+				A25020A31DF1291200C0A0E3 /* UIWindow+VBHierarchy.h */,
+				A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */,
 			);
 			path = VBCategories;
 			sourceTree = "<group>";
@@ -521,6 +529,8 @@
 				A25A48F31DADCD02007D6B66 /* VBAlertTextDefine.h */,
 				A25A48F41DADCD02007D6B66 /* VBAlertView.h */,
 				A25A48F51DADCD02007D6B66 /* VBAlertView.m */,
+				A26747C31DF11DE900854524 /* VBProgressHUD.h */,
+				A26747C41DF11DE900854524 /* VBProgressHUD.m */,
 				A25A48F61DADCD02007D6B66 /* VBerror@2x.png */,
 				A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */,
 			);
@@ -820,6 +830,7 @@
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
 				A25A49001DADCD02007D6B66 /* VBFMEncryptDatabase.m in Sources */,
+				A25020A51DF1291200C0A0E3 /* UIWindow+VBHierarchy.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
 				A25A48FB1DADCD02007D6B66 /* VBLog.m in Sources */,
 				A25A48FF1DADCD02007D6B66 /* VBDBManager.m in Sources */,
@@ -836,6 +847,7 @@
 				A242F0CD1DD711FD009D0350 /* VBTableViewController.m in Sources */,
 				A25A48FE1DADCD02007D6B66 /* VBConfigDBManager.mm in Sources */,
 				A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */,
+				A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */,
 				A25A490C1DADCD02007D6B66 /* VBHTTPModels.m in Sources */,
 				A25A49061DADCD02007D6B66 /* VBHTTPErrorManager.m in Sources */,
 				A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */,
