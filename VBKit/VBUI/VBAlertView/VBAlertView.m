@@ -17,6 +17,7 @@
 
 @implementation VBAlertView{
    
+    UIAlertController *_alertCtrl;
     UIActivityIndicatorView *_activityView; // 新添加系统自带活动指示器
 }
 
@@ -38,7 +39,8 @@
     }
     return self;
 }
-#pragma mark - 弹窗
+
+#pragma mark - alert
 //普通提示弹窗
 - (void)showTipAlert:(NSString *)message {
     
@@ -181,14 +183,15 @@
                  doneTitle:(NSString *)doneTitle
                 completion:(textCompletionBlock)completion {
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                                                                   message:message
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    _alertCtrl = nil;
+    _alertCtrl = [UIAlertController alertControllerWithTitle:title
+                                                     message:message
+                                              preferredStyle:UIAlertControllerStyleAlert];
     
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+    [_alertCtrl addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = placeholder;
     }];
-    UITextField *textField = alert.textFields[0];
+    UITextField *textField = _alertCtrl.textFields[0];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * _Nonnull action) {
@@ -204,31 +207,134 @@
                                                             completion(textField.text, 1);
                                                         }
                                                     }];
-    [alert addAction:cancelAction];
-    [alert addAction:doneAction];
+    [_alertCtrl addAction:cancelAction];
+    [_alertCtrl addAction:doneAction];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [[window vb_currentViewController] presentViewController:alert animated:YES completion:nil];
+    [[window vb_currentViewController] presentViewController:_alertCtrl animated:YES completion:nil];
+}
+#pragma mark - actionSheet
+
+/**
+ 单选弹层
+ */
+- (void)showActionSheet:(NSString *)buttonTitle
+             completion:(choiceCompletionBlock)completion {
+
+    [self showActionSheet:nil
+                    title:nil
+             buttonTitles:@[buttonTitle]
+        cancelButtonTitle:@"取消"
+               completion:completion];
+}
+/**
+ 单选弹层 - 消息 标题 按钮
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+            buttonTitle:(NSString *)buttonTitle
+             completion:(choiceCompletionBlock)completion {
+    
+    [self showActionSheet:message
+                    title:title
+             buttonTitles:@[buttonTitle]
+        cancelButtonTitle:@"取消"
+               completion:completion];
+}
+/**
+ 单选弹层 - 消息 标题 按钮 取消按钮
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+            buttonTitle:(NSString *)buttonTitle
+      cancelButtonTitle:(NSString *)cancelButtonTitle
+             completion:(choiceCompletionBlock)completion {
+
+    [self showActionSheet:message
+                    title:title
+             buttonTitles:@[buttonTitle]
+        cancelButtonTitle:cancelButtonTitle
+               completion:completion];
+    
+}
+/**
+ 自定义单选弹层
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+           buttonTitles:(NSArray<NSString *> *)buttonTitles
+      cancelButtonTitle:(NSString *)cancelButtonTitle
+             completion:(choiceCompletionBlock)completion {
+    
+    NSMutableArray *actionArr = [NSMutableArray array];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButtonTitle
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                             NSInteger index = [_alertCtrl.actions indexOfObject:action];
+                                                             completion(index, action);
+                                                         }];
+    [actionArr addObject:cancelAction];
+    for (NSString *buttontitle in buttonTitles) {
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:buttontitle
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction * _Nonnull action) {
+                                                               if (completion) {
+                                                                   
+                                                                   NSInteger index = [_alertCtrl.actions indexOfObject:action];
+                                                                   completion(index, action);
+                                                               }
+                                                           }];
+        [actionArr addObject:action];
+    }
+    
+    [self showCommonAlert:message
+                    title:title
+                    style:UIAlertControllerStyleActionSheet
+              actionArray:actionArr];
 }
 
-
+#pragma mark - common alertView
+/**
+ 通用提示弹层
+ */
 - (void)showCommonAlert:(NSString *)message
                   title:(NSString *)title
                   style:(UIAlertControllerStyle)style
            actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION {
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                                                                   message:message
-                                                            preferredStyle:style];
+    _alertCtrl = nil;
+    _alertCtrl = [UIAlertController alertControllerWithTitle:title
+                                                     message:message
+                                              preferredStyle:style];
     va_list args;
     va_start(args, actionObject);
     
     for (UIAlertAction *action = actionObject; action != nil; action = va_arg(args, UIAlertAction*)) {
-        [alert addAction:action];
+        [_alertCtrl addAction:action];
     }
     va_end(args);
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [[window vb_currentViewController] presentViewController:alert animated:YES completion:nil];
+    [[window vb_currentViewController] presentViewController:_alertCtrl animated:YES completion:nil];
+}
+
+- (void)showCommonAlert:(NSString *)message
+                  title:(NSString *)title
+                  style:(UIAlertControllerStyle)style
+            actionArray:(NSArray<UIAlertAction *> *)actionArray {
+    
+    _alertCtrl = nil;
+    _alertCtrl = [UIAlertController alertControllerWithTitle:title
+                                                     message:message
+                                              preferredStyle:style];
+    for (UIAlertAction *action in actionArray) {
+        [_alertCtrl addAction:action];
+    }
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [[window vb_currentViewController] presentViewController:_alertCtrl animated:YES completion:nil];
 }
 #pragma mark - 提示窗
 //

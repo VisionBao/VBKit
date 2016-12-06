@@ -79,19 +79,46 @@ typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
                  doneTitle:(NSString *)doneTitle
                 completion:(textCompletionBlock)completion;
 
+#pragma mark - actionSheet
 
 /**
- 通用提示弹层
+ 单选弹层
+ */
+- (void)showActionSheet:(NSString *)buttonTitle
+             completion:(choiceCompletionBlock)completion;
+/**
+ 单选弹层 - 消息 标题 按钮
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+            buttonTitle:(NSString *)buttonTitle
+             completion:(choiceCompletionBlock)completion;
+/**
+ 单选弹层 - 消息 标题 按钮 取消按钮
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+            buttonTitle:(NSString *)buttonTitle
+      cancelButtonTitle:(NSString *)cancelButtonTitle
+             completion:(choiceCompletionBlock)completion;
+/**
+ 自定义单选弹层
+ */
+- (void)showActionSheet:(NSString *)message
+                  title:(NSString *)title
+           buttonTitles:(NSArray<NSString *> *)buttonTitles
+      cancelButtonTitle:(NSString *)cancelButtonTitle
+             completion:(choiceCompletionBlock)completion;
 
- @param message message
- @param title title
- @param style UIAlertControllerStyle
- @param actionObject custom action
+#pragma mark - common alertView
+/**
+ 通用提示弹层
  */
 - (void)showCommonAlert:(NSString *)message
                   title:(NSString *)title
                   style:(UIAlertControllerStyle)style
            actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION;
+
 #pragma mark - 提示窗
 
 //加载中提示

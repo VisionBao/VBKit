@@ -35,8 +35,8 @@
     [[VBAlertView shareAlertView] showTipAlert:arr[x] title:@"今日吃" completion:nil];
 }
 - (void)vb_rightButtonItemClick {
-    [[VBAlertView shareAlertView] showTextFiledAlert:@"fuck" title:@"tip" placeholder:@"1234" doneTitle:@"go!" completion:^(NSString *text, NSInteger selecteIndex) {
-        NSLog(@"%@ - %zd", text, selecteIndex);
+    [[VBAlertView shareAlertView] showActionSheet:@"123" completion:^(NSInteger selecteIndex, UIAlertAction *action) {
+        NSLog(@"%zd, %@", selecteIndex, action.title);
     }];
 }
 - (void)didReceiveMemoryWarning {
