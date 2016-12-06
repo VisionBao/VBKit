@@ -139,6 +139,7 @@
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:title1
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                             
                                                              if (completion) {
                                                                  completion(0, action);
                                                              }
@@ -148,6 +149,7 @@
         action2 = [UIAlertAction actionWithTitle:title2
                                               style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                
                                                 if (completion) {
                                                     completion(1, action);
                                                 }
@@ -159,6 +161,7 @@
         action3 = [UIAlertAction actionWithTitle:title3
                                               style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                
                                                 if (completion) {
                                                     completion(2, action);
                                                 }
@@ -185,33 +188,28 @@
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = placeholder;
     }];
-    
+    UITextField *textField = alert.textFields[0];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * _Nonnull action) {
-                                                       
+                                                        
+                                                        if (completion) {
+                                                            completion(textField.text, 0);
+                                                        }
                                                     }];
     UIAlertAction *doneAction = [UIAlertAction actionWithTitle:doneTitle
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * _Nonnull action) {
-                                                        
+                                                        if (completion) {
+                                                            completion(textField.text, 1);
+                                                        }
                                                     }];
-    
+    [alert addAction:cancelAction];
+    [alert addAction:doneAction];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [[window vb_currentViewController] presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)showTextFiledAlert:(NSString *)message doneTitle:(NSString *)doneTitle defaultText:(NSString *)defaultText completion:(textCompletionBlock)completion
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:doneTitle, nil];
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    UITextField *textField = [alert textFieldAtIndex:0];
-    [textField setText:defaultText];
-    
-    objc_setAssociatedObject(alert, VBTextAlertViewKey, completion, OBJC_ASSOCIATION_COPY);
-    
-    [alert show];
-}
 
 - (void)showCommonAlert:(NSString *)message
                   title:(NSString *)title
@@ -232,24 +230,6 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [[window vb_currentViewController] presentViewController:alert animated:YES completion:nil];
 }
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    textCompletionBlock textBlock = objc_getAssociatedObject(alertView, VBTextAlertViewKey);
-    if (textBlock) {
-        if (buttonIndex == 1) {
-            UITextField *textField = [alertView textFieldAtIndex:0];
-            textBlock(textField.text);
-        }
-    }
-    
-    choiceCompletionBlock choiceBlock = objc_getAssociatedObject(alertView, VBChoiceAlertViewKey);
-    if (choiceBlock) {
-        choiceBlock(buttonIndex, nil);
-    }
-}
-
 #pragma mark - 提示窗
 //
 ////加载中提示

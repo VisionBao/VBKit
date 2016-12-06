@@ -35,11 +35,8 @@
     [[VBAlertView shareAlertView] showTipAlert:arr[x] title:@"今日吃" completion:nil];
 }
 - (void)vb_rightButtonItemClick {
-//    [[VBAlertView shareAlertView] showChoiceAlert:@"fuck" title:@"fuck you" button1Title:@"1" button2Title:@"2" button3Title:@"3" completion:^(NSInteger index, UIAlertAction *action) {
-//            NSLog(@"%zd - %@", index, action.title);
-//    }];
-    [[VBAlertView shareAlertView] showTextFiledAlert:@"输入密码" title:@"提示" defaultText:@"账号" completion:^(NSString *text) {
-        
+    [[VBAlertView shareAlertView] showTextFiledAlert:@"fuck" title:@"tip" placeholder:@"1234" doneTitle:@"go!" completion:^(NSString *text, NSInteger selecteIndex) {
+        NSLog(@"%@ - %zd", text, selecteIndex);
     }];
 }
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,7 @@
 #import "WSProgressHUD/WSProgressHUD.h"
 
 typedef void (^choiceCompletionBlock)(NSInteger selecteIndex, UIAlertAction *action);
-typedef void (^textCompletionBlock)(NSString *text, choiceCompletionBlock);
+typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 
 typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
     VBProgressHUDMaskWithoutDefault, // default mask all
@@ -68,20 +68,30 @@ typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
            button2Title:(NSString *)title2
            button3Title:(NSString *)title3
              completion:(choiceCompletionBlock)completion;
-/**
- <#Description#>
 
- @param message <#message description#>
- @param title <#title description#>
- @param defaultText <#defaultText description#>
- @param completion <#completion description#>
+
+/**
+ 带输入框弹层
  */
 - (void)showTextFiledAlert:(NSString *)message
                      title:(NSString *)title
-               defaultText:(NSString *)defaultText
+               placeholder:(NSString *)placeholder
+                 doneTitle:(NSString *)doneTitle
                 completion:(textCompletionBlock)completion;
-- (void)showTextFiledAlert:(NSString *)message doneTitle:(NSString *)doneTitle defaultText:(NSString *)defaultText completion:(textCompletionBlock)completion;
 
+
+/**
+ 通用提示弹层
+
+ @param message message
+ @param title title
+ @param style UIAlertControllerStyle
+ @param actionObject custom action
+ */
+- (void)showCommonAlert:(NSString *)message
+                  title:(NSString *)title
+                  style:(UIAlertControllerStyle)style
+           actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION;
 #pragma mark - 提示窗
 
 //加载中提示
