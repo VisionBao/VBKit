@@ -12,4 +12,7 @@
 #import "UIView+VBMotionEffect.h"
 #import "UIColor+VBHEX.h"
 #import "UIWindow+VBHierarchy.h"
+#import "UIImage+VBCapture.h"
+#import "UIImage+VBImageEffects.h"
+#import "UIViewController+BlurEffects.h"
 #endif /* VBCategories_h */

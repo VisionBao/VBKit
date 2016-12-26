@@ -59,6 +59,8 @@
 		A25A491C1DADCD02007D6B66 /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F61DADCD02007D6B66 /* VBerror@2x.png */; };
 		A25A491D1DADCD02007D6B66 /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */; };
 		A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */; };
+		A266C1541E10F4D800C91A3E /* UIImage+VBImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */; };
+		A266C1571E10F6CE00C91A3E /* UIImage+VBCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */; };
 		A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A26747C41DF11DE900854524 /* VBProgressHUD.m */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
@@ -191,6 +193,10 @@
 		A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VBHEX.h"; sourceTree = "<group>"; };
 		A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VBHEX.m"; sourceTree = "<group>"; };
 		A25A49211DADD055007D6B66 /* VBKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		A266C1521E10F4D800C91A3E /* UIImage+VBImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VBImageEffects.h"; sourceTree = "<group>"; };
+		A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBImageEffects.m"; sourceTree = "<group>"; };
+		A266C1551E10F6CE00C91A3E /* UIImage+VBCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VBCapture.h"; sourceTree = "<group>"; };
+		A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBCapture.m"; sourceTree = "<group>"; };
 		A26747C31DF11DE900854524 /* VBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressHUD.h; sourceTree = "<group>"; };
 		A26747C41DF11DE900854524 /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +344,10 @@
 				A25A489F1DADCD02007D6B66 /* VBCategories.h */,
 				A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */,
 				A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */,
+				A266C1521E10F4D800C91A3E /* UIImage+VBImageEffects.h */,
+				A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */,
+				A266C1551E10F6CE00C91A3E /* UIImage+VBCapture.h */,
+				A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */,
 				A25A489D1DADCD02007D6B66 /* UIView+VBMotionEffect.h */,
 				A25A489E1DADCD02007D6B66 /* UIView+VBMotionEffect.m */,
 				A25020A31DF1291200C0A0E3 /* UIWindow+VBHierarchy.h */,
@@ -853,12 +863,14 @@
 				A25A49061DADCD02007D6B66 /* VBHTTPErrorManager.m in Sources */,
 				A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */,
 				A25A49021DADCD02007D6B66 /* VBFMEncryptHelper.m in Sources */,
+				A266C1541E10F4D800C91A3E /* UIImage+VBImageEffects.m in Sources */,
 				A25A49091DADCD02007D6B66 /* NSString+VBBase64.m in Sources */,
 				A25A490D1DADCD02007D6B66 /* VBHttpUrlManager.m in Sources */,
 				A242F0C11DD70EB8009D0350 /* VBNavigationController.m in Sources */,
 				A25A49081DADCD02007D6B66 /* NSData+VBBase64.m in Sources */,
 				A25A49071DADCD02007D6B66 /* VBHTTPManager.m in Sources */,
 				A25A49041DADCD02007D6B66 /* VBFileManager.m in Sources */,
+				A266C1571E10F6CE00C91A3E /* UIImage+VBCapture.m in Sources */,
 				A25A49011DADCD02007D6B66 /* VBFMEncryptDatabaseQueue.m in Sources */,
 				A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */,
 				A25A48FD1DADCD02007D6B66 /* VBColorManager.m in Sources */,

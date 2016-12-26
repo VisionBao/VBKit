@@ -354,10 +354,10 @@
     [WSProgressHUD showWithStatus:status];
 }
 
-+ (void)showLoadingHUDWithMask:(NSString *)status maskWithout:(VBProgressHUDMaskWithoutType)type
-{
-    [WSProgressHUD showWithStatus:status maskType:WSProgressHUDMaskTypeBlack maskWithout:(NSInteger)type];
-}
+//+ (void)showLoadingHUDWithMask:(NSString *)status maskWithout:(VBProgressHUDMaskWithoutType)type
+//{
+//    [WSProgressHUD showWithStatus:status maskType:WSProgressHUDMaskTypeBlack maskWithout:(NSInteger)type];
+//}
 
 + (void)showLoadingHUD:(NSString *)status inView:(UIView *)view
 {
