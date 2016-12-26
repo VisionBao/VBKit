@@ -336,8 +336,8 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [[window vb_currentViewController] presentViewController:_alertCtrl animated:YES completion:nil];
 }
+
 #pragma mark - 提示窗
-//
 ////加载中提示
 + (void)showHUD
 {
