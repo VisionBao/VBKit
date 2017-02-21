@@ -6,8 +6,8 @@
 //  Copyright © 2015年 VisionBao. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "VBAlertTextDefine.h"
-#import "WSProgressHUD/WSProgressHUD.h"
+
+//该类为系统UIAlertController封装
 
 typedef void (^choiceCompletionBlock)(NSInteger selecteIndex, UIAlertAction *action);
 typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
@@ -112,20 +112,5 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
                   style:(UIAlertControllerStyle)style
            actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION;
 
-
-
-#pragma mark - 活动指示器
-/**
- *  在View的中心位置添加
- */
-- (void)showActivityIndicatorViewInView:(UIView *)view;
-/**
- *  移除活动指示器
- */
-- (void)removeActivityIndicatorView;
-/**
- *  在view上添加一个活动指示器，可以设置活动指示器的center
- */
-- (void)showActivityIndicatorViewInView:(UIView *)view center:(CGPoint)center;
 
 @end
