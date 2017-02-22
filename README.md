@@ -1,6 +1,6 @@
 # VBKit
 
-[![Build Status][image-1]][1]![Cocoapods][image-2]
+[![Build Status][image-1]][1] ![Cocoapods][image-2]
 
 [1]:	https://travis-ci.org/VisionBao/VBKit
 
