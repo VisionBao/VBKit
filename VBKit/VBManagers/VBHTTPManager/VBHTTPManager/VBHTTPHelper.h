@@ -10,8 +10,8 @@
 #define VBHTTPHelper_h
 
 #import "VBHTTPManager.h"
-#import "VBHTTPErrorManager.h"
 #import "VBFileConfig.h"
 #import "VBHTTPTools.h"
+#import "VBHTTPCacheManager.h"
 
 #endif /* VBHTTPHelper_h */

@@ -13,7 +13,5 @@
 #import "VBLocationManager.h"
 #import "VBFileManager.h"
 #import "VBHTTPHelper.h"
-#import "VBHttpUrlManager.h"
-#import "VBHTTPModels.h"
 #import "VBDBManager.h"
 #endif /* VBManagers_h */

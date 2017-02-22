@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 
-@interface VBViewController ()
+@interface ViewController ()
+
+@property (nonatomic, strong) NSURLSessionTask *dataTask;
 
 @end
 
@@ -27,11 +29,20 @@
 //    [self addBackButtonItem];
 }
 
-- (void)backButtonItemClick {
-
+- (void)vb_backButtonItemClick {
+    
+    self.dataTask = [[VBHTTPManager shareManager] postRequest:@"http://appd.zonetime.net/Api/Apollo/getauthcode" params:nil responseCache:^(id responseCache) {
+        NSLog(@"%@----cache", responseCache);
+    } success:^(id responseObj) {
+        NSLog(@"%@", responseObj);
+    } failure:^(NSError *error) {
+        
+    }];
+                              
 }
-- (void)rightButtonItemClick {
-
+- (void)vb_rightButtonItemClick {
+    [VBHTTPCacheManager removeAllHttpCache];
+   NSLog(@"%zd", [VBHTTPCacheManager getAllHttpCacheSize]);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

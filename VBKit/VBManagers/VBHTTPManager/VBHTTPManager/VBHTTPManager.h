@@ -17,89 +17,127 @@ typedef NS_ENUM(NSInteger, VBNetworkStatus) {
     VBNetworkStatusReachableViaWiFi = 2,//WIFI网络
 };
 
+typedef NS_ENUM(NSInteger, VBNetworkCacheType) {
+    VBNetworkCacheTypeNoCache     = 0, //无缓存
+    VBNetworkCacheTypeCache       = 1, //缓存
+    VBNetworkCacheTypeIgnoreCache = 2, //忽略缓存请求
+    VBNetworkCacheTypeOnlyCache   = 3, //只读缓存
+};
+
+
+/**
+ 缓存的Block
+ */
+typedef void(^RequestCacheBlock)(id responseCache);
+
 /**
  请求成功block
  */
-typedef void (^requestSuccessBlock)(id responseObj);
+typedef void (^RequestSuccessBlock)(id responseObj);
 
 /**
  请求失败block
  */
-typedef void (^requestFailureBlock) (NSError *error);
+typedef void (^RequestFailureBlock)(NSError *error);
 
 /**
  请求响应block
  */
-typedef void (^responseBlock)(id dataObj,NSURL *filePath, NSError *error);
+typedef void (^ResponseBlock)(id dataObj, NSURL *filePath, NSError *error);
 
 /**
  监听进度响应block
  */
-typedef void (^progressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
+typedef void (^ProgressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 
 @interface VBHTTPManager : NSObject
 
-+ (id)shareManager;
+@property (nonatomic, readonly) AFNetworkReachabilityManager *reachabilityManager;
+
++ (instancetype)shareManager;
+
 //设置timeout 默认60s
 - (void)setTimeout:(NSTimeInterval)timeout;
 //设置header
-- (void)setCommonHttpHeaders:(NSDictionary *)httpHeaders;
+- (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders;
 
 /**
- GET请求
+ GET请求(无缓存)
  */
-- (void)getRequest:(NSString *)url
-            params:(NSDictionary *)params
-           success:(requestSuccessBlock)successHandler
-           failure:(requestFailureBlock)failureHandler;
+- (NSURLSessionTask *)getRequest:(NSString *)url
+                          params:(NSDictionary *)params
+                         success:(RequestSuccessBlock)successHandler
+                         failure:(RequestFailureBlock)failureHandler;
 
 /**
- POST请求
+ GET请求(缓存)
  */
-- (void)postRequest:(NSString *)url
-             params:(NSDictionary *)params
-            success:(requestSuccessBlock)successHandler
-            failure:(requestFailureBlock)failureHandler;
+- (NSURLSessionTask *)getRequest:(NSString *)url
+                          params:(NSDictionary *)params
+                   responseCache:(RequestCacheBlock)responseCache
+                         success:(RequestSuccessBlock)successHandler
+                         failure:(RequestFailureBlock)failureHandler;
+/**
+ POST请求(无缓存)
+ */
+- (NSURLSessionTask *)postRequest:(NSString *)url
+                           params:(NSDictionary *)params
+                          success:(RequestSuccessBlock)successHandler
+                          failure:(RequestFailureBlock)failureHandler;
+/**
+ POST请求(缓存)
+ */
+- (NSURLSessionTask *)postRequest:(NSString *)url
+                           params:(NSDictionary *)params
+                    responseCache:(RequestCacheBlock)responseCache
+                          success:(RequestSuccessBlock)successHandler
+                          failure:(RequestFailureBlock)failureHandler;
 
 /**
  PUT请求
  */
-- (void)putRequest:(NSString *)url
-            params:(NSDictionary *)params
-           success:(requestSuccessBlock)successHandler
-           failure:(requestFailureBlock)failureHandler;
+- (NSURLSessionTask *)putRequest:(NSString *)url
+                              params:(NSDictionary *)params
+                             success:(RequestSuccessBlock)successHandler
+                             failure:(RequestFailureBlock)failureHandler;
 
 /**
  DELETE请求
  */
-- (void)deleteRequest:(NSString *)url
-               params:(NSDictionary *)params
-              success:(requestSuccessBlock)successHandler
-              failure:(requestFailureBlock)failureHandler;
+- (NSURLSessionTask *)deleteRequest:(NSString *)url
+                                 params:(NSDictionary *)params
+                                success:(RequestSuccessBlock)successHandler
+                                failure:(RequestFailureBlock)failureHandler;
 
 /**
  下载文件，监听下载进度
  */
-- (void)downloadRequest:(NSString *)url
-               filePath:(NSString *)filePath
-     successAndProgress:(progressBlock)progressHandler
-               complete:(responseBlock)completionHandler;
+- (NSURLSessionTask *)downloadRequest:(NSString *)url
+                                     filePath:(NSString *)filePath
+                           successAndProgress:(ProgressBlock)progressHandler
+                                     complete:(ResponseBlock)completionHandler;
 /**
  文件上传
  */
-- (void)updateRequest:(NSString *)url
-               params:(NSDictionary *)params
-           fileConfig:(VBFileConfig *)fileConfig
-              success:(requestSuccessBlock)successHandler
-              failure:(requestFailureBlock)failureHandler;
+- (NSURLSessionTask *)updateRequest:(NSString *)url
+                                 params:(NSDictionary *)params
+                             fileConfig:(VBFileConfig *)fileConfig
+                                success:(RequestSuccessBlock)successHandler
+                                failure:(RequestFailureBlock)failureHandler;
 
 /**
  文件上传，监听上传进度
  */
-- (void)updateRequest:(NSString *)url
-               params:(NSDictionary *)params
-           fileConfig:(VBFileConfig *)fileConfig
-   successAndProgress:(progressBlock)progressHandler
-             complete:(responseBlock)completionHandler;
+- (NSURLSessionTask *)updateRequest:(NSString *)url
+                             params:(NSDictionary *)params
+                         fileConfig:(VBFileConfig *)fileConfig
+                 successAndProgress:(ProgressBlock)progressHandler
+                            success:(RequestSuccessBlock)successHandler
+                            failure:(RequestFailureBlock)failureHandler;
+
+- (void)cancelAllRequest;
+
++ (void)cancelRequestWithURL:(NSString *)URL;
+
 @end
 

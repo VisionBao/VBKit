@@ -143,5 +143,6 @@ Pod::Spec.new do |s|
   s.dependency "Masonry"
   s.dependency "ZipArchive"
   s.dependency "WSProgressHUD"
-
+  s.dependency "YYCache"
+  
 end
