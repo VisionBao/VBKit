@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "VBKit for base project."
 
   # This description is used to generate tags and improve search results.
@@ -135,14 +135,14 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "AFNetworking"
-  s.dependency "FMDB"
-  s.dependency "MJRefresh"
-  s.dependency "CocoaLumberjack"
-  s.dependency "Reachability"
-  s.dependency "Masonry"
-  s.dependency "ZipArchive"
-  s.dependency "WSProgressHUD"
-  s.dependency "YYCache"
+  s.dependency "AFNetworking", "~> 3.1.0"
+  s.dependency "FMDB", "~> 2.6.2"
+  s.dependency "MJRefresh", "~> 3.1.12"
+  s.dependency "CocoaLumberjack", "~> 3.0.0"
+  s.dependency "Reachability", "~> 3.2"
+  s.dependency "Masonry", "~> 1.0.2"
+  s.dependency "ZipArchive", "~> 1.4.0"
+  s.dependency "WSProgressHUD", "~> 1.1.1"
+  s.dependency "YYCache", "~> 1.0.4"
   
 end
