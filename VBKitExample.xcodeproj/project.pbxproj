@@ -16,8 +16,6 @@
 		A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C31DD70FDC009D0350 /* VBTableViewCell.m */; };
 		A242F0C71DD70FFE009D0350 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C61DD70FFE009D0350 /* VBView.m */; };
 		A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C91DD71026009D0350 /* VBViewController.m */; };
-		A242F0CD1DD711FD009D0350 /* VBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CC1DD711FD009D0350 /* VBTableViewController.m */; };
-		A242F0D01DD712A6009D0350 /* VBETbaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */; };
 		A25A48561DADCC3D007D6B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A48551DADCC3D007D6B66 /* main.m */; };
 		A25A48611DADCC3D007D6B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A48601DADCC3D007D6B66 /* Assets.xcassets */; };
 		A25A48641DADCC3D007D6B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25A48621DADCC3D007D6B66 /* LaunchScreen.storyboard */; };
@@ -98,10 +96,6 @@
 		A242F0C61DD70FFE009D0350 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
 		A242F0C81DD71026009D0350 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
 		A242F0C91DD71026009D0350 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
-		A242F0CB1DD711FD009D0350 /* VBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewController.h; sourceTree = "<group>"; };
-		A242F0CC1DD711FD009D0350 /* VBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewController.m; sourceTree = "<group>"; };
-		A242F0CE1DD712A6009D0350 /* VBETbaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBETbaleViewController.h; sourceTree = "<group>"; };
-		A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBETbaleViewController.m; sourceTree = "<group>"; };
 		A25A48511DADCC3D007D6B66 /* VBKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25A48551DADCC3D007D6B66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A25A48601DADCC3D007D6B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,8 +262,6 @@
 				A25A488A1DADCCFB007D6B66 /* images.jpeg */,
 				A25A488B1DADCCFB007D6B66 /* VBAppDelegate.h */,
 				A25A488C1DADCCFB007D6B66 /* VBAppDelegate.m */,
-				A242F0CE1DD712A6009D0350 /* VBETbaleViewController.h */,
-				A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */,
 				A25A48901DADCCFB007D6B66 /* ViewController.h */,
 				A25A48911DADCCFB007D6B66 /* ViewController.m */,
 				A25A48601DADCC3D007D6B66 /* Assets.xcassets */,
@@ -478,8 +470,6 @@
 				A242F0C61DD70FFE009D0350 /* VBView.m */,
 				A242F0C81DD71026009D0350 /* VBViewController.h */,
 				A242F0C91DD71026009D0350 /* VBViewController.m */,
-				A242F0CB1DD711FD009D0350 /* VBTableViewController.h */,
-				A242F0CC1DD711FD009D0350 /* VBTableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -812,9 +802,7 @@
 				A25A48FC1DADCD02007D6B66 /* VBObject.m in Sources */,
 				A25A49051DADCD02007D6B66 /* VBFileConfig.m in Sources */,
 				A25A48FA1DADCD02007D6B66 /* UIView+VBMotionEffect.m in Sources */,
-				A242F0D01DD712A6009D0350 /* VBETbaleViewController.m in Sources */,
 				A25A490E1DADCD02007D6B66 /* VBLocationManager.m in Sources */,
-				A242F0CD1DD711FD009D0350 /* VBTableViewController.m in Sources */,
 				A25A48FE1DADCD02007D6B66 /* VBConfigDBManager.mm in Sources */,
 				A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */,
 				A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */,

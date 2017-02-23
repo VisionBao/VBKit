@@ -7,7 +7,6 @@
 //
 
 #import "VBAppDelegate.h"
-#import "VBTableViewController.h"
 #import "ViewController.h"
 
 @interface VBAppDelegate ()
