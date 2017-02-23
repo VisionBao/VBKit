@@ -137,7 +137,7 @@ typedef void (^ProgressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 
 - (void)cancelAllRequest;
 
-+ (void)cancelRequestWithURL:(NSString *)URL;
+- (void)cancelRequestWithURL:(NSString *)URL;
 
 @end
 

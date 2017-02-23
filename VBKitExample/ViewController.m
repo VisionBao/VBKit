@@ -30,7 +30,7 @@
 }
 
 - (void)vb_backButtonItemClick {
-    
+    [VBLocationManager shareManager];
 }
 - (void)vb_rightButtonItemClick {
     

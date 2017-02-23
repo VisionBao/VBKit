@@ -16,7 +16,7 @@
 
 - (BOOL)locationServiceEnabled;
 - (void)updateLocation;
-- (BOOL)updateLocationWithSuccess:(void (^)(float,float))success
+- (BOOL)updateLocationWithSuccess:(void (^)(float lat,float lot))success
                           failure:(void (^)())failure;
 
 @property (assign, nonatomic) float lat;

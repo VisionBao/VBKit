@@ -130,7 +130,7 @@
     [_manager startUpdatingLocation];
 }
 
-- (BOOL)updateLocationWithSuccess:(void (^)(float,float))success
+- (BOOL)updateLocationWithSuccess:(void (^)(float lat,float lot))success
                           failure:(void (^)())failure
 {
     _isFinishGetLocation = NO;
