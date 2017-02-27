@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "VBAppDelegate.h"
 #import "UIWindow+VBHierarchy.h"
+#import "VBAlertBaseView.h"
 @interface VBViewController ()
 
 @end
@@ -25,7 +26,7 @@
     [self vb_addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
     [self vb_addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
 //    [self addBackButtonItem];
-    
+    [VBAlertBaseView showHUDAddedTo:self.view animated:YES];
 }
 
 - (void)vb_backButtonItemClick {

@@ -62,6 +62,7 @@
 		A266C1541E10F4D800C91A3E /* UIImage+VBImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */; };
 		A266C1571E10F6CE00C91A3E /* UIImage+VBCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */; };
 		A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A26747C41DF11DE900854524 /* VBProgressHUD.m */; };
+		A2D7742C1E641F330018A5D4 /* VBProgressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +200,8 @@
 		A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBCapture.m"; sourceTree = "<group>"; };
 		A26747C31DF11DE900854524 /* VBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressHUD.h; sourceTree = "<group>"; };
 		A26747C41DF11DE900854524 /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
+		A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressComponent.h; sourceTree = "<group>"; };
+		A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressComponent.m; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -536,6 +539,7 @@
 		A25A48F21DADCD02007D6B66 /* VBAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				A2D774291E641F330018A5D4 /* Base */,
 				A25A48F31DADCD02007D6B66 /* VBAlertTextDefine.h */,
 				A25A48F41DADCD02007D6B66 /* VBAlertView.h */,
 				A25A48F51DADCD02007D6B66 /* VBAlertView.m */,
@@ -545,6 +549,15 @@
 				A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */,
 			);
 			path = VBAlertView;
+			sourceTree = "<group>";
+		};
+		A2D774291E641F330018A5D4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */,
+				A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -839,6 +852,7 @@
 			files = (
 				A25A49031DADCD02007D6B66 /* VBDBManagerFactory.m in Sources */,
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
+				A2D7742C1E641F330018A5D4 /* VBProgressComponent.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
 				A25A49001DADCD02007D6B66 /* VBFMEncryptDatabase.m in Sources */,
 				A25020A51DF1291200C0A0E3 /* UIWindow+VBHierarchy.m in Sources */,

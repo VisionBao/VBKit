@@ -27,6 +27,7 @@ PODS:
   - FMDB/standard (2.6.2)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
+  - pop (1.0.9)
   - Reachability (3.2)
   - Shimmer (1.0.2)
   - WSProgressHUD (1.1.1):
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - FMDB
   - Masonry
   - MJRefresh
+  - pop
   - Reachability
   - WSProgressHUD
   - ZipArchive
@@ -49,11 +51,12 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   WSProgressHUD: 0ebb8dd846f7fb4715d42c87584456480cb7fbf0
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 8d96d2f116c534e13bfa152be7c31103bc858aac
+PODFILE CHECKSUM: db2d5066f0ddc0b2d0ca9b7eec2ad4fa60207cd0
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1
