@@ -15,6 +15,7 @@
 #import "VBNavigationBar.h"
 #import "VBViewController.h"
 #import "VBTableViewCell.h"
+#import "VBTableViewController.h"
 #import "VBNavigationController.h"
 #import "VBTabBarController.h"
 

@@ -52,6 +52,7 @@
 		A25A491C1DADCD02007D6B66 /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F61DADCD02007D6B66 /* VBerror@2x.png */; };
 		A25A491D1DADCD02007D6B66 /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */; };
 		A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */; };
+		A2D774181E5ED6140018A5D4 /* VBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D774161E5ED6140018A5D4 /* VBTableViewController.m */; };
 		A2FC5A411E5C38A600F934C5 /* VBHTTPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */; };
 		A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
@@ -170,6 +171,8 @@
 		A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VBHEX.h"; sourceTree = "<group>"; };
 		A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VBHEX.m"; sourceTree = "<group>"; };
 		A25A49211DADD055007D6B66 /* VBKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		A2D774161E5ED6140018A5D4 /* VBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewController.m; sourceTree = "<group>"; };
+		A2D774171E5ED6140018A5D4 /* VBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewController.h; sourceTree = "<group>"; };
 		A2FC5A3F1E5C38A600F934C5 /* VBHTTPCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBHTTPCacheManager.h; sourceTree = "<group>"; };
 		A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBHTTPCacheManager.m; sourceTree = "<group>"; };
 		A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -470,6 +473,8 @@
 				A242F0C61DD70FFE009D0350 /* VBView.m */,
 				A242F0C81DD71026009D0350 /* VBViewController.h */,
 				A242F0C91DD71026009D0350 /* VBViewController.m */,
+				A2D774161E5ED6140018A5D4 /* VBTableViewController.m */,
+				A2D774171E5ED6140018A5D4 /* VBTableViewController.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				A2FC5A411E5C38A600F934C5 /* VBHTTPCacheManager.m in Sources */,
 				A25A49011DADCD02007D6B66 /* VBFMEncryptDatabaseQueue.m in Sources */,
 				A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */,
+				A2D774181E5ED6140018A5D4 /* VBTableViewController.m in Sources */,
 				A25A490B1DADCD02007D6B66 /* NSString+VBUrlEncode.m in Sources */,
 				A25A491B1DADCD02007D6B66 /* VBAlertView.m in Sources */,
 			);
