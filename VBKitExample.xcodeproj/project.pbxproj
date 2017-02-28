@@ -202,6 +202,7 @@
 		A26747C41DF11DE900854524 /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
 		A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressComponent.h; sourceTree = "<group>"; };
 		A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressComponent.m; sourceTree = "<group>"; };
+		A2D7742D1E65152A0018A5D4 /* VBProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressDelegate.h; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -556,6 +557,7 @@
 			children = (
 				A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */,
 				A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */,
+				A2D7742D1E65152A0018A5D4 /* VBProgressDelegate.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";

@@ -10,13 +10,13 @@
 
 @interface VBProgressComponent : UIView
 
-+ (_Nonnull instancetype)showHUDAddedTo:( UIView * _Nonnull)view
++ (instancetype _Nonnull)showHUDAddedTo:( UIView * _Nonnull)view
                                animated:(BOOL)animated;
 
 + (BOOL)hideHUDForView:(UIView * _Nonnull)view
               animated:(BOOL)animated;
 
-+ (nullable VBAlertBaseView *)HUDForView:(UIView * _Nonnull)view;
++ (VBAlertView * _Nonnull )HUDForView:(UIView * _Nonnull)view;
 
 
 
@@ -27,5 +27,5 @@
 - (void)hideWithAnimated:(BOOL)animated
               afterDelay:(NSTimeInterval)delay;
 
-- (_Nonnull instancetype)initWithView:(UIView * _Nonnull)view;
+- (instancetype _Nonnull)initWithView:(UIView * _Nonnull)view;
 @end

@@ -10,15 +10,21 @@
 
 @implementation VBProgressHUD
 
-+ (VBProgressHUD *)shareHUD {
+//+ (VBProgressHUD *)shareHUD {
+//    
+//    static dispatch_once_t once;
+//    static VBProgressHUD *shareView;
+//    dispatch_once(&once, ^{
+//        shareView = [[self alloc] initWithFrame:[UIApplication sharedApplication].keyWindow.bounds];
+//        
+//    });
+//    return shareView;
+//}
+
+- (instancetype)initWithHUDView:(UIView<VBProgressDelegate> *)view {
+    UIView *superView = [view progressBackgroudView];
     
-    static dispatch_once_t once;
-    static VBProgressHUD *shareView;
-    dispatch_once(&once, ^{
-        shareView = [[self alloc] initWithFrame:[UIApplication sharedApplication].keyWindow.bounds];
-        
-    });
-    return shareView;
+    return self;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBProgressDelegate.h"
 
 typedef NS_ENUM(NSInteger, VBProgressHUDMaskType) {
     VBProgressHUDMaskTypeDefault, //allow user touch when hud display
@@ -30,6 +31,9 @@ typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
 
 @interface VBProgressHUD : UIView
 #pragma mark - 提示窗
+
+- (instancetype)initWithHUDView:(UIView<VBProgressDelegate> *)view;
+
 //
 ////加载中提示
 //+ (void)showHUD;
