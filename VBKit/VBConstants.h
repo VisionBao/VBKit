@@ -56,4 +56,15 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #define SS(strongSelf) __strong __typeof__(weakSelf) strongSelf = weakSelf;
 
+
+/** 快速查询一段代码的执行时间 */
+/** 用法
+ TICK
+ do your work here
+ TOCK
+ */
+
+#define TICK NSDate *startTime = [NSDate date];
+#define TOCK NSLog(@"Time:%f", -[startTime timeIntervalSinceNow]);
+
 #endif /* VBConstants_h */

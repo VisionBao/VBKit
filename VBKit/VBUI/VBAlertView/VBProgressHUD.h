@@ -30,9 +30,9 @@ typedef NS_ENUM(NSInteger, VBProgressHUDMaskWithoutType) { //
 
 
 @interface VBProgressHUD : UIView
-#pragma mark - 提示窗
 
 - (instancetype)initWithHUDView:(UIView<VBProgressDelegate> *)view;
+
 
 //
 ////加载中提示

@@ -14,4 +14,5 @@
 #import "UIWindow+VBHierarchy.h"
 #import "UIImage+VBCapture.h"
 #import "UIImage+VBImageEffects.h"
+#import "UIImage+VBImage.h"
 #endif /* VBCategories_h */
