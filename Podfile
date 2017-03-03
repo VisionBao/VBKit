@@ -15,7 +15,7 @@ pod 'ZipArchive'
 pod 'Masonry'
 pod 'WSProgressHUD'
 pod 'YYCache'
-
+pod 'pop'
   target 'VBKitExampleTests' do
     inherit! :search_paths
     # Pods for testing

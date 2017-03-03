@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32B58E26735B6C9398FC1F7B /* libPods-VBKitExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */; };
 		3BD0EDF1C923E805BD1F58A1 /* libPods-VBKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */; };
+		A23F5CC91E66B7110033C0D6 /* UIImage+VBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F5CC81E66B7110033C0D6 /* UIImage+VBImage.m */; };
 		A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0B71DD70E11009D0350 /* VBTabBarController.m */; };
 		A242F0BB1DD70E65009D0350 /* VBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0BA1DD70E65009D0350 /* VBNavigationBar.m */; };
 		A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0BD1DD70E92009D0350 /* VBTableView.m */; };
@@ -16,6 +17,9 @@
 		A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C31DD70FDC009D0350 /* VBTableViewCell.m */; };
 		A242F0C71DD70FFE009D0350 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C61DD70FFE009D0350 /* VBView.m */; };
 		A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C91DD71026009D0350 /* VBViewController.m */; };
+		A242F0CD1DD711FD009D0350 /* VBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CC1DD711FD009D0350 /* VBTableViewController.m */; };
+		A242F0D01DD712A6009D0350 /* VBETbaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */; };
+		A25020A51DF1291200C0A0E3 /* UIWindow+VBHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */; };
 		A25A48561DADCC3D007D6B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A48551DADCC3D007D6B66 /* main.m */; };
 		A25A48611DADCC3D007D6B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A48601DADCC3D007D6B66 /* Assets.xcassets */; };
 		A25A48641DADCC3D007D6B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25A48621DADCC3D007D6B66 /* LaunchScreen.storyboard */; };
@@ -54,6 +58,10 @@
 		A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */; };
 		A2FC5A411E5C38A600F934C5 /* VBHTTPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */; };
 		A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */; };
+		A266C1541E10F4D800C91A3E /* UIImage+VBImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */; };
+		A266C1571E10F6CE00C91A3E /* UIImage+VBCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */; };
+		A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A26747C41DF11DE900854524 /* VBProgressHUD.m */; };
+		A2D7742C1E641F330018A5D4 /* VBProgressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +90,8 @@
 		47967553EB3D82947BB41006 /* Pods-VBKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExampleUITests/Pods-VBKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		484F459FB632EBEB75019962 /* Pods-VBKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExampleTests/Pods-VBKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CFF7A4379C7AB3288169584 /* Pods-VBKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExample/Pods-VBKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A23F5CC71E66B7110033C0D6 /* UIImage+VBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VBImage.h"; sourceTree = "<group>"; };
+		A23F5CC81E66B7110033C0D6 /* UIImage+VBImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBImage.m"; sourceTree = "<group>"; };
 		A242F0B61DD70E11009D0350 /* VBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTabBarController.h; sourceTree = "<group>"; };
 		A242F0B71DD70E11009D0350 /* VBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTabBarController.m; sourceTree = "<group>"; };
 		A242F0B91DD70E65009D0350 /* VBNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNavigationBar.h; sourceTree = "<group>"; };
@@ -96,6 +106,12 @@
 		A242F0C61DD70FFE009D0350 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
 		A242F0C81DD71026009D0350 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
 		A242F0C91DD71026009D0350 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
+		A242F0CB1DD711FD009D0350 /* VBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTableViewController.h; sourceTree = "<group>"; };
+		A242F0CC1DD711FD009D0350 /* VBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTableViewController.m; sourceTree = "<group>"; };
+		A242F0CE1DD712A6009D0350 /* VBETbaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBETbaleViewController.h; sourceTree = "<group>"; };
+		A242F0CF1DD712A6009D0350 /* VBETbaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBETbaleViewController.m; sourceTree = "<group>"; };
+		A25020A31DF1291200C0A0E3 /* UIWindow+VBHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+VBHierarchy.h"; sourceTree = "<group>"; };
+		A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+VBHierarchy.m"; sourceTree = "<group>"; };
 		A25A48511DADCC3D007D6B66 /* VBKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25A48551DADCC3D007D6B66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A25A48601DADCC3D007D6B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +189,15 @@
 		A2FC5A3F1E5C38A600F934C5 /* VBHTTPCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBHTTPCacheManager.h; sourceTree = "<group>"; };
 		A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBHTTPCacheManager.m; sourceTree = "<group>"; };
 		A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A266C1521E10F4D800C91A3E /* UIImage+VBImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VBImageEffects.h"; sourceTree = "<group>"; };
+		A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBImageEffects.m"; sourceTree = "<group>"; };
+		A266C1551E10F6CE00C91A3E /* UIImage+VBCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VBCapture.h"; sourceTree = "<group>"; };
+		A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VBCapture.m"; sourceTree = "<group>"; };
+		A26747C31DF11DE900854524 /* VBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressHUD.h; sourceTree = "<group>"; };
+		A26747C41DF11DE900854524 /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
+		A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressComponent.h; sourceTree = "<group>"; };
+		A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressComponent.m; sourceTree = "<group>"; };
+		A2D7742D1E65152A0018A5D4 /* VBProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressDelegate.h; sourceTree = "<group>"; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -318,8 +343,16 @@
 				A25A489F1DADCD02007D6B66 /* VBCategories.h */,
 				A25A491E1DADCEA2007D6B66 /* UIColor+VBHEX.h */,
 				A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */,
+				A266C1521E10F4D800C91A3E /* UIImage+VBImageEffects.h */,
+				A266C1531E10F4D800C91A3E /* UIImage+VBImageEffects.m */,
+				A266C1551E10F6CE00C91A3E /* UIImage+VBCapture.h */,
+				A266C1561E10F6CE00C91A3E /* UIImage+VBCapture.m */,
+				A23F5CC71E66B7110033C0D6 /* UIImage+VBImage.h */,
+				A23F5CC81E66B7110033C0D6 /* UIImage+VBImage.m */,
 				A25A489D1DADCD02007D6B66 /* UIView+VBMotionEffect.h */,
 				A25A489E1DADCD02007D6B66 /* UIView+VBMotionEffect.m */,
+				A25020A31DF1291200C0A0E3 /* UIWindow+VBHierarchy.h */,
+				A25020A41DF1291200C0A0E3 /* UIWindow+VBHierarchy.m */,
 			);
 			path = VBCategories;
 			sourceTree = "<group>";
@@ -488,12 +521,25 @@
 		A25A48F21DADCD02007D6B66 /* VBAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				A2D774291E641F330018A5D4 /* Base */,
 				A25A48F41DADCD02007D6B66 /* VBAlertView.h */,
 				A25A48F51DADCD02007D6B66 /* VBAlertView.m */,
+				A26747C31DF11DE900854524 /* VBProgressHUD.h */,
+				A26747C41DF11DE900854524 /* VBProgressHUD.m */,
 				A25A48F61DADCD02007D6B66 /* VBerror@2x.png */,
 				A25A48F71DADCD02007D6B66 /* VBsuccess@2x.png */,
 			);
 			path = VBAlertView;
+			sourceTree = "<group>";
+		};
+		A2D774291E641F330018A5D4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A2D7742A1E641F330018A5D4 /* VBProgressComponent.h */,
+				A2D7742B1E641F330018A5D4 /* VBProgressComponent.m */,
+				A2D7742D1E65152A0018A5D4 /* VBProgressDelegate.h */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,7 +619,7 @@
 				TargetAttributes = {
 					A25A48501DADCC3D007D6B66 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TQKKQ9452M;
+						DevelopmentTeam = 3CYYH3D98X;
 						ProvisioningStyle = Automatic;
 					};
 					A25A48691DADCC3D007D6B66 = {
@@ -789,8 +835,10 @@
 			files = (
 				A25A49031DADCD02007D6B66 /* VBDBManagerFactory.m in Sources */,
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
+				A2D7742C1E641F330018A5D4 /* VBProgressComponent.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
 				A25A49001DADCD02007D6B66 /* VBFMEncryptDatabase.m in Sources */,
+				A25020A51DF1291200C0A0E3 /* UIWindow+VBHierarchy.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
 				A25A48FB1DADCD02007D6B66 /* VBLog.m in Sources */,
 				A25A48FF1DADCD02007D6B66 /* VBDBManager.m in Sources */,
@@ -805,14 +853,20 @@
 				A25A490E1DADCD02007D6B66 /* VBLocationManager.m in Sources */,
 				A25A48FE1DADCD02007D6B66 /* VBConfigDBManager.mm in Sources */,
 				A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */,
+				A26747C51DF11DE900854524 /* VBProgressHUD.m in Sources */,
+				A23F5CC91E66B7110033C0D6 /* UIImage+VBImage.m in Sources */,
+				A25A490C1DADCD02007D6B66 /* VBHTTPModels.m in Sources */,
+				A25A49061DADCD02007D6B66 /* VBHTTPErrorManager.m in Sources */,
 				A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */,
 				A25A49021DADCD02007D6B66 /* VBFMEncryptHelper.m in Sources */,
+				A266C1541E10F4D800C91A3E /* UIImage+VBImageEffects.m in Sources */,
 				A25A49091DADCD02007D6B66 /* NSString+VBBase64.m in Sources */,
 				A242F0C11DD70EB8009D0350 /* VBNavigationController.m in Sources */,
 				A25A49081DADCD02007D6B66 /* NSData+VBBase64.m in Sources */,
 				A25A49071DADCD02007D6B66 /* VBHTTPManager.m in Sources */,
 				A25A49041DADCD02007D6B66 /* VBFileManager.m in Sources */,
 				A2FC5A411E5C38A600F934C5 /* VBHTTPCacheManager.m in Sources */,
+				A266C1571E10F6CE00C91A3E /* UIImage+VBCapture.m in Sources */,
 				A25A49011DADCD02007D6B66 /* VBFMEncryptDatabaseQueue.m in Sources */,
 				A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */,
 				A25A490B1DADCD02007D6B66 /* NSString+VBUrlEncode.m in Sources */,
@@ -960,7 +1014,7 @@
 			baseConfigurationReference = 4CFF7A4379C7AB3288169584 /* Pods-VBKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TQKKQ9452M;
+				DEVELOPMENT_TEAM = 3CYYH3D98X;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKitExample/VBKitExample-Prefix.pch";
 				INFOPLIST_FILE = VBKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -975,7 +1029,7 @@
 			baseConfigurationReference = 2C3664E27E0674F7C8ACE019 /* Pods-VBKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TQKKQ9452M;
+				DEVELOPMENT_TEAM = 3CYYH3D98X;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VBKitExample/VBKitExample-Prefix.pch";
 				INFOPLIST_FILE = VBKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
