@@ -11,5 +11,6 @@
 
 #import "VBObject.h"
 #import "VBLog.h"
+#import "VBRuntime.h"
 
 #endif /* VBFoundation_h */
