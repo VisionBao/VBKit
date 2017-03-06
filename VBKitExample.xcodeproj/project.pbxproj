@@ -16,6 +16,7 @@
 		A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C31DD70FDC009D0350 /* VBTableViewCell.m */; };
 		A242F0C71DD70FFE009D0350 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C61DD70FFE009D0350 /* VBView.m */; };
 		A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C91DD71026009D0350 /* VBViewController.m */; };
+		A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A257E5AE1E6D3C2E00B8798D /* VBRuntime.m */; };
 		A25A48561DADCC3D007D6B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A48551DADCC3D007D6B66 /* main.m */; };
 		A25A48611DADCC3D007D6B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A48601DADCC3D007D6B66 /* Assets.xcassets */; };
 		A25A48641DADCC3D007D6B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25A48621DADCC3D007D6B66 /* LaunchScreen.storyboard */; };
@@ -96,6 +97,8 @@
 		A242F0C61DD70FFE009D0350 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
 		A242F0C81DD71026009D0350 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
 		A242F0C91DD71026009D0350 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
+		A257E5AD1E6D3C2E00B8798D /* VBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBRuntime.h; sourceTree = "<group>"; };
+		A257E5AE1E6D3C2E00B8798D /* VBRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBRuntime.m; sourceTree = "<group>"; };
 		A25A48511DADCC3D007D6B66 /* VBKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25A48551DADCC3D007D6B66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A25A48601DADCC3D007D6B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,6 +233,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A257E5AC1E6D3C0E00B8798D /* VBRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				A257E5AD1E6D3C2E00B8798D /* VBRuntime.h */,
+				A257E5AE1E6D3C2E00B8798D /* VBRuntime.m */,
+			);
+			path = VBRuntime;
+			sourceTree = "<group>";
+		};
 		A25A48481DADCC3D007D6B66 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +339,7 @@
 		A25A48A11DADCD02007D6B66 /* VBFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				A257E5AC1E6D3C0E00B8798D /* VBRuntime */,
 				A25A48A21DADCD02007D6B66 /* VBFoundation.h */,
 				A25A48A31DADCD02007D6B66 /* VBLog.h */,
 				A25A48A41DADCD02007D6B66 /* VBLog.m */,
@@ -791,6 +804,7 @@
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
 				A25A49001DADCD02007D6B66 /* VBFMEncryptDatabase.m in Sources */,
+				A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
 				A25A48FB1DADCD02007D6B66 /* VBLog.m in Sources */,
 				A25A48FF1DADCD02007D6B66 /* VBDBManager.m in Sources */,
