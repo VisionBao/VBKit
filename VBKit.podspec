@@ -149,12 +149,14 @@ Pod::Spec.new do |s|
   end
    s.subspec 'VBUI' do |ss|
     ss.public_header_files = 'VBKit/VBUI/VBUI.h'
-    ss.source_files = 'VBKit/VBUI/**/*'
-    ss.resources = "VBKit/**/*.png"
+    # ss.source_files = 'VBKit/VBUI/**/*'
     ss.dependency "VBKit/VBConstants"
-    ss.dependency "WSProgressHUD", "~> 1.1.1"
     ss.subspec 'VBAlertView' do |sss|
-      ss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+      sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+      sss.dependency "WSProgressHUD", "~> 1.1.1"
+   end
+   ss.subspec 'Base' do |sss|
+      sss.source_files = 'VBKit/VBUI/Base/**/*'
    end
   end
 
