@@ -7,13 +7,15 @@
 //
 
 #import "VBRuntime.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 @implementation VBRuntime
 
 /**
  获取类名
  
- @param class 相应类
+ @param className 相应类
  @return NSString：类名
  */
 + (NSString *)vb_fetchClassName:(Class)className {
@@ -24,7 +26,7 @@
 /**
  获取成员变量
  
- @param class Class
+ @param className Class
  @return NSArray
  */
 + (NSArray *)vb_fetchIvarList:(Class)className {
@@ -48,7 +50,7 @@
 /**
  获取类的属性列表, 包括私有和公有属性，以及定义在延展中的属性
  
- @param class Class
+ @param className Class
  @return 属性列表数组
  */
 + (NSArray *)vb_fetchPropertyList:(Class)className {
@@ -104,7 +106,7 @@
 /**
  往类上添加新的方法与其实现
  
- @param class 相应的类
+ @param className 相应的类
  @param methodSel 方法的名
  @param methodSelImpl 对应方法实现的方法名
  */
@@ -118,13 +120,13 @@
 /**
  方法交换
  
- @param class 交换方法所在的类
+ @param className 交换方法所在的类
  @param method1 方法1
  @param method2 方法2
  */
-+ (void)vb_methodSwap:(Class)class firstMethod:(SEL)method1 secondMethod:(SEL)method2 {
-    Method firstMethod = class_getInstanceMethod(class, method1);
-    Method secondMethod = class_getInstanceMethod(class, method2);
++ (void)vb_methodSwap:(Class)className firstMethod:(SEL)method1 secondMethod:(SEL)method2 {
+    Method firstMethod = class_getInstanceMethod(className, method1);
+    Method secondMethod = class_getInstanceMethod(className, method2);
     method_exchangeImplementations(firstMethod, secondMethod);
 }
 
