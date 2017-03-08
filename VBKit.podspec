@@ -135,9 +135,9 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.subspec 'Header' do |ss|
-    ss.source_files = 'VBKit/VBKit.h'
-  end
+
+    s.source_files = 'VBKit/VBKit.h'
+
   
   s.subspec 'VBConstants' do |ss|
     ss.source_files = 'VBKit/VBConstants.h'
@@ -153,9 +153,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'VBManagers' do |ss|
-    ss.subspec 'Header' do |sss|
-     sss.source_files = 'VBKit/VBManagers/VBManagers.h'
-   end
+     ss.source_files = 'VBKit/VBManagers/VBManagers.h'
    ss.subspec 'VBUMengAnalyticsManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBUMengAnalyticsManager/**/*'
      sss.dependency "UMengAnalytics", "~> 4.2.4"
@@ -179,9 +177,7 @@ Pod::Spec.new do |s|
  end
 
  s.subspec 'VBUI' do |ss|
-   ss.subspec 'Header' do |sss|
-     sss.source_files = 'VBKit/VBUI/VBUI.h'
-   end
+     ss.source_files = 'VBKit/VBUI/VBUI.h'
    ss.subspec 'VBAlertView' do |sss|
      sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
      sss.dependency "WSProgressHUD", "~> 1.1.1"
