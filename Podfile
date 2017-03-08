@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 target 'VBKitExample' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
@@ -15,7 +15,7 @@ target 'VBKitExample' do
   pod 'Masonry'
   pod 'WSProgressHUD'
   pod 'YYCache'
-  pod 'UMengAnalytics', '~> 4.2.4'
+  pod 'UMengAnalytics'
   target 'VBKitExampleTests' do
     inherit! :search_paths
     # Pods for testing
