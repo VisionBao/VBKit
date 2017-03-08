@@ -179,19 +179,22 @@ Pod::Spec.new do |s|
  end
 
  s.subspec 'VBUI' do |ss|
-  ss.subspec 'Header' do |sss|
-    sss.source_files = 'VBKit/VBUI/VBUI.h'
+   ss.subspec 'Header' do |sss|
+     sss.source_files = 'VBKit/VBUI/VBUI.h'
+   end
+   ss.subspec 'VBAlertView' do |sss|
+     sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+     sss.dependency "WSProgressHUD", "~> 1.1.1"
+   end
+   ss.subspec 'Base' do |sss|
+    sss.source_files = 'VBKit/VBUI/Base/**/*'
+    sss.dependency "VBKit/VBConstants"
   end
-  ss.subspec 'VBAlertView' do |sss|
-    sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
-    sss.dependency "WSProgressHUD", "~> 1.1.1"
-  end
-  ss.subspec 'Base' do |sss|
-   sss.source_files = 'VBKit/VBUI/Base/**/*'
-   sss.dependency "VBKit/VBConstants"
- end
 end
-s.dependency "MJRefresh", "~> 3.1.12"
-s.dependency "Reachability", "~> 3.2"
-s.dependency "Masonry", "~> 1.0.2"
+s.subspec 'CommonLib' do |ss|
+ ss.dependency "MJRefresh", "~> 3.1.12"
+ ss.dependency "Reachability", "~> 3.2"
+ ss.dependency "Masonry", "~> 1.0.2"
+end
+
 end
