@@ -6,16 +6,16 @@ target 'VBKitExample' do
   # use_frameworks!
 
   # Pods for VBKit
-pod 'AFNetworking'
-pod 'FMDB'
-pod 'MJRefresh'
-pod 'CocoaLumberjack'
-pod 'Reachability'
-pod 'ZipArchive'
-pod 'Masonry'
-pod 'WSProgressHUD'
-pod 'YYCache'
-
+  pod 'AFNetworking'
+  pod 'FMDB'
+  pod 'MJRefresh'
+  pod 'CocoaLumberjack'
+  pod 'Reachability'
+  pod 'ZipArchive'
+  pod 'Masonry'
+  pod 'WSProgressHUD'
+  pod 'YYCache'
+  pod 'UMengAnalytics', '~> 4.2.4'
   target 'VBKitExampleTests' do
     inherit! :search_paths
     # Pods for testing

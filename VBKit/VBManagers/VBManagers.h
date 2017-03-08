@@ -13,4 +13,5 @@
 #import "VBFileManager.h"
 #import "VBHTTPHelper.h"
 #import "VBDBManager.h"
+#import "VBUMengAnalyticsManager.h"
 #endif /* VBManagers_h */

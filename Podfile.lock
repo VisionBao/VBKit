@@ -29,6 +29,7 @@ PODS:
   - MJRefresh (3.1.12)
   - Reachability (3.2)
   - Shimmer (1.0.2)
+  - UMengAnalytics (4.2.4)
   - WSProgressHUD (1.1.1):
     - Shimmer
   - YYCache (1.0.4)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - Masonry
   - MJRefresh
   - Reachability
+  - UMengAnalytics (~> 4.2.4)
   - WSProgressHUD
   - YYCache
   - ZipArchive
@@ -53,10 +55,11 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   WSProgressHUD: 0ebb8dd846f7fb4715d42c87584456480cb7fbf0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 3447503143b53b25635d12def5ec1fc46827de93
+PODFILE CHECKSUM: e86e85f7002647468935a7c3a7d14a67a5f0e560
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

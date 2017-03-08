@@ -16,9 +16,9 @@
  @param class 相应类
  @return NSString：类名
  */
-+ (NSString *)vb_fetchClassName:(Class)class {
-    const char *className = class_getName(class);
-    return [NSString stringWithUTF8String:className];
++ (NSString *)vb_fetchClassName:(Class)className {
+    const char *classNameStr = class_getName(className);
+    return [NSString stringWithUTF8String:classNameStr];
 }
 
 /**
@@ -27,9 +27,9 @@
  @param class Class
  @return NSArray
  */
-+ (NSArray *)vb_fetchIvarList:(Class)class {
++ (NSArray *)vb_fetchIvarList:(Class)className {
     unsigned int count = 0;
-    Ivar *ivarList = class_copyIvarList(class, &count);
+    Ivar *ivarList = class_copyIvarList(className, &count);
     
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
     for (unsigned int i = 0; i < count; i++ ) {
@@ -51,9 +51,9 @@
  @param class Class
  @return 属性列表数组
  */
-+ (NSArray *)vb_fetchPropertyList:(Class)class {
++ (NSArray *)vb_fetchPropertyList:(Class)className {
     unsigned int count = 0;
-    objc_property_t *propertyList = class_copyPropertyList(class, &count);
+    objc_property_t *propertyList = class_copyPropertyList(className, &count);
     
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
     for (unsigned int i = 0; i < count; i++ ) {
@@ -68,9 +68,9 @@
 /**
  获取类的实例方法列表：getter, setter, 对象方法等。但不能获取类方法
  */
-+ (NSArray *)vb_fetchMethodList:(Class)class {
++ (NSArray *)vb_fetchMethodList:(Class)className {
     unsigned int count = 0;
-    Method *methodList = class_copyMethodList(class, &count);
+    Method *methodList = class_copyMethodList(className, &count);
     
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
     for (unsigned int i = 0; i < count; i++ ) {
@@ -85,9 +85,9 @@
 /**
  获取协议列表
  */
-+ (NSArray *)vb_fetchProtocolList:(Class)class {
++ (NSArray *)vb_fetchProtocolList:(Class)className {
     unsigned int count = 0;
-    __unsafe_unretained Protocol **protocolList = class_copyProtocolList(class, &count);
+    __unsafe_unretained Protocol **protocolList = class_copyProtocolList(className, &count);
     
     NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
     for (unsigned int i = 0; i < count; i++ ) {
@@ -108,11 +108,11 @@
  @param methodSel 方法的名
  @param methodSelImpl 对应方法实现的方法名
  */
-+ (void)vb_addMethod:(Class)class method:(SEL)methodSel method:(SEL)methodSelImpl {
-    Method method = class_getInstanceMethod(class, methodSelImpl);
++ (void)vb_addMethod:(Class)className method:(SEL)methodSel method:(SEL)methodSelImpl {
+    Method method = class_getInstanceMethod(className, methodSelImpl);
     IMP methodIMP = method_getImplementation(method);
     const char *types = method_getTypeEncoding(method);
-    class_addMethod(class, methodSel, methodIMP, types);
+    class_addMethod(className, methodSel, methodIMP, types);
 }
 
 /**
