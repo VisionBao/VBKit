@@ -47,41 +47,7 @@
             [VBFileManager makeDir:strpath];
         }
             break;
-        case VBFilePATH_LOCALMUSIC:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"LocalMusic"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
-        case VBFilePATH_LYRIC:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Lyric"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
-        case VBFilePATH_BKIMAGE:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"BKResouce"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
-        case VBFilePATH_OPUS:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"MyOpus"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
-        case VBFilePATH_MYIMAGE:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"MyImage"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
+        
         case VBFilePATH_USER:
         {
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -89,24 +55,10 @@
             [VBFileManager makeDir:strpath];
         }
             break;
-        case VBFilePATH_GIFT:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"gift"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
         case VBFilePATH_HTTPCACHE:
         {
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"HttpCache"];
-            [VBFileManager makeDir:strpath];
-        }
-            break;
-        case VBFilePATH_AltasLAB:
-        {
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            strpath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"AltasLab"];
             [VBFileManager makeDir:strpath];
         }
             break;

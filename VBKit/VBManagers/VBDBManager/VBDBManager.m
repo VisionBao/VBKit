@@ -7,7 +7,6 @@
 //
 
 #import "VBDBManager.h"
-#import "VBFileManager.h"
 
 static NSString *VBFMDbName = @"VBKit.db.sqlite";
 
@@ -23,7 +22,9 @@ static NSString *VBFMDbName = @"VBKit.db.sqlite";
 - (id)init {
     self = [super init];
     if (self) {
-        NSString *dbPath = [VBFileManager getPathWithType:VBFilePATH_DUCUMENT];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *strpath = [paths objectAtIndex:0];
+        NSString *dbPath = strpath;
         dbPath = [dbPath stringByAppendingPathComponent:VBFMDbName];
         _dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
     }
