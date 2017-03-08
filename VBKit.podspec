@@ -135,17 +135,27 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+   s.subspec 'VBConstants' do |ss|
+    ss.source_files = 'VBKit/VBConstants.h'
+  end
    s.subspec 'VBCategories' do |ss|
     ss.source_files = 'VBKit/VBCategories/**/*'
   end
    s.subspec 'VBFoundation' do |ss|
     ss.source_files = 'VBKit/VBFoundation/**/*'
   end
-  s.subspec 'VBManagers' do |ss|
+   s.subspec 'VBManagers' do |ss|
     ss.source_files = 'VBKit/VBManagers/**/*'
   end
-  s.subspec 'VBUI' do |ss|
+   s.subspec 'VBUI' do |ss|
+    ss.public_header_files = 'VBKit/VBUI/VBUI.h'
     ss.source_files = 'VBKit/VBUI/**/*'
+    ss.resources = "VBKit/**/*.png"
+    ss.dependency "VBKit/VBConstants"
+    ss.dependency "WSProgressHUD", "~> 1.1.1"
+    ss.subspec 'VBAlertView' do |sss|
+      ss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+   end
   end
 
 
@@ -156,7 +166,7 @@ Pod::Spec.new do |s|
   s.dependency "Reachability", "~> 3.2"
   s.dependency "Masonry", "~> 1.0.2"
   s.dependency "ZipArchive", "~> 1.4.0"
-  s.dependency "WSProgressHUD", "~> 1.1.1"
+
   s.dependency "YYCache", "~> 1.0.4"
   
 end
