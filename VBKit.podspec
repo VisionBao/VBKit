@@ -162,7 +162,7 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
-     s.dependency "FMDB", "~> 2.6.2"
+     sss.dependency "FMDB", "~> 2.6.2"
    end
    ss.subspec 'VBFileManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBFileManager/**/*'
