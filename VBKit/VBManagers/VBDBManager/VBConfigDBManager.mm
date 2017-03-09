@@ -21,8 +21,8 @@
 - (id)init {
     self = [super init];
     if (self) {
+        
         _dbMgr = [VBDBManager shareManager];
-        // 一定要先获取 dbMgr才能调用
         [self createTables];
     }
     return self;

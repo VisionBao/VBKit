@@ -36,7 +36,7 @@
 {
     BOOL res = [super open];
     if (res && _encryptKey) {
-        //数据库open后设置加密key
+        
         [self setKey:_encryptKey];
     }
     return res;
@@ -47,7 +47,7 @@
 {
     BOOL res = [super openWithFlags:flags vfs:vfsName];
     if (res && _encryptKey) {
-        //数据库open后设置加密key
+        
         [self setKey:_encryptKey];
     }
     return res;
