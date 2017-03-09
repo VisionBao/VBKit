@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.0.4"
+  s.version      = "0.1.0"
   s.summary      = "VBKit for base project."
 
   # This description is used to generate tags and improve search results.
@@ -160,7 +160,7 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
-     sss.dependency "FMDB", "~> 2.6.2"
+     sss.dependency "FMDB/SQLCipher", "~> 2.6.2"
    end
    ss.subspec 'VBFileManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBFileManager/**/*'
@@ -173,6 +173,7 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBLocationManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBLocationManager/**/*'
+     sss.frameworks   = 'CoreLocation'
    end
  end
 
