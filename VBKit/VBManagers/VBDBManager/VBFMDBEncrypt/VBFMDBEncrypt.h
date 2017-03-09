@@ -11,7 +11,6 @@
 
 #import "VBFMEncryptDatabase.h"
 #import "VBFMEncryptDatabaseQueue.h"
-#import "VBFMEncryptHelper.h"
 
 
 #endif /* VBFMDBEncrypt_h */

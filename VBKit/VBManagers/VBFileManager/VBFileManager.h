@@ -15,15 +15,8 @@ typedef NS_ENUM(NSUInteger, VBFilePathType) {
     VBFilePATH_DUCUMENT,  // "/Document"
     VBFilePATH_CACHE,     // "/cache
     VBFilePATH_LOG,       // "/cache/Log"
-    VBFilePATH_LOCALMUSIC,// "/Document/LocalMusic"
-    VBFilePATH_LYRIC,     // "/Document/Lyric"
-    VBFilePATH_BKIMAGE,   // "/Cache/BKResource
-    VBFilePATH_OPUS,      // "/Document/MyOpus"
-    VBFilePATH_MYIMAGE,   // "/Cache/MyImage"
     VBFilePATH_USER,      // "/Document/User"
-    VBFilePATH_GIFT,      // "/Document/gift"
     VBFilePATH_HTTPCACHE, // "/Document/HttpCache
-    VBFilePATH_AltasLAB,  // "/Document/AltasLab
 };
 
 @interface VBFileManager : NSObject

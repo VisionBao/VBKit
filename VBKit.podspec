@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.0.4"
+  s.version      = "0.1.0"
   s.summary      = "VBKit for base project."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "VBKit/**/*.{h,m}"
+  # s.source_files  = "VBKit/**/*.{h,m}"
   # s.source_files  = "VBKit/*" 
   # s.exclude_files = "Demo/*"
 
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "VBKit/**/*.png"
+  # s.resources = "VBKit/**/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -135,14 +135,63 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "AFNetworking", "~> 3.1.0"
-  s.dependency "FMDB", "~> 2.6.2"
-  s.dependency "MJRefresh", "~> 3.1.12"
-  s.dependency "CocoaLumberjack", "~> 3.0.0"
-  s.dependency "Reachability", "~> 3.2"
-  s.dependency "Masonry", "~> 1.0.2"
-  s.dependency "ZipArchive", "~> 1.4.0"
-  s.dependency "WSProgressHUD", "~> 1.1.1"
-  s.dependency "YYCache", "~> 1.0.4"
+
+    s.source_files = 'VBKit/VBKit.h'
+
   
+  s.subspec 'VBConstants' do |ss|
+    ss.source_files = 'VBKit/VBConstants.h'
+  end
+  
+  s.subspec 'VBCategories' do |ss|
+    ss.source_files = 'VBKit/VBCategories/**/*'
+  end
+  
+  s.subspec 'VBFoundation' do |ss|
+    ss.source_files = 'VBKit/VBFoundation/**/*'
+    ss.dependency "CocoaLumberjack", "~> 3.0.0"
+  end
+
+  s.subspec 'VBManagers' do |ss|
+     ss.source_files = 'VBKit/VBManagers/VBManagers.h'
+   ss.subspec 'VBUMengAnalyticsManager' do |sss|
+     sss.source_files = 'VBKit/VBManagers/VBUMengAnalyticsManager/**/*'
+     sss.dependency "UMengAnalytics", "~> 4.2.4"
+   end
+   ss.subspec 'VBDBManager' do |sss|
+     sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
+     sss.dependency "FMDB/SQLCipher", "~> 2.6.2"
+   end
+   ss.subspec 'VBFileManager' do |sss|
+     sss.source_files = 'VBKit/VBManagers/VBFileManager/**/*'
+     sss.dependency "ZipArchive", "~> 1.4.0"
+   end
+   ss.subspec 'VBHTTPManager' do |sss|
+     sss.source_files = 'VBKit/VBManagers/VBHTTPManager/**/*'
+     sss.dependency "AFNetworking", "~> 3.1.0"
+     sss.dependency "YYCache", "~> 1.0.4"
+   end
+   ss.subspec 'VBLocationManager' do |sss|
+     sss.source_files = 'VBKit/VBManagers/VBLocationManager/**/*'
+     sss.frameworks   = 'CoreLocation'
+   end
+ end
+
+ s.subspec 'VBUI' do |ss|
+     ss.source_files = 'VBKit/VBUI/VBUI.h'
+   ss.subspec 'VBAlertView' do |sss|
+     sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+     sss.dependency "WSProgressHUD", "~> 1.1.1"
+   end
+   ss.subspec 'Base' do |sss|
+    sss.source_files = 'VBKit/VBUI/Base/**/*'
+    sss.dependency "VBKit/VBConstants"
+  end
+end
+s.subspec 'CommonLib' do |ss|
+ ss.dependency "MJRefresh", "~> 3.1.12"
+ ss.dependency "Reachability", "~> 3.2"
+ ss.dependency "Masonry", "~> 1.0.2"
+end
+
 end

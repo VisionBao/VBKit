@@ -31,7 +31,8 @@
 
 - (void)basicSetup {
     //basicSetup
-
+    NSLog(@"%@", NSHomeDirectory());
+    [VBDBManager setEncryptKey:@"123456"];
     
 }
 
