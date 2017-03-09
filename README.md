@@ -15,24 +15,20 @@
 
 ## 功能及结构(整理中...)
 
-{0}.  VBUI
+- VBUI
+  - Base		
+  - VBAlertView
+- VBManagers
+  - VBDBManager
+  - VBFileManager
+  - VBHTTPManager
+  - VBLocationManager
+  - VBUMengAnalyticsManager
+- VBFoundation
 
-   1.  Base		
-   2.  VBAlertView
+   
 
-{0}.  VBManagers
-
-   1. VBDBManager
-   2.  VBFileManager
-   3. VBHTTPManager
-   4. VBLocationManager
-   5. VBUMengAnalyticsManager
-
-{0}.  VBFoundation
-
-   ​
-
-{0}.  VBCategories
+- VBCategories
 
    ​
 
