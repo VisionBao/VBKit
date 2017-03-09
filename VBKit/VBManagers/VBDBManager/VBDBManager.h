@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "fmdb.h"
+#import <FMDB.h>
+#import "VBFMDBEncrypt.h"
 
 #define ARRAYSIZE(A) (sizeof(A)/sizeof((A)[0]))
 
@@ -17,10 +18,27 @@
  *  数据库管理基类
  */
 @interface VBDBManager : NSObject{
-    FMDatabaseQueue *_dbQueue;
+    VBFMEncryptDatabaseQueue *_dbQueue;
 }
 
 + (id)shareManager;
-- (FMDatabaseQueue *)fmDabaseQueue;
++ (void)setEncryptKey:(NSString *)Key;
+
+/** encrypt sqlite database (same file) */
++ (BOOL)encryptDatabase:(NSString *)path encryptKey:(NSString *)encryptKey;
+
+/** decrypt sqlite database (same file) */
++ (BOOL)unEncryptDatabase:(NSString *)path encryptKey:(NSString *)encryptKey;
+
+/** encrypt sqlite database to new file */
++ (BOOL)encryptDatabase:(NSString *)sourcePath targetPath:(NSString *)targetPath encryptKey:(NSString *)encryptKey;
+
+/** decrypt sqlite database to new file */
++ (BOOL)unEncryptDatabase:(NSString *)sourcePath targetPath:(NSString *)targetPath encryptKey:(NSString *)encryptKey;
+
+/** change secretKey for sqlite database */
++ (BOOL)changeKey:(NSString *)dbPath originKey:(NSString *)originKey newKey:(NSString *)newKey;
+
+- (VBFMEncryptDatabaseQueue *)fmDabaseQueue;
 
 @end

@@ -56,7 +56,6 @@
 		A2C1D3F11E7007FE005BF087 /* VBDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1D3E61E7007FE005BF087 /* VBDBManager.m */; };
 		A2C1D3F21E7007FE005BF087 /* VBFMEncryptDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1D3EB1E7007FE005BF087 /* VBFMEncryptDatabase.m */; };
 		A2C1D3F31E7007FE005BF087 /* VBFMEncryptDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1D3ED1E7007FE005BF087 /* VBFMEncryptDatabaseQueue.m */; };
-		A2C1D3F41E7007FE005BF087 /* VBFMEncryptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C1D3EF1E7007FE005BF087 /* VBFMEncryptHelper.m */; };
 		A2FC5A411E5C38A600F934C5 /* VBHTTPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */; };
 		A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
@@ -177,13 +176,11 @@
 		A2C1D3E51E7007FE005BF087 /* VBDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDBManager.h; sourceTree = "<group>"; };
 		A2C1D3E61E7007FE005BF087 /* VBDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBDBManager.m; sourceTree = "<group>"; };
 		A2C1D3E81E7007FE005BF087 /* VBFMDBEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMDBEncrypt.h; sourceTree = "<group>"; };
-		A2C1D3E91E7007FE005BF087 /* VBFMDBEncryptConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMDBEncryptConfig.h; sourceTree = "<group>"; };
 		A2C1D3EA1E7007FE005BF087 /* VBFMEncryptDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptDatabase.h; sourceTree = "<group>"; };
 		A2C1D3EB1E7007FE005BF087 /* VBFMEncryptDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptDatabase.m; sourceTree = "<group>"; };
 		A2C1D3EC1E7007FE005BF087 /* VBFMEncryptDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptDatabaseQueue.h; sourceTree = "<group>"; };
 		A2C1D3ED1E7007FE005BF087 /* VBFMEncryptDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptDatabaseQueue.m; sourceTree = "<group>"; };
-		A2C1D3EE1E7007FE005BF087 /* VBFMEncryptHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptHelper.h; sourceTree = "<group>"; };
-		A2C1D3EF1E7007FE005BF087 /* VBFMEncryptHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptHelper.m; sourceTree = "<group>"; };
+		A2C1D3F51E71252E005BF087 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A2FC5A3F1E5C38A600F934C5 /* VBHTTPCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBHTTPCacheManager.h; sourceTree = "<group>"; };
 		A2FC5A401E5C38A600F934C5 /* VBHTTPCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBHTTPCacheManager.m; sourceTree = "<group>"; };
 		A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -223,6 +220,7 @@
 		44B48CE6E5F8AFD53A50F1F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2C1D3F51E71252E005BF087 /* libsqlite3.tbd */,
 				A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */,
 				07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */,
 				D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */,
@@ -516,13 +514,10 @@
 			isa = PBXGroup;
 			children = (
 				A2C1D3E81E7007FE005BF087 /* VBFMDBEncrypt.h */,
-				A2C1D3E91E7007FE005BF087 /* VBFMDBEncryptConfig.h */,
 				A2C1D3EA1E7007FE005BF087 /* VBFMEncryptDatabase.h */,
 				A2C1D3EB1E7007FE005BF087 /* VBFMEncryptDatabase.m */,
 				A2C1D3EC1E7007FE005BF087 /* VBFMEncryptDatabaseQueue.h */,
 				A2C1D3ED1E7007FE005BF087 /* VBFMEncryptDatabaseQueue.m */,
-				A2C1D3EE1E7007FE005BF087 /* VBFMEncryptHelper.h */,
-				A2C1D3EF1E7007FE005BF087 /* VBFMEncryptHelper.m */,
 			);
 			path = VBFMDBEncrypt;
 			sourceTree = "<group>";
@@ -831,7 +826,6 @@
 				A25A490A1DADCD02007D6B66 /* NSString+VBHash.m in Sources */,
 				A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */,
 				A25A48561DADCC3D007D6B66 /* main.m in Sources */,
-				A2C1D3F41E7007FE005BF087 /* VBFMEncryptHelper.m in Sources */,
 				A242F0BB1DD70E65009D0350 /* VBNavigationBar.m in Sources */,
 				A218D2D01E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m in Sources */,
 				A25A48981DADCCFB007D6B66 /* ViewController.m in Sources */,

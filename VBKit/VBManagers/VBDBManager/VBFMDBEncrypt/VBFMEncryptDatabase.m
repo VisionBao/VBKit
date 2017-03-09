@@ -7,83 +7,53 @@
 //
 
 #import "VBFMEncryptDatabase.h"
-#import "VBFMDBEncryptConfig.h"
 #import <sqlite3.h>
 
-@implementation VBFMEncryptDatabase
-static NSString *encryptKey_;
-
-+ (void)initialize
-{
-    [super initialize];
-    //初始化数据库加密key，在使用之前可以通过 setEncryptKey 修改
-    encryptKey_ = VBFMDBEncryptKey;
+@interface VBFMEncryptDatabase () {
+    NSString *_encryptKey;
 }
 
-#pragma mark - 重载原来方法
-- (BOOL)open {
-    if (_db) {
-        return YES;
+@end
+
+@implementation VBFMEncryptDatabase
+
++ (instancetype)databaseWithPath:(NSString*)aPath encryptKey:(NSString *)encryptKey
+{
+    return [[[self class] alloc] initWithPath:aPath encryptKey:encryptKey];
+}
+
+- (instancetype)initWithPath:(NSString*)aPath encryptKey:(NSString *)encryptKey
+{
+    if (self = [self initWithPath:aPath]) {
+        _encryptKey = encryptKey;
     }
-    
-    int err = sqlite3_open([self sqlitePath], &_db );
-    if(err != SQLITE_OK) {
-        NSLog(@"error opening!: %d", err);
-        return NO;
-    } else {
+    return self;
+}
+
+
+#pragma mark - Override Method
+- (BOOL)open
+{
+    BOOL res = [super open];
+    if (res && _encryptKey) {
         //数据库open后设置加密key
-        [self setKey:encryptKey_];
+        [self setKey:_encryptKey];
     }
-    
-    if (_maxBusyRetryTimeInterval > 0.0) {
-        // set the handler
-        [self setMaxBusyRetryTimeInterval:_maxBusyRetryTimeInterval];
-    }
-    
-    return YES;
+    return res;
 }
 
 #if SQLITE_VERSION_NUMBER >= 3005000
-- (BOOL)openWithFlags:(int)flags {
-    if (_db) {
-        return YES;
-    }
-    
-    int err = sqlite3_open_v2([self sqlitePath], &_db, flags, NULL /* Name of VFS module to use */);
-    if(err != SQLITE_OK) {
-        NSLog(@"error opening!: %d", err);
-        return NO;
-    } else {
+- (BOOL)openWithFlags:(int)flags vfs:(NSString *)vfsName
+{
+    BOOL res = [super openWithFlags:flags vfs:vfsName];
+    if (res && _encryptKey) {
         //数据库open后设置加密key
-        [self setKey:encryptKey_];
+        [self setKey:_encryptKey];
     }
-    if (_maxBusyRetryTimeInterval > 0.0) {
-        // set the handler
-        [self setMaxBusyRetryTimeInterval:_maxBusyRetryTimeInterval];
-    }
-    
-    return YES;
+    return res;
 }
 
 #endif
 
-- (const char*)sqlitePath {
-    
-    if (!_databasePath) {
-        return ":memory:";
-    }
-    
-    if ([_databasePath length] == 0) {
-        return ""; // this creates a temporary database (it's an sqlite thing).
-    }
-    
-    return [_databasePath fileSystemRepresentation];
-    
-}
 
-#pragma mark - 配置方法
-+ (void)setEncryptKey:(NSString *)encryptKey
-{
-    encryptKey_ = encryptKey;
-}
 @end

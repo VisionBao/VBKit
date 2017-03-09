@@ -10,7 +10,12 @@
 
 @interface VBFMEncryptDatabase : FMDatabase
 
-/** 如果需要自定义encryptkey，可以调用这个方法修改（在使用之前）*/
-+ (void)setEncryptKey:(NSString *)encryptKey;
+
++ (instancetype)databaseWithPath:(NSString*)aPath
+                      encryptKey:(NSString *)encryptKey;
+
+- (instancetype)initWithPath:(NSString*)aPath
+                  encryptKey:(NSString *)encryptKey;
+
 
 @end

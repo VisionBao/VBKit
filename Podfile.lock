@@ -22,13 +22,17 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
+  - FMDB/SQLCipher (2.6.2):
+    - SQLCipher
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
   - Reachability (3.2)
   - Shimmer (1.0.2)
+  - SQLCipher (3.4.1):
+    - SQLCipher/standard (= 3.4.1)
+  - SQLCipher/common (3.4.1)
+  - SQLCipher/standard (3.4.1):
+    - SQLCipher/common
   - UMengAnalytics (4.2.4)
   - WSProgressHUD (1.1.1):
     - Shimmer
@@ -38,11 +42,11 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CocoaLumberjack
-  - FMDB
+  - FMDB/SQLCipher
   - Masonry
   - MJRefresh
   - Reachability
-  - UMengAnalytics (~> 4.2.4)
+  - UMengAnalytics
   - WSProgressHUD
   - YYCache
   - ZipArchive
@@ -55,11 +59,12 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SQLCipher: 43d12c0eb9c57fb438749618fc3ce0065509a559
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   WSProgressHUD: 0ebb8dd846f7fb4715d42c87584456480cb7fbf0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: e86e85f7002647468935a7c3a7d14a67a5f0e560
+PODFILE CHECKSUM: c8f1abde0c2e6bfa981009b1f19861ab3d53cab1
 
 COCOAPODS: 1.2.0

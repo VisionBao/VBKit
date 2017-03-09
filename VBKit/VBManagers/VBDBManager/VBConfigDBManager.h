@@ -14,4 +14,12 @@
 }
 
 + (id)shareManager;
+- (void)clearTables;
+- (void)dropTables;
+- (BOOL)insertItem:(NSString *)key value:(NSString *)value;
+- (BOOL)insertBoolItem:(NSString *)key value:(BOOL)value;
+- (BOOL)insertIntItem:(NSString *)key value:(NSInteger)value;
+- (NSString *)queryItem:(NSString *)key;
+- (BOOL)updateItem:(NSString *)key value:(NSString *)value;
+- (BOOL)deleteItem:(NSString *)key;
 @end
