@@ -62,6 +62,7 @@
 		A2F31A9D1E7157FB00C8354C /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2F31A711E7157FB00C8354C /* VBerror@2x.png */; };
 		A2F31A9E1E7157FB00C8354C /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F31A731E7157FB00C8354C /* VBProgressHUD.m */; };
 		A2F31A9F1E7157FB00C8354C /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2F31A741E7157FB00C8354C /* VBsuccess@2x.png */; };
+		A2F31AF01E71727000C8354C /* UIAlertController+VBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F31AEF1E71727000C8354C /* UIAlertController+VBAlert.m */; };
 		A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */; };
 		F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */; };
 /* End PBXBuildFile section */
@@ -199,6 +200,8 @@
 		A2F31A731E7157FB00C8354C /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
 		A2F31A741E7157FB00C8354C /* VBsuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VBsuccess@2x.png"; sourceTree = "<group>"; };
 		A2F31A751E7157FB00C8354C /* VBUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBUI.h; sourceTree = "<group>"; };
+		A2F31AEE1E71727000C8354C /* UIAlertController+VBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+VBAlert.h"; sourceTree = "<group>"; };
+		A2F31AEF1E71727000C8354C /* UIAlertController+VBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+VBAlert.m"; sourceTree = "<group>"; };
 		A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -544,6 +547,8 @@
 				A2F31A721E7157FB00C8354C /* VBProgressHUD.h */,
 				A2F31A731E7157FB00C8354C /* VBProgressHUD.m */,
 				A2F31A741E7157FB00C8354C /* VBsuccess@2x.png */,
+				A2F31AEE1E71727000C8354C /* UIAlertController+VBAlert.h */,
+				A2F31AEF1E71727000C8354C /* UIAlertController+VBAlert.m */,
 			);
 			path = VBAlertView;
 			sourceTree = "<group>";
@@ -867,6 +872,7 @@
 				A2F31A8A1E7157FB00C8354C /* NSString+VBUrlEncode.m in Sources */,
 				A2F31A811E7157FB00C8354C /* VBFMEncryptDatabase.m in Sources */,
 				A2F31A7C1E7157FB00C8354C /* VBLog.m in Sources */,
+				A2F31AF01E71727000C8354C /* UIAlertController+VBAlert.m in Sources */,
 				A2F31A941E7157FB00C8354C /* VBNavigationBar.m in Sources */,
 				A2F31A8E1E7157FB00C8354C /* VBAnalyticsHook.m in Sources */,
 				A2F31A7B1E7157FB00C8354C /* UIWindow+VBHierarchy.m in Sources */,
