@@ -58,9 +58,10 @@ typedef void (^ProgressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 
 //设置timeout 默认60s
 - (void)setTimeout:(NSTimeInterval)timeout;
-//设置header
+//设置通用header
 - (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders;
-
+//设置临时header
+- (void)setTempHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders;
 /**
  GET请求(无缓存)
  */

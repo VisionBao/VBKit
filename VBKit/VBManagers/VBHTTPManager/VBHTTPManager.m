@@ -16,6 +16,7 @@
 
 @property (nonatomic, assign) NSTimeInterval vb_timeout; //超时
 @property (nonatomic, strong) NSDictionary *httpHeaders; //headers
+@property (nonatomic, strong) NSDictionary *httpHeaderstemp; //临时headers
 
 @property (nonatomic, strong) NSMutableArray *taskArray;
 
@@ -54,13 +55,13 @@
 //设置header
 - (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders {
     _httpHeaders = httpHeaders;
-    for (NSString *key in _httpHeaders.allKeys) {
-        if (_httpHeaders[key] != nil) {
-            [_sessionManager.requestSerializer setValue:_httpHeaders[key] forHTTPHeaderField:key];
-        }
-    }
+    [self configCommonHeaders];
 }
-
+//设置临时header
+- (void)setTempHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders {
+    _httpHeaderstemp = httpHeaders;
+    [self configTempHeaders];
+}
 - (void)cancelAllRequest {
     
     @synchronized(self) {
@@ -106,6 +107,7 @@
                          success:(RequestSuccessBlock)successHandler
                          failure:(RequestFailureBlock)failureHandler {
     
+    [self configTempHeaders];
     responseCache ? responseCache([VBHTTPCacheManager httpCacheForURL:url parameters:params]) : nil;
     
     NSURLSessionTask *sessionTask = [self.sessionManager GET:url
@@ -121,7 +123,7 @@
                                                         failureHandler ? failureHandler(error) : nil;
                                                     }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
-    
+    [self clearTempHeaders];
     return sessionTask;
 }
 
@@ -149,6 +151,7 @@
                           success:(RequestSuccessBlock)successHandler
                           failure:(RequestFailureBlock)failureHandler {
     
+    [self configTempHeaders];
     responseCache ? responseCache([VBHTTPCacheManager httpCacheForURL:url parameters:params]) : nil;
     
     NSURLSessionTask *sessionTask = [self.sessionManager POST:url
@@ -165,7 +168,7 @@
                                                      }];
     
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
-    
+    [self clearTempHeaders];
     return sessionTask;
 }
 
@@ -177,7 +180,7 @@
                           params:(NSDictionary *)params
                          success:(RequestSuccessBlock)successHandler
                          failure:(RequestFailureBlock)failureHandler {
-    
+    [self configTempHeaders];
     NSURLSessionTask *sessionTask = [self.sessionManager PUT:url
                                                   parameters:params
                                                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -188,6 +191,7 @@
                                                          failureHandler ? failureHandler(error) : nil;
                                                      }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
+    [self clearTempHeaders];
     return sessionTask;
 }
 
@@ -198,7 +202,7 @@
                              params:(NSDictionary *)params
                             success:(RequestSuccessBlock)successHandler
                             failure:(RequestFailureBlock)failureHandler {
-    
+    [self configTempHeaders];
     NSURLSessionTask *sessionTask = [self.sessionManager DELETE:url
                                                      parameters:params
                                                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -209,6 +213,7 @@
                                                             failureHandler ? failureHandler(error) : nil;
                                                         }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
+    [self clearTempHeaders];
     return sessionTask;
 }
 
@@ -269,6 +274,7 @@
                             success:(RequestSuccessBlock)successHandler
                             failure:(RequestFailureBlock)failureHandler {
     
+    [self configTempHeaders];
     NSURLSessionTask *sessionTask = [self.sessionManager POST:url
                                                    parameters:params
                                     constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -286,7 +292,55 @@
                                         failureHandler ? failureHandler(error) : nil;
                                     }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
+    [self clearTempHeaders];
     return sessionTask;
+}
+#pragma mark - private method
+
+- (void)configCommonHeaders {
+    
+    for (NSString *key in _httpHeaders.allKeys) {
+        if (_httpHeaders[key] != nil) {
+            [_sessionManager.requestSerializer setValue:_httpHeaders[key] forHTTPHeaderField:key];
+        }
+    }
+}
+
+- (void)configTempHeaders {
+    
+    if (!_httpHeaderstemp) {
+        return;
+    }
+    [self clearCommonHeaders];
+    for (NSString *key in _httpHeaderstemp.allKeys) {
+        if (_httpHeaderstemp[key] != nil) {
+            [_sessionManager.requestSerializer setValue:_httpHeaderstemp[key] forHTTPHeaderField:key];
+        }
+    }
+}
+
+//清除通用请求头设置
+- (void)clearCommonHeaders {
+
+    for (NSString *key in _httpHeaders.allKeys) {
+        if (_httpHeaders[key] != nil) {
+            [_sessionManager.requestSerializer setValue:nil forHTTPHeaderField:key];
+        }
+    }
+}
+//清除临时请求头设置
+- (void)clearTempHeaders {
+    
+    if (!_httpHeaderstemp) {
+        return;
+    }
+    for (NSString *key in _httpHeaderstemp.allKeys) {
+        if (_httpHeaderstemp[key] != nil) {
+            [_sessionManager.requestSerializer setValue:nil forHTTPHeaderField:key];
+        }
+    }
+    _httpHeaderstemp = nil;
+    [self configCommonHeaders];
 }
 
 - (NSMutableArray *)taskArray {
