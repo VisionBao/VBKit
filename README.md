@@ -5,7 +5,7 @@
 [1]:	https://travis-ci.org/VisionBao/VBKit
 
 [image-1]:	https://travis-ci.org/VisionBao/VBKit.svg?branch=master
-[image-2]:	https://img.shields.io/badge/cocoapods-v0.1.0-blue.svg
+[image-2]:	https://img.shields.io/badge/cocoapods-v0.1.1-blue.svg
 
 [TOC]
 
@@ -33,15 +33,15 @@
    ​
 
 
-##使用方法
+## 使用方法
 
-###1.在Podfile中加入 
+### 1.在Podfile中加入 
 ```
   pod 'VBKit', :git => 'https://github.com/VisionBao/VBKit.git'
 ```
 或
 ```
-  pod 'VBKit', :git => 'https://github.com/VisionBao/VBKit.git' , :tag => '0.1.0'
+  pod 'VBKit', :git => 'https://github.com/VisionBao/VBKit.git' , :tag => '0.1.1'
 ```
 
 如果你只需要单一模块
