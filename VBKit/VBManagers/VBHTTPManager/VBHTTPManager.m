@@ -109,19 +109,22 @@
     
     [self configTempHeaders];
     responseCache ? responseCache([VBHTTPCacheManager httpCacheForURL:url parameters:params]) : nil;
-    
-    NSURLSessionTask *sessionTask = [self.sessionManager GET:url
-                                                  parameters:params
-                                                    progress:^(NSProgress * _Nonnull downloadProgress) {
-                                                        
-                                                    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                        [self.taskArray removeObject:task];
-                                                        successHandler ? successHandler(responseObject) : nil;
-                                                        responseCache ? [VBHTTPCacheManager setHttpCache:responseObject URL:url parameters:params] : nil;
-                                                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                        [self.taskArray removeObject:task];
-                                                        failureHandler ? failureHandler(error) : nil;
-                                                    }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionTask *sessionTask =
+    [self.sessionManager GET:url
+                  parameters:params
+                    progress:^(NSProgress * _Nonnull downloadProgress) {
+                        
+                    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                        [strongSelf.taskArray removeObject:task];
+                        successHandler ? successHandler(responseObject, task) : nil;
+                        responseCache ? [VBHTTPCacheManager setHttpCache:responseObject URL:url parameters:params] : nil;
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                        [strongSelf.taskArray removeObject:task];
+                        failureHandler ? failureHandler(error, task) : nil;
+                    }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
     [self clearTempHeaders];
     return sessionTask;
@@ -153,19 +156,22 @@
     
     [self configTempHeaders];
     responseCache ? responseCache([VBHTTPCacheManager httpCacheForURL:url parameters:params]) : nil;
-    
-    NSURLSessionTask *sessionTask = [self.sessionManager POST:url
-                                                   parameters:params
-                                                     progress:^(NSProgress * _Nonnull uploadProgress) {
-                                                         
-                                                     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                         [self.taskArray removeObject:task];
-                                                         successHandler ? successHandler(responseObject) : nil;
-                                                         responseCache ? [VBHTTPCacheManager setHttpCache:responseObject URL:url parameters:params] : nil;
-                                                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                         [self.taskArray removeObject:task];
-                                                         failureHandler ? failureHandler(error) : nil;
-                                                     }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionTask *sessionTask =
+    [self.sessionManager POST:url
+                   parameters:params
+                     progress:^(NSProgress * _Nonnull uploadProgress) {
+                         
+                     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                         [strongSelf.taskArray removeObject:task];
+                         successHandler ? successHandler(responseObject, task) : nil;
+                         responseCache ? [VBHTTPCacheManager setHttpCache:responseObject URL:url parameters:params] : nil;
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                         [strongSelf.taskArray removeObject:task];
+                         failureHandler ? failureHandler(error, task) : nil;
+                     }];
     
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
     [self clearTempHeaders];
@@ -181,15 +187,19 @@
                          success:(RequestSuccessBlock)successHandler
                          failure:(RequestFailureBlock)failureHandler {
     [self configTempHeaders];
-    NSURLSessionTask *sessionTask = [self.sessionManager PUT:url
-                                                  parameters:params
-                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                         [self.taskArray removeObject:task];
-                                                         successHandler ? successHandler(responseObject) : nil;
-                                                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                         [self.taskArray removeObject:task];
-                                                         failureHandler ? failureHandler(error) : nil;
-                                                     }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionTask *sessionTask =
+    [self.sessionManager PUT:url
+                  parameters:params
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                         [strongSelf.taskArray removeObject:task];
+                         successHandler ? successHandler(responseObject, task) : nil;
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                         [strongSelf.taskArray removeObject:task];
+                         failureHandler ? failureHandler(error, task) : nil;
+                     }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
     [self clearTempHeaders];
     return sessionTask;
@@ -203,15 +213,19 @@
                             success:(RequestSuccessBlock)successHandler
                             failure:(RequestFailureBlock)failureHandler {
     [self configTempHeaders];
-    NSURLSessionTask *sessionTask = [self.sessionManager DELETE:url
-                                                     parameters:params
-                                                        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                            [self.taskArray removeObject:task];
-                                                            successHandler ? successHandler(responseObject) : nil;
-                                                        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                            [self.taskArray removeObject:task];
-                                                            failureHandler ? failureHandler(error) : nil;
-                                                        }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionTask *sessionTask =
+    [self.sessionManager DELETE:url
+                     parameters:params
+                        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                            __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                            [strongSelf.taskArray removeObject:task];
+                            successHandler ? successHandler(responseObject, task) : nil;
+                        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                            __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                            [strongSelf.taskArray removeObject:task];
+                            failureHandler ? failureHandler(error, task) : nil;
+                        }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
     [self clearTempHeaders];
     return sessionTask;
@@ -231,17 +245,23 @@
     NSURL *URL = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
-                                                                     progress:^(NSProgress * _Nonnull downloadProgress) {
-                                                                         progressHandler ? progressHandler(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount) : nil;
-                                                                     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-                                                                         NSURL *downloadUrl = [NSURL fileURLWithPath:filePath];
-                                                                         NSURL *finalUrl =[downloadUrl URLByAppendingPathComponent:[response suggestedFilename]];
-                                                                         return finalUrl;
-                                                                     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-                                                                         [self.taskArray removeObject:downloadTask];
-                                                                         completionHandler ? completionHandler(response, filePath, error) : nil;
-                                                                     }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionDownloadTask *downloadTask;
+    __weak __typeof(NSURLSessionDownloadTask *)weakTask = downloadTask;
+    downloadTask =
+    [manager downloadTaskWithRequest:request
+                            progress:^(NSProgress * _Nonnull downloadProgress) {
+                                progressHandler ? progressHandler(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount) : nil;
+                            } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                NSURL *downloadUrl = [NSURL fileURLWithPath:filePath];
+                                NSURL *finalUrl =[downloadUrl URLByAppendingPathComponent:[response suggestedFilename]];
+                                return finalUrl;
+                            } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                __strong __typeof__(weakSelf) strongSelf = weakSelf;
+                                __strong __typeof(NSURLSessionDownloadTask *)strongTask = weakTask;
+                                [strongSelf.taskArray removeObject:strongTask];
+                                completionHandler ? completionHandler(response, filePath, error) : nil;
+                            }];
     
     [downloadTask resume];
     downloadTask ? [self.taskArray addObject:downloadTask] : nil;
@@ -275,22 +295,26 @@
                             failure:(RequestFailureBlock)failureHandler {
     
     [self configTempHeaders];
-    NSURLSessionTask *sessionTask = [self.sessionManager POST:url
-                                                   parameters:params
-                                    constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-                                        [formData appendPartWithFileData:fileConfig.fileData
-                                                                    name:fileConfig.name
-                                                                fileName:fileConfig.fileName
-                                                                mimeType:fileConfig.mimeType];
-                                    } progress:^(NSProgress * _Nonnull uploadProgress) {
-                                        progressHandler ? progressHandler(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount) : nil;
-                                    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                        [self.taskArray removeObject:task];
-                                        successHandler ? successHandler(responseObject) : nil;
-                                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                        [self.taskArray removeObject:task];
-                                        failureHandler ? failureHandler(error) : nil;
-                                    }];
+    __weak __typeof(&*self)weakSelf = self;
+    NSURLSessionTask *sessionTask =
+    [self.sessionManager POST:url
+                   parameters:params
+    constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:fileConfig.fileData
+                                    name:fileConfig.name
+                                fileName:fileConfig.fileName
+                                mimeType:fileConfig.mimeType];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        progressHandler ? progressHandler(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount) : nil;
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        __strong __typeof__(weakSelf) strongSelf = weakSelf;
+        [strongSelf.taskArray removeObject:task];
+        successHandler ? successHandler(responseObject, task) : nil;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        __strong __typeof__(weakSelf) strongSelf = weakSelf;
+        [strongSelf.taskArray removeObject:task];
+        failureHandler ? failureHandler(error, task) : nil;
+    }];
     sessionTask ? [self.taskArray addObject:sessionTask] : nil;
     [self clearTempHeaders];
     return sessionTask;
@@ -321,7 +345,7 @@
 
 //清除通用请求头设置
 - (void)clearCommonHeaders {
-
+    
     for (NSString *key in _httpHeaders.allKeys) {
         if (_httpHeaders[key] != nil) {
             [_sessionManager.requestSerializer setValue:nil forHTTPHeaderField:key];
