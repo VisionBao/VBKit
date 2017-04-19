@@ -52,6 +52,10 @@
     _sessionManager.requestSerializer.timeoutInterval = _vb_timeout;
 }
 
+- (void)setAcceptableContentTypes:(NSSet <NSString *>*)types {
+    
+    _sessionManager.responseSerializer.acceptableContentTypes = types;
+}
 //设置header
 - (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders {
     _httpHeaders = httpHeaders;
