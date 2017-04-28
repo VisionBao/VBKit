@@ -492,9 +492,9 @@
 				A200032C1EB3171C00DB12AF /* Custom */,
 				A200032D1EB3171C00DB12AF /* UIAlertController+VBAlert.h */,
 				A200032E1EB3171C00DB12AF /* UIAlertController+VBAlert.m */,
-				A20003311EB3171C00DB12AF /* VBerror@2x.png */,
 				A20003321EB3171C00DB12AF /* VBProgressHUD.h */,
 				A20003331EB3171C00DB12AF /* VBProgressHUD.m */,
+				A20003311EB3171C00DB12AF /* VBerror@2x.png */,
 				A20003341EB3171C00DB12AF /* VBsuccess@2x.png */,
 			);
 			path = VBAlertView;

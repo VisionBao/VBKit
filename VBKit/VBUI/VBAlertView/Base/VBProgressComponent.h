@@ -16,9 +16,7 @@
 + (BOOL)hideHUDForView:(UIView * _Nonnull)view
               animated:(BOOL)animated;
 
-+ (VBAlertView * _Nonnull )HUDForView:(UIView * _Nonnull)view;
-
-
++ (UIView * _Nonnull )HUDForView:(UIView * _Nonnull)view;
 
 - (void)showWithAnimated:(BOOL)animated;
 

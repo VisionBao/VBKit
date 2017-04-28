@@ -19,6 +19,6 @@
 #import "VBTabBarController.h"
 
 //UI
-#import "VBAlertView.h"
+//#import "VBAlertView.h"
 
 #endif /* VBUI_h */
