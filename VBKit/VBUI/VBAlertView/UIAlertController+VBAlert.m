@@ -14,31 +14,31 @@ static UIAlertController *_alertCtrl;
 
 #pragma mark - alert
 //普通提示弹窗
-+ (void)showTipAlert:(NSString *)message {
++ (void)vb_showTipAlert:(NSString *)message {
     
-    [self showChoiceAlert:message
-                    title:nil
+    [self vb_showChoiceAlert:message
+                    title:@""
                 doneTitle:nil
               cancelTitle:@"确定"
                completion:nil];
 }
 
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message
           completion:(choiceCompletionBlock)completion {
     
-    [self showChoiceAlert:message
-                    title:nil
+    [self vb_showChoiceAlert:message
+                    title:@""
                 doneTitle:nil
               cancelTitle:@"确定"
                completion:completion];
 }
 
 //带标题提示弹窗
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message
                title:(NSString *)title
           completion:(choiceCompletionBlock)completion {
     
-    [self showChoiceAlert:message
+    [self vb_showChoiceAlert:message
                     title:title
                 doneTitle:nil
               cancelTitle:@"确定"
@@ -46,12 +46,12 @@ static UIAlertController *_alertCtrl;
 }
 
 //自定义单按钮提示弹窗
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message
                title:(NSString *)title
          cancelTitle:(NSString *)cancelTitle
           completion:(choiceCompletionBlock)completion {
     
-    [self showChoiceAlert:message
+    [self vb_showChoiceAlert:message
                     title:title
                 doneTitle:nil
               cancelTitle:cancelTitle
@@ -59,12 +59,12 @@ static UIAlertController *_alertCtrl;
 }
 
 //两个按钮提示弹窗
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
               doneTitle:(NSString *)doneTitle
              completion:(choiceCompletionBlock)completion {
     
-    [self showChoiceAlert:message
+    [self vb_showChoiceAlert:message
                     title:title
                 doneTitle:doneTitle
               cancelTitle:@"取消"
@@ -72,7 +72,7 @@ static UIAlertController *_alertCtrl;
 }
 
 //自定义双按钮提示弹窗
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
               doneTitle:(NSString *)doneTitle
             cancelTitle:(NSString *)cancelTitle
@@ -96,14 +96,14 @@ static UIAlertController *_alertCtrl;
                                             }];
         
     }
-    [self showCommonAlert:message
+    [self vb_showCommonAlert:message
                     title:title
                     style:UIAlertControllerStyleAlert
              actionObject:cancelAction, doneAction, nil];
 }
 
 //三选择弹窗
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
            button1Title:(NSString *)title1
            button2Title:(NSString *)title2
@@ -142,14 +142,14 @@ static UIAlertController *_alertCtrl;
                                          }];
         
     }
-    [self showCommonAlert:message
+    [self vb_showCommonAlert:message
                     title:title
                     style:UIAlertControllerStyleAlert
              actionObject:action1, action2, action3,nil];
 }
 
 //带输入框的弹窗
-+ (void)showTextFiledAlert:(NSString *)message
++ (void)vb_showTextFiledAlert:(NSString *)message
                      title:(NSString *)title
                placeholder:(NSString *)placeholder
                  doneTitle:(NSString *)doneTitle
@@ -189,10 +189,10 @@ static UIAlertController *_alertCtrl;
 /**
  单选弹层
  */
-+ (void)showActionSheet:(NSString *)buttonTitle
++ (void)vb_showActionSheet:(NSString *)buttonTitle
              completion:(choiceCompletionBlock)completion {
     
-    [self showActionSheet:nil
+    [self vb_showActionSheet:nil
                     title:nil
              buttonTitles:@[buttonTitle]
         cancelButtonTitle:@"取消"
@@ -201,12 +201,12 @@ static UIAlertController *_alertCtrl;
 /**
  单选弹层 - 消息 标题 按钮
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
             buttonTitle:(NSString *)buttonTitle
              completion:(choiceCompletionBlock)completion {
     
-    [self showActionSheet:message
+    [self vb_showActionSheet:message
                     title:title
              buttonTitles:@[buttonTitle]
         cancelButtonTitle:@"取消"
@@ -215,13 +215,13 @@ static UIAlertController *_alertCtrl;
 /**
  单选弹层 - 消息 标题 按钮 取消按钮
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
             buttonTitle:(NSString *)buttonTitle
       cancelButtonTitle:(NSString *)cancelButtonTitle
              completion:(choiceCompletionBlock)completion {
     
-    [self showActionSheet:message
+    [self vb_showActionSheet:message
                     title:title
              buttonTitles:@[buttonTitle]
         cancelButtonTitle:cancelButtonTitle
@@ -231,7 +231,7 @@ static UIAlertController *_alertCtrl;
 /**
  自定义单选弹层
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
            buttonTitles:(NSArray<NSString *> *)buttonTitles
       cancelButtonTitle:(NSString *)cancelButtonTitle
@@ -261,7 +261,7 @@ static UIAlertController *_alertCtrl;
         [actionArr addObject:action];
     }
     
-    [self showCommonAlert:message
+    [self vb_showCommonAlert:message
                     title:title
                     style:UIAlertControllerStyleActionSheet
               actionArray:actionArr];
@@ -271,7 +271,7 @@ static UIAlertController *_alertCtrl;
 /**
  通用提示弹层
  */
-+ (void)showCommonAlert:(NSString *)message
++ (void)vb_showCommonAlert:(NSString *)message
                   title:(NSString *)title
                   style:(UIAlertControllerStyle)style
            actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION {
@@ -292,7 +292,7 @@ static UIAlertController *_alertCtrl;
     [[window vb_currentViewController] presentViewController:_alertCtrl animated:YES completion:nil];
 }
 
-+ (void)showCommonAlert:(NSString *)message
++ (void)vb_showCommonAlert:(NSString *)message
                   title:(NSString *)title
                   style:(UIAlertControllerStyle)style
             actionArray:(NSArray<UIAlertAction *> *)actionArray {

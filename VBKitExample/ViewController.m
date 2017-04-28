@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIAlertController+VBAlert.h"
 
 @interface ViewController ()
 
@@ -20,41 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setTitle:@"fuck" forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-//    [self vb_initNavBarWithCustomView:button tintColor:[UIColor blackColor]];
-//    [self vb_addRightButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
-//    [self vb_addBackButtonItemWithTitle:@"fuck" backImg:@"icon_cell_blue_normal@2x"];
-////    [self addBackButtonItem];
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *strpath = [paths objectAtIndex:0];
-//    [[VBConfigDBManager shareManager] insertItem:@"name" value:@"fuck"];
-//    NSString * dbPath = [strpath stringByAppendingPathComponent:@"VBKit.db.sqlite"];
-//    [VBDBManager unEncryptDatabase:dbPath encryptKey:@"123456"];
-//    NSLog(@"%@", [VBFileManager getPathWithType:VBFilePATH_HOME]);
-    
-   NSSet * set =  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
-    [[VBHTTPManager shareManager] setAcceptableContentTypes:set];
-    
-    [[VBHTTPManager shareManager] getRequest:@"http://www.0476ml.com/index.php/home/Index/Android" params:nil success:^(id responseObj, NSURLSessionDataTask *task) {
-        
-        
-    } failure:^(NSError *error, NSURLSessionDataTask *task) {
-        
-    }];
+    [self vb_initNavBar];
+    [self vb_addBackButtonItem];
+    [self vb_addRightButtonItem];
 }
 
 - (void)vb_backButtonItemClick {
-    int x = arc4random() % 6;
-    NSArray *arr = @[@"拉面", @"饺子", @"米线", @"羊杂汤", @"咖啡厅", @"黄焖鸡"];
-    NSLog(@"%@", arr[x]);
-    [[VBAlertView shareAlertView] showTipAlert:arr[x] title:@"今日吃" completion:nil];
+  
+    [UIAlertController vb_showActionSheet:@"123" title:@"222" buttonTitle:@"2222222" cancelButtonTitle:@"22" completion:^(NSInteger selecteIndex, UIAlertAction *action) {
+        
+    }];
 }
 - (void)vb_rightButtonItemClick {
-    [[VBAlertView shareAlertView] showActionSheet:@"123" completion:^(NSInteger selecteIndex, UIAlertAction *action) {
-        NSLog(@"%zd, %@", selecteIndex, action.title);
+    
+    [UIAlertController vb_showActionSheet:@"111" title:@"222" buttonTitles:@[@"1",@"2",@"3", @"4", @"5"] cancelButtonTitle:@"quxiao" completion:^(NSInteger selecteIndex, UIAlertAction *action) {
+        
     }];
 }
 - (void)didReceiveMemoryWarning {

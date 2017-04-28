@@ -18,33 +18,33 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  普通提示弹窗 - 消息
  */
-+ (void)showTipAlert:(NSString *)message;
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message;
++ (void)vb_showTipAlert:(NSString *)message
           completion:(choiceCompletionBlock)completion;
 /**
  带标题提示弹窗 - 消息 标题
  */
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message
                title:(NSString *)title
           completion:(choiceCompletionBlock)completion;
 /**
  自定义单按钮提示弹窗 - 消息 标题 按钮
  */
-+ (void)showTipAlert:(NSString *)message
++ (void)vb_showTipAlert:(NSString *)message
                title:(NSString *)title
          cancelTitle:(NSString *)cancelTitle
           completion:(choiceCompletionBlock)completion;
 /**
  双按钮提示弹窗 - 消息 标题 按钮
  */
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
               doneTitle:(NSString *)doneTitle
              completion:(choiceCompletionBlock)completion;
 /**
  自定义双按钮提示弹窗 - 消息 标题 确认按钮 取消按钮
  */
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
               doneTitle:(NSString *)doneTitle
             cancelTitle:(NSString *)cancelTitle
@@ -52,7 +52,7 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  三选择弹窗
  */
-+ (void)showChoiceAlert:(NSString *)message
++ (void)vb_showChoiceAlert:(NSString *)message
                   title:(NSString *)title
            button1Title:(NSString *)title1
            button2Title:(NSString *)title2
@@ -63,7 +63,7 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  带输入框弹层
  */
-+ (void)showTextFiledAlert:(NSString *)message
++ (void)vb_showTextFiledAlert:(NSString *)message
                      title:(NSString *)title
                placeholder:(NSString *)placeholder
                  doneTitle:(NSString *)doneTitle
@@ -74,19 +74,19 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  单选弹层
  */
-+ (void)showActionSheet:(NSString *)buttonTitle
++ (void)vb_showActionSheet:(NSString *)buttonTitle
              completion:(choiceCompletionBlock)completion;
 /**
  单选弹层 - 消息 标题 按钮
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
             buttonTitle:(NSString *)buttonTitle
              completion:(choiceCompletionBlock)completion;
 /**
  单选弹层 - 消息 标题 按钮 取消按钮
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
             buttonTitle:(NSString *)buttonTitle
       cancelButtonTitle:(NSString *)cancelButtonTitle
@@ -94,7 +94,7 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  自定义单选弹层
  */
-+ (void)showActionSheet:(NSString *)message
++ (void)vb_showActionSheet:(NSString *)message
                   title:(NSString *)title
            buttonTitles:(NSArray<NSString *> *)buttonTitles
       cancelButtonTitle:(NSString *)cancelButtonTitle
@@ -104,7 +104,7 @@ typedef void (^textCompletionBlock)(NSString *text, NSInteger selecteIndex);
 /**
  通用提示弹层
  */
-+ (void)showCommonAlert:(NSString *)message
++ (void)vb_showCommonAlert:(NSString *)message
                   title:(NSString *)title
                   style:(UIAlertControllerStyle)style
            actionObject:(UIAlertAction *)actionObject, ... NS_REQUIRES_NIL_TERMINATION;
