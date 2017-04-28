@@ -7,13 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VBDBManager.h"
 
-@interface VBConfigDBManager : NSObject{
-    VBDBManager *_dbMgr;
-}
+@interface VBConfigDBManager : NSObject
 
-+ (id)shareManager;
++ (instancetype)shareManager;
 - (void)clearTables;
 - (void)dropTables;
 - (BOOL)insertItem:(NSString *)key value:(NSString *)value;

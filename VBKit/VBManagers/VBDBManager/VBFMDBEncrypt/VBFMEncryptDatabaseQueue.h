@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class FMDatabase;
+#import <FMDB.h>
 
 @interface VBFMEncryptDatabaseQueue : FMDatabaseQueue
 

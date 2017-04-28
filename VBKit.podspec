@@ -16,17 +16,17 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.1.0"
-  s.summary      = "VBKit for base project."
+  s.version      = "0.1.4"
+  s.summary      = "VBKit is committed to rapid construction projects."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  # s.description  = <<-DESC
-  #                  VBKit for base project.
-  #                  DESC
+  s.description  = <<-DESC
+                   VBKit for base project.VBKit is committed to rapid construction projects.
+                   DESC
 
   s.homepage     = "https://github.com/VisionBao/VBKit/"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -53,9 +53,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "VisionBao" => "Vision8888888@gmail.com" }
+  s.author             = { "VisionBao" => "visionbao@163.com" }
   # Or just: s.author    = "VisionBao"
-  # s.authors            = { "VisionBao" => "Vision8888888@gmail.com" }
+  # s.authors            = { "VisionBao" => "visionbao@163.com" }
   # s.social_media_url   = "http://twitter.com/VisionBao"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "8.0"
+  # s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -180,18 +180,16 @@ Pod::Spec.new do |s|
  s.subspec 'VBUI' do |ss|
      ss.source_files = 'VBKit/VBUI/VBUI.h'
    ss.subspec 'VBAlertView' do |sss|
-     sss.source_files = 'VBKit/VBUI/VBAlertView/**/*'
+     sss.source_files = 'VBKit/VBUI/VBAlertView/**/*.{h,m}'
+     sss.resource  = 'VBKit/VBUI/VBAlertView/**/*.png'
      sss.dependency "WSProgressHUD", "~> 1.1.1"
    end
    ss.subspec 'Base' do |sss|
-    sss.source_files = 'VBKit/VBUI/Base/**/*'
+    sss.source_files = 'VBKit/VBUI/Base/**/*.{h,m}'
+    sss.resource  = 'VBKit/VBUI/Base/**/*.png'
     sss.dependency "VBKit/VBConstants"
   end
 end
-s.subspec 'CommonLib' do |ss|
- ss.dependency "MJRefresh", "~> 3.1.12"
- ss.dependency "Reachability", "~> 3.2"
- ss.dependency "Masonry", "~> 1.0.2"
-end
+
 
 end

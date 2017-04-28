@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <sqlite3.h>
-#import <FMDB.h>
 #import "VBFMDBEncrypt.h"
 
 #define ARRAYSIZE(A) (sizeof(A)/sizeof((A)[0]))
@@ -17,12 +15,25 @@
 /**
  *  数据库管理基类
  */
-@interface VBDBManager : NSObject{
-    VBFMEncryptDatabaseQueue *_dbQueue;
-}
+@interface VBDBManager : NSObject
+
+/**
+ 设置DB文件名
+ 请在初始化前设置
+
+ @param Name 文件名
+ */
++ (void)setDBName:(NSString *)Name;
+
+/**
+ 设置DB密码
+ 请在初始化前设置 默认无密码
+
+ @param Key 密码
+ */
++ (void)setEncryptKey:(NSString *)Key;
 
 + (id)shareManager;
-+ (void)setEncryptKey:(NSString *)Key;
 
 /** 加密 - 同文件 */
 + (BOOL)encryptDatabase:(NSString *)path

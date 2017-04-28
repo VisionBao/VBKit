@@ -11,7 +11,7 @@
 
 #import "VBLocationManager.h"
 #import "VBFileManager.h"
-#import "VBHTTPHelper.h"
+#import "VBHTTPManager.h"
 #import "VBDBManager.h"
 #import "VBConfigDBManager.h"
 #import "VBFMDBEncrypt.h"

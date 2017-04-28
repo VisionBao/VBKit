@@ -33,12 +33,12 @@ typedef void(^RequestCacheBlock)(id responseCache);
 /**
  请求成功block
  */
-typedef void (^RequestSuccessBlock)(id responseObj);
+typedef void (^RequestSuccessBlock)(id responseObj, NSURLSessionDataTask *task);
 
 /**
  请求失败block
  */
-typedef void (^RequestFailureBlock)(NSError *error);
+typedef void (^RequestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 
 /**
  请求响应block
@@ -58,9 +58,12 @@ typedef void (^ProgressBlock)(int64_t bytesWritten, int64_t totalBytesWritten);
 
 //设置timeout 默认60s
 - (void)setTimeout:(NSTimeInterval)timeout;
-//设置header
+//设置 ContentTypes
+- (void)setAcceptableContentTypes:(NSSet <NSString *>*)types;
+//设置通用header
 - (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders;
-
+//设置临时header
+- (void)setTempHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders;
 /**
  GET请求(无缓存)
  */

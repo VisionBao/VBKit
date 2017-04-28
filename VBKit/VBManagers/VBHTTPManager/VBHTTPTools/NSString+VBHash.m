@@ -20,6 +20,17 @@
     CC_MD5(string, length, bytes);
     return [self vb_stringFromBytes:bytes length:CC_MD5_DIGEST_LENGTH];
 }
+
+- (NSString *)vb_md5String16Bate{
+    
+    NSString *md5Str = [self vb_md5String];
+    NSString  *string;
+    for (int i=0; i<24; i++) {
+        string=[md5Str substringWithRange:NSMakeRange(8, 16)];
+    }
+    return string;
+}
+
 - (NSString *)vb_sha1String
 {
     const char *string = self.UTF8String;

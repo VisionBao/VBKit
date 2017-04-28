@@ -7,11 +7,20 @@
 //
 
 #import "VBDBManager.h"
+#import <sqlite3.h>
+#import <FMDB.h>
 
 static NSString *VBFMDbName = @"VBKit.db.sqlite";
 static NSString *VBFMDbEncryptKey = nil;
 
+@interface VBDBManager () {
+    VBFMEncryptDatabaseQueue *_dbQueue;
+}
+
+@end
+
 @implementation VBDBManager
+
 + (id)shareManager {
     static VBDBManager *s_dbManager = nil;
     static dispatch_once_t onceToken;
@@ -20,8 +29,13 @@ static NSString *VBFMDbEncryptKey = nil;
     });
     return s_dbManager;
 }
+
 + (void)setEncryptKey:(NSString *)Key {
     VBFMDbEncryptKey = Key;
+}
+
++ (void)setDBName:(NSString *)Name {
+    VBFMDbName = Name;
 }
 
 + (BOOL)encryptDatabase:(NSString *)path

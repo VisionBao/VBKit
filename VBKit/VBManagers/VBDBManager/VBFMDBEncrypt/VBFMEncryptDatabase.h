@@ -6,7 +6,7 @@
 //  Copyright © 2015年 VisionBao. All rights reserved.
 //
 
-#import <FMDB/FMDB.h>
+#import <FMDB.h>
 
 @interface VBFMEncryptDatabase : FMDatabase
 

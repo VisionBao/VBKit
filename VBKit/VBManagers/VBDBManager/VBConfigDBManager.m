@@ -7,9 +7,18 @@
 //
 
 #import "VBConfigDBManager.h"
+#import "VBDBManager.h"
+#import <FMDB.h>
+
+@interface VBConfigDBManager (){
+    VBDBManager *_dbMgr;
+}
+
+@end
 
 @implementation VBConfigDBManager
-+ (id)shareManager {
+
++ (instancetype)shareManager {
     static VBConfigDBManager *s_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
