@@ -44,7 +44,6 @@
 		A20003561EB3171C00DB12AF /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20003261EB3171C00DB12AF /* VBViewController.m */; };
 		A20003571EB3171C00DB12AF /* VBProgressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A200032A1EB3171C00DB12AF /* VBProgressComponent.m */; };
 		A20003581EB3171C00DB12AF /* UIAlertController+VBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A200032E1EB3171C00DB12AF /* UIAlertController+VBAlert.m */; };
-		A20003591EB3171C00DB12AF /* VBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20003301EB3171C00DB12AF /* VBAlertView.m */; };
 		A200035A1EB3171C00DB12AF /* VBerror@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20003311EB3171C00DB12AF /* VBerror@2x.png */; };
 		A200035B1EB3171C00DB12AF /* VBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A20003331EB3171C00DB12AF /* VBProgressHUD.m */; };
 		A200035C1EB3171C00DB12AF /* VBsuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A20003341EB3171C00DB12AF /* VBsuccess@2x.png */; };
@@ -197,8 +196,6 @@
 		A200032B1EB3171C00DB12AF /* VBProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressDelegate.h; sourceTree = "<group>"; };
 		A200032D1EB3171C00DB12AF /* UIAlertController+VBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+VBAlert.h"; sourceTree = "<group>"; };
 		A200032E1EB3171C00DB12AF /* UIAlertController+VBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+VBAlert.m"; sourceTree = "<group>"; };
-		A200032F1EB3171C00DB12AF /* VBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAlertView.h; sourceTree = "<group>"; };
-		A20003301EB3171C00DB12AF /* VBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAlertView.m; sourceTree = "<group>"; };
 		A20003311EB3171C00DB12AF /* VBerror@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VBerror@2x.png"; sourceTree = "<group>"; };
 		A20003321EB3171C00DB12AF /* VBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProgressHUD.h; sourceTree = "<group>"; };
 		A20003331EB3171C00DB12AF /* VBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProgressHUD.m; sourceTree = "<group>"; };
@@ -495,8 +492,6 @@
 				A200032C1EB3171C00DB12AF /* Custom */,
 				A200032D1EB3171C00DB12AF /* UIAlertController+VBAlert.h */,
 				A200032E1EB3171C00DB12AF /* UIAlertController+VBAlert.m */,
-				A200032F1EB3171C00DB12AF /* VBAlertView.h */,
-				A20003301EB3171C00DB12AF /* VBAlertView.m */,
 				A20003311EB3171C00DB12AF /* VBerror@2x.png */,
 				A20003321EB3171C00DB12AF /* VBProgressHUD.h */,
 				A20003331EB3171C00DB12AF /* VBProgressHUD.m */,
@@ -909,7 +904,6 @@
 				A2F31A961E7157FB00C8354C /* (null) in Sources */,
 				A200033C1EB3171C00DB12AF /* VBDBManager.m in Sources */,
 				A200034A1EB3171C00DB12AF /* VBAnalyticsHook.m in Sources */,
-				A20003591EB3171C00DB12AF /* VBAlertView.m in Sources */,
 				A2F31A9B1E7157FB00C8354C /* (null) in Sources */,
 				A2F31A831E7157FB00C8354C /* (null) in Sources */,
 				A2F31A791E7157FB00C8354C /* (null) in Sources */,
