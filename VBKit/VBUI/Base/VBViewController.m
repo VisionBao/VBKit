@@ -47,7 +47,7 @@
         _navBar = [[VBNavigationBar alloc] init];
         _navItem = [[UINavigationItem alloc] init];
         
-        [_navBar setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
+        [_navBar setFrame:CGRectMake(0, 0, kVBSCREEN_WIDTH, kVBNAVIGATION_BAR_HEIGHT)];
         [_navBar setTranslucent:NO];
         [_navBar pushNavigationItem:_navItem animated:NO];
         [_navBar setBarTintColor:_tintColor];
@@ -195,11 +195,11 @@
 - (void)vb_hideNavigationBarAnimated:(BOOL)hide {
     [UIView animateWithDuration:0.1 animations:^{
         if (hide) {
-            [_navBar setFrame:CGRectMake(0, -NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
+            [_navBar setFrame:CGRectMake(0, -kVBNAVIGATION_BAR_HEIGHT, kVBSCREEN_WIDTH, kVBNAVIGATION_BAR_HEIGHT)];
             _navBar.alpha = 0;
         } else {
             _navBar.alpha = 1;
-            [_navBar setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
+            [_navBar setFrame:CGRectMake(0, 0, kVBSCREEN_WIDTH, kVBNAVIGATION_BAR_HEIGHT)];
         }
     } completion:^(BOOL finished) {
         _navBar.hidden = hide;
