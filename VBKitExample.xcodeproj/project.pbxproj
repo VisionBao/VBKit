@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32B58E26735B6C9398FC1F7B /* libPods-VBKitExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */; };
 		3BD0EDF1C923E805BD1F58A1 /* libPods-VBKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */; };
+		A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */; };
 		A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */; };
 		A218D2D01E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CA1E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m */; };
 		A218D2D11E6FAD7000EE2A78 /* UIControl+VBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CC1E6FAD7000EE2A78 /* UIControl+VBAnalytics.m */; };
@@ -86,6 +87,8 @@
 		47967553EB3D82947BB41006 /* Pods-VBKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExampleUITests/Pods-VBKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		484F459FB632EBEB75019962 /* Pods-VBKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExampleTests/Pods-VBKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CFF7A4379C7AB3288169584 /* Pods-VBKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExample/Pods-VBKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A20003691EB77D2E00DB12AF /* NSDate+VBDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+VBDate.h"; sourceTree = "<group>"; };
+		A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+VBDate.m"; sourceTree = "<group>"; };
 		A218D2C71E6FAD7000EE2A78 /* VBAnalyticsHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAnalyticsHook.h; sourceTree = "<group>"; };
 		A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAnalyticsHook.m; sourceTree = "<group>"; };
 		A218D2C91E6FAD7000EE2A78 /* VBUMengAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBUMengAnalyticsManager.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				A25A491F1DADCEA2007D6B66 /* UIColor+VBHEX.m */,
 				A25A489D1DADCD02007D6B66 /* UIView+VBMotionEffect.h */,
 				A25A489E1DADCD02007D6B66 /* UIView+VBMotionEffect.m */,
+				A20003691EB77D2E00DB12AF /* NSDate+VBDate.h */,
+				A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */,
 			);
 			path = VBCategories;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */,
 				A2C2C46B1E819D7C008BE660 /* VBConfigDBManager.m in Sources */,
 				A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */,
+				A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */,
 				A2C2C46F1E819D7C008BE660 /* VBFileConfig.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
 				A25A48FB1DADCD02007D6B66 /* VBLog.m in Sources */,
