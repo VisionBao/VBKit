@@ -22,6 +22,11 @@
 		A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C31DD70FDC009D0350 /* VBTableViewCell.m */; };
 		A242F0C71DD70FFE009D0350 /* VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C61DD70FFE009D0350 /* VBView.m */; };
 		A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0C91DD71026009D0350 /* VBViewController.m */; };
+		A243F65E1EC2BF49000C460C /* VBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = A243F65D1EC2BF49000C460C /* VBBadge.m */; };
+		A243F6651EC2BFEC000C460C /* UIView+VBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = A243F6641EC2BFEC000C460C /* UIView+VBBadge.m */; };
+		A243F6681EC2C052000C460C /* UIBarButtonItem+VBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = A243F6671EC2C052000C460C /* UIBarButtonItem+VBBadge.m */; };
+		A243F66B1EC2C0D9000C460C /* UITabBarItem+VBBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = A243F66A1EC2C0D9000C460C /* UITabBarItem+VBBadge.m */; };
+		A243F66E1EC2C212000C460C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A243F66D1EC2C212000C460C /* Foundation.framework */; };
 		A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A257E5AE1E6D3C2E00B8798D /* VBRuntime.m */; };
 		A25A48561DADCC3D007D6B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A48551DADCC3D007D6B66 /* main.m */; };
 		A25A48611DADCC3D007D6B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A48601DADCC3D007D6B66 /* Assets.xcassets */; };
@@ -112,6 +117,16 @@
 		A242F0C61DD70FFE009D0350 /* VBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBView.m; sourceTree = "<group>"; };
 		A242F0C81DD71026009D0350 /* VBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBViewController.h; sourceTree = "<group>"; };
 		A242F0C91DD71026009D0350 /* VBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBViewController.m; sourceTree = "<group>"; };
+		A243F65C1EC2BF49000C460C /* VBBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBBadge.h; sourceTree = "<group>"; };
+		A243F65D1EC2BF49000C460C /* VBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBBadge.m; sourceTree = "<group>"; };
+		A243F6631EC2BFEC000C460C /* UIView+VBBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VBBadge.h"; sourceTree = "<group>"; };
+		A243F6641EC2BFEC000C460C /* UIView+VBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VBBadge.m"; sourceTree = "<group>"; };
+		A243F6661EC2C052000C460C /* UIBarButtonItem+VBBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+VBBadge.h"; sourceTree = "<group>"; };
+		A243F6671EC2C052000C460C /* UIBarButtonItem+VBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+VBBadge.m"; sourceTree = "<group>"; };
+		A243F6691EC2C0D9000C460C /* UITabBarItem+VBBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+VBBadge.h"; sourceTree = "<group>"; };
+		A243F66A1EC2C0D9000C460C /* UITabBarItem+VBBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+VBBadge.m"; sourceTree = "<group>"; };
+		A243F66C1EC2C11A000C460C /* VBBadgeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBBadgeProtocol.h; sourceTree = "<group>"; };
+		A243F66D1EC2C212000C460C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A257E5AD1E6D3C2E00B8798D /* VBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBRuntime.h; sourceTree = "<group>"; };
 		A257E5AE1E6D3C2E00B8798D /* VBRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBRuntime.m; sourceTree = "<group>"; };
 		A25A48511DADCC3D007D6B66 /* VBKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A243F66E1EC2C212000C460C /* Foundation.framework in Frameworks */,
 				A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */,
 				F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */,
 			);
@@ -222,6 +238,7 @@
 		44B48CE6E5F8AFD53A50F1F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A243F66D1EC2C212000C460C /* Foundation.framework */,
 				A2C1D3F51E71252E005BF087 /* libsqlite3.tbd */,
 				A2FC5AC61E5EAC2400F934C5 /* CoreLocation.framework */,
 				07E9E16C77F4CAA8440EF910 /* libPods-VBKitExample.a */,
@@ -257,6 +274,30 @@
 				A218D2CE1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m */,
 			);
 			path = VBUMengAnalyticsManager;
+			sourceTree = "<group>";
+		};
+		A243F65B1EC2BF2D000C460C /* VBBadge */ = {
+			isa = PBXGroup;
+			children = (
+				A243F65F1EC2BFA9000C460C /* Categories */,
+				A243F65C1EC2BF49000C460C /* VBBadge.h */,
+				A243F65D1EC2BF49000C460C /* VBBadge.m */,
+				A243F66C1EC2C11A000C460C /* VBBadgeProtocol.h */,
+			);
+			path = VBBadge;
+			sourceTree = "<group>";
+		};
+		A243F65F1EC2BFA9000C460C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A243F6631EC2BFEC000C460C /* UIView+VBBadge.h */,
+				A243F6641EC2BFEC000C460C /* UIView+VBBadge.m */,
+				A243F6661EC2C052000C460C /* UIBarButtonItem+VBBadge.h */,
+				A243F6671EC2C052000C460C /* UIBarButtonItem+VBBadge.m */,
+				A243F6691EC2C0D9000C460C /* UITabBarItem+VBBadge.h */,
+				A243F66A1EC2C0D9000C460C /* UITabBarItem+VBBadge.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		A257E5AC1E6D3C0E00B8798D /* VBRuntime */ = {
@@ -415,6 +456,7 @@
 				A25A48F81DADCD02007D6B66 /* VBUI.h */,
 				A25A48DC1DADCD02007D6B66 /* Base */,
 				A25A48F21DADCD02007D6B66 /* VBAlertView */,
+				A243F65B1EC2BF2D000C460C /* VBBadge */,
 			);
 			path = VBUI;
 			sourceTree = "<group>";
@@ -810,11 +852,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
+				A243F6681EC2C052000C460C /* UIBarButtonItem+VBBadge.m in Sources */,
 				A2C2C46C1E819D7C008BE660 /* VBDBManager.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
+				A243F65E1EC2BF49000C460C /* VBBadge.m in Sources */,
 				A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */,
 				A2C2C46B1E819D7C008BE660 /* VBConfigDBManager.m in Sources */,
 				A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */,
+				A243F66B1EC2C0D9000C460C /* UITabBarItem+VBBadge.m in Sources */,
 				A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */,
 				A2C2C46F1E819D7C008BE660 /* VBFileConfig.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
@@ -842,6 +887,7 @@
 				A2C2C4731E819D7C008BE660 /* NSString+VBBase64.m in Sources */,
 				A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */,
 				A25A491B1DADCD02007D6B66 /* VBAlertView.m in Sources */,
+				A243F6651EC2BFEC000C460C /* UIView+VBBadge.m in Sources */,
 				A2C2C46D1E819D7C008BE660 /* VBFMEncryptDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
