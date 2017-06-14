@@ -26,7 +26,6 @@
   - VBUMengAnalyticsManager
 - VBFoundation
 
-   
 
 - VBCategories
 
@@ -41,7 +40,7 @@
 ```
 或
 ```
-  pod 'VBKit', :tag => '0.1.3'
+  pod 'VBKit', '0.1.3'
 ```
 
 如果你只需要单一模块
