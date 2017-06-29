@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "VBKit is committed to rapid construction projects."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "VBKit/**/*.{h,m}"
-  # s.source_files  = "VBKit/*" 
+  # s.source_files  = "VBKit/*"
   # s.exclude_files = "Demo/*"
 
   # s.public_header_files = "VBKit/**/*.h"
@@ -138,15 +138,15 @@ Pod::Spec.new do |s|
 
     s.source_files = 'VBKit/VBKit.h'
 
-  
+
   s.subspec 'VBConstants' do |ss|
     ss.source_files = 'VBKit/VBConstants.h'
   end
-  
+
   s.subspec 'VBCategories' do |ss|
     ss.source_files = 'VBKit/VBCategories/**/*'
   end
-  
+
   s.subspec 'VBFoundation' do |ss|
     ss.source_files = 'VBKit/VBFoundation/**/*'
     ss.dependency "CocoaLumberjack", "~> 3.0.0"
@@ -160,7 +160,8 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
-     sss.dependency "FMDB/SQLCipher", "~> 2.6.2"
+     sss.dependency "FMDB/SQLCipher", "~> 2.0.0"
+     sss.library = 'sqlite3'
    end
    ss.subspec 'VBFileManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBFileManager/**/*'
@@ -168,8 +169,8 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBHTTPManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBHTTPManager/**/*'
-     sss.dependency "AFNetworking", "~> 3.1.0"
-     sss.dependency "YYCache", "~> 1.0.4"
+     sss.dependency "AFNetworking", "~> 3.0.0"
+     sss.dependency "YYCache", "~> 1.0.0"
    end
    ss.subspec 'VBLocationManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBLocationManager/**/*'
