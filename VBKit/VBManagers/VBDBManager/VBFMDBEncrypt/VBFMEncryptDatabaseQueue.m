@@ -40,7 +40,11 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
 }
 
 @end
+
 @implementation VBFMEncryptDatabaseQueue
+
+@synthesize path = _path;
+@synthesize openFlags = _openFlags;
 
 + (instancetype)databaseQueueWithPath:(NSString*)aPath encryptKey:(NSString *)encryptKey {
     

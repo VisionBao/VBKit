@@ -8,10 +8,9 @@
 
 #import "VBDBManager.h"
 #import <sqlite3.h>
-#import <FMDB.h>
 
 static NSString *VBFMDbName = @"VBKit.db.sqlite";
-static NSString *VBFMDbEncryptKey = nil;
+static NSString *VBFMDbEncryptKey = @"vbkit";
 
 @interface VBDBManager () {
     VBFMEncryptDatabaseQueue *_dbQueue;

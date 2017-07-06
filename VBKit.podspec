@@ -160,7 +160,7 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
-     sss.dependency "FMDB/SQLCipher", "~> 2.0.0"
+     sss.dependency "FMDB/SQLCipher", "~> 2.7.0"
      sss.library = 'sqlite3'
    end
    ss.subspec 'VBFileManager' do |sss|
@@ -169,8 +169,8 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBHTTPManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBHTTPManager/**/*'
-     sss.dependency "AFNetworking", "~> 3.0.0"
-     sss.dependency "YYCache", "~> 1.0.0"
+     sss.dependency "AFNetworking", "~> 3.1.0"
+     sss.dependency "YYCache", "~> 1.0.4"
    end
    ss.subspec 'VBLocationManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBLocationManager/**/*'

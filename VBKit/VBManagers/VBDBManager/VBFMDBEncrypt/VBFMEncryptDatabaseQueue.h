@@ -11,6 +11,11 @@
 
 @interface VBFMEncryptDatabaseQueue : FMDatabaseQueue
 
+@property (atomic, retain) NSString *path;
+
+/** Open flags */
+
+@property (atomic, readonly) int openFlags;
 
 ///----------------------------------------------------
 /// @name Initialization, opening, and closing of queue

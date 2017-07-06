@@ -10,6 +10,7 @@
 		32B58E26735B6C9398FC1F7B /* libPods-VBKitExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD990CABE7CB0BD7A58F0689 /* libPods-VBKitExampleUITests.a */; };
 		3BD0EDF1C923E805BD1F58A1 /* libPods-VBKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */; };
 		A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */; };
+		A212D8DA1F0502A100F6ACEC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C1D3F51E71252E005BF087 /* libsqlite3.tbd */; };
 		A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */; };
 		A218D2D01E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CA1E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m */; };
 		A218D2D11E6FAD7000EE2A78 /* UIControl+VBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CC1E6FAD7000EE2A78 /* UIControl+VBAnalytics.m */; };
@@ -195,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A212D8DA1F0502A100F6ACEC /* libsqlite3.tbd in Frameworks */,
 				A2FC5AC71E5EAC2400F934C5 /* CoreLocation.framework in Frameworks */,
 				F90C515D07D141B281B09D26 /* libPods-VBKitExample.a in Frameworks */,
 			);
@@ -694,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		46AB175991988F2BE7BADB53 /* [CP] Copy Pods Resources */ = {
@@ -754,7 +756,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BA97DB2C32A557490817BFA6 /* [CP] Embed Pods Frameworks */ = {
@@ -784,7 +786,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CBDE0D5E5788E179699E5A62 /* [CP] Embed Pods Frameworks */ = {
@@ -991,6 +993,7 @@
 				INFOPLIST_FILE = VBKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.visionbao.VBKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

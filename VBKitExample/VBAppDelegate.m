@@ -8,7 +8,7 @@
 
 #import "VBAppDelegate.h"
 #import "ViewController.h"
-
+#import "VBConfigDBManager.h"
 @interface VBAppDelegate ()
 
 @end
@@ -24,7 +24,11 @@
     
     // Showing the App
     [self makeWindowVisible:launchOptions];
+    [VBDBManager setEncryptKey:@"123456"];
     
+   BOOL *succsee = [[VBConfigDBManager shareManager] insertItem:@"abc" value:@"123"];
+    
+    NSLog(@"%@", [[VBConfigDBManager shareManager] queryItem:@"abc"]);
     
     return YES;
 }
@@ -32,7 +36,6 @@
 - (void)basicSetup {
     //basicSetup
     NSLog(@"%@", NSHomeDirectory());
-    [VBDBManager setEncryptKey:@"123456"];
     
 }
 

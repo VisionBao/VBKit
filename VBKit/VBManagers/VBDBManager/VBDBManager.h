@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VBFMDBEncrypt.h"
+#import "VBFMEncryptDatabaseQueue.h"
+#import <FMDB.h>
 
 #define ARRAYSIZE(A) (sizeof(A)/sizeof((A)[0]))
 

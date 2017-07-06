@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "VBConfigDBManager.h"
-
+#import "VBDBManager.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) NSURLSessionTask *dataTask;
