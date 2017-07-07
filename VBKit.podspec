@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBKit"
-  s.version      = "0.1.6"
+  s.version      = "0.1.7"
   s.summary      = "VBKit is committed to rapid construction projects."
 
   # This description is used to generate tags and improve search results.
@@ -153,11 +153,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'VBManagers' do |ss|
-     ss.source_files = 'VBKit/VBManagers/VBManagers.h'
-     ss.subspec 'VBUMengAnalyticsManager' do |sss|
-       sss.source_files = 'VBKit/VBManagers/VBUMengAnalyticsManager/**/*'
-       sss.dependency "UMengAnalytics", "~> 4.2.4"
-    end
+   ss.source_files = 'VBKit/VBManagers/VBManagers.h'
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
      sss.dependency "FMDB/SQLCipher", "~> 2.7.2"

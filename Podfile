@@ -16,7 +16,6 @@ target 'VBKitExample' do
   pod 'Masonry'
   pod 'WSProgressHUD'
   pod 'YYCache'
-  pod 'UMengAnalytics'
   target 'VBKitExampleTests' do
     inherit! :search_paths
     # Pods for testing
