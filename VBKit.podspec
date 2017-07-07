@@ -154,10 +154,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'VBManagers' do |ss|
      ss.source_files = 'VBKit/VBManagers/VBManagers.h'
-   ss.subspec 'VBUMengAnalyticsManager' do |sss|
-     sss.source_files = 'VBKit/VBManagers/VBUMengAnalyticsManager/**/*'
-     sss.dependency "UMengAnalytics", "~> 4.2.4"
-   end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
      sss.dependency "FMDB/SQLCipher", "~> 2.7.2"

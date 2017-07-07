@@ -11,10 +11,6 @@
 		3BD0EDF1C923E805BD1F58A1 /* libPods-VBKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EFB9828145DD0AAE5C244A /* libPods-VBKitExampleTests.a */; };
 		A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */; };
 		A212D8DA1F0502A100F6ACEC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C1D3F51E71252E005BF087 /* libsqlite3.tbd */; };
-		A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */; };
-		A218D2D01E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CA1E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m */; };
-		A218D2D11E6FAD7000EE2A78 /* UIControl+VBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CC1E6FAD7000EE2A78 /* UIControl+VBAnalytics.m */; };
-		A218D2D21E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = A218D2CE1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m */; };
 		A218D2D41E6FAD7C00EE2A78 /* VBUserAnalyticsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A218D2D31E6FAD7C00EE2A78 /* VBUserAnalyticsConfig.plist */; };
 		A242F0B81DD70E11009D0350 /* VBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0B71DD70E11009D0350 /* VBTabBarController.m */; };
 		A242F0BB1DD70E65009D0350 /* VBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A242F0BA1DD70E65009D0350 /* VBNavigationBar.m */; };
@@ -90,14 +86,6 @@
 		4CFF7A4379C7AB3288169584 /* Pods-VBKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VBKitExample/Pods-VBKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A20003691EB77D2E00DB12AF /* NSDate+VBDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+VBDate.h"; sourceTree = "<group>"; };
 		A200036A1EB77D2E00DB12AF /* NSDate+VBDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+VBDate.m"; sourceTree = "<group>"; };
-		A218D2C71E6FAD7000EE2A78 /* VBAnalyticsHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAnalyticsHook.h; sourceTree = "<group>"; };
-		A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAnalyticsHook.m; sourceTree = "<group>"; };
-		A218D2C91E6FAD7000EE2A78 /* VBUMengAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBUMengAnalyticsManager.h; sourceTree = "<group>"; };
-		A218D2CA1E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBUMengAnalyticsManager.m; sourceTree = "<group>"; };
-		A218D2CB1E6FAD7000EE2A78 /* UIControl+VBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+VBAnalytics.h"; sourceTree = "<group>"; };
-		A218D2CC1E6FAD7000EE2A78 /* UIControl+VBAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+VBAnalytics.m"; sourceTree = "<group>"; };
-		A218D2CD1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+VBAnalytics.h"; sourceTree = "<group>"; };
-		A218D2CE1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VBAnalytics.m"; sourceTree = "<group>"; };
 		A218D2D31E6FAD7C00EE2A78 /* VBUserAnalyticsConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VBUserAnalyticsConfig.plist; sourceTree = "<group>"; };
 		A242F0B61DD70E11009D0350 /* VBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBTabBarController.h; sourceTree = "<group>"; };
 		A242F0B71DD70E11009D0350 /* VBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBTabBarController.m; sourceTree = "<group>"; };
@@ -246,21 +234,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A218D2C61E6FAD7000EE2A78 /* VBUMengAnalyticsManager */ = {
-			isa = PBXGroup;
-			children = (
-				A218D2C71E6FAD7000EE2A78 /* VBAnalyticsHook.h */,
-				A218D2C81E6FAD7000EE2A78 /* VBAnalyticsHook.m */,
-				A218D2C91E6FAD7000EE2A78 /* VBUMengAnalyticsManager.h */,
-				A218D2CA1E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m */,
-				A218D2CB1E6FAD7000EE2A78 /* UIControl+VBAnalytics.h */,
-				A218D2CC1E6FAD7000EE2A78 /* UIControl+VBAnalytics.m */,
-				A218D2CD1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.h */,
-				A218D2CE1E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m */,
-			);
-			path = VBUMengAnalyticsManager;
-			sourceTree = "<group>";
-		};
 		A257E5AC1E6D3C0E00B8798D /* VBRuntime */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,7 +359,6 @@
 				A25A48DA1DADCD02007D6B66 /* VBManagers.h */,
 				A2C2C44F1E819D7C008BE660 /* VBDBManager */,
 				A2C2C45A1E819D7C008BE660 /* VBHTTPManager */,
-				A218D2C61E6FAD7000EE2A78 /* VBUMengAnalyticsManager */,
 				A25A48BD1DADCD02007D6B66 /* VBFileManager */,
 				A25A48D71DADCD02007D6B66 /* VBLocationManager */,
 			);
@@ -814,14 +786,12 @@
 				A25A48961DADCCFB007D6B66 /* VBAppDelegate.m in Sources */,
 				A2C2C46C1E819D7C008BE660 /* VBDBManager.m in Sources */,
 				A242F0C71DD70FFE009D0350 /* VBView.m in Sources */,
-				A218D2CF1E6FAD7000EE2A78 /* VBAnalyticsHook.m in Sources */,
 				A2C2C46B1E819D7C008BE660 /* VBConfigDBManager.m in Sources */,
 				A257E5AF1E6D3C2E00B8798D /* VBRuntime.m in Sources */,
 				A200036B1EB77D2E00DB12AF /* NSDate+VBDate.m in Sources */,
 				A2C2C46F1E819D7C008BE660 /* VBFileConfig.m in Sources */,
 				A242F0CA1DD71026009D0350 /* VBViewController.m in Sources */,
 				A25A48FB1DADCD02007D6B66 /* VBLog.m in Sources */,
-				A218D2D21E6FAD7000EE2A78 /* UIViewController+VBAnalytics.m in Sources */,
 				A25A49201DADCEA2007D6B66 /* UIColor+VBHEX.m in Sources */,
 				A2C2C4741E819D7C008BE660 /* NSString+VBHash.m in Sources */,
 				A25A48561DADCC3D007D6B66 /* main.m in Sources */,
@@ -829,13 +799,11 @@
 				A242F0BB1DD70E65009D0350 /* VBNavigationBar.m in Sources */,
 				A2C2C4701E819D7C008BE660 /* VBHTTPCacheManager.m in Sources */,
 				A2C2C4721E819D7C008BE660 /* NSData+VBBase64.m in Sources */,
-				A218D2D01E6FAD7000EE2A78 /* VBUMengAnalyticsManager.m in Sources */,
 				A25A48981DADCCFB007D6B66 /* ViewController.m in Sources */,
 				A25A48FC1DADCD02007D6B66 /* VBObject.m in Sources */,
 				A2C2C4751E819D7C008BE660 /* NSString+VBUrlEncode.m in Sources */,
 				A2C2C4711E819D7C008BE660 /* VBHTTPManager.m in Sources */,
 				A25A48FA1DADCD02007D6B66 /* UIView+VBMotionEffect.m in Sources */,
-				A218D2D11E6FAD7000EE2A78 /* UIControl+VBAnalytics.m in Sources */,
 				A25A490E1DADCD02007D6B66 /* VBLocationManager.m in Sources */,
 				A242F0C41DD70FDC009D0350 /* VBTableViewCell.m in Sources */,
 				A242F0BE1DD70E92009D0350 /* VBTableView.m in Sources */,

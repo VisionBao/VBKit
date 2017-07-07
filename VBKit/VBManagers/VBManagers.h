@@ -15,5 +15,4 @@
 #import "VBDBManager.h"
 #import "VBConfigDBManager.h"
 #import "VBFMDBEncrypt.h"
-#import "VBUMengAnalyticsManager.h"
 #endif /* VBManagers_h */

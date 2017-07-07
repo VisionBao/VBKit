@@ -28,7 +28,7 @@
     
    BOOL *succsee = [[VBConfigDBManager shareManager] insertItem:@"abc" value:@"123"];
     
-    NSLog(@"%@", [[VBConfigDBManager shareManager] queryItem:@"abc"]);
+    NSLog(@"--fuck%@", [[VBConfigDBManager shareManager] queryItem:@"abc"]);
     
     return YES;
 }

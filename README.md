@@ -23,7 +23,7 @@
   - VBFileManager
   - VBHTTPManager
   - VBLocationManager
-  - VBUMengAnalyticsManager
+  - ~~VBUMengAnalyticsManager~~(整理到VBShareKit中...)
 - VBFoundation
 
 
