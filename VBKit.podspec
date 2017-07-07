@@ -160,7 +160,7 @@ Pod::Spec.new do |s|
    end
    ss.subspec 'VBDBManager' do |sss|
      sss.source_files = 'VBKit/VBManagers/VBDBManager/**/*'
-     sss.dependency "FMDB/SQLCipher", "~> 2.7.0"
+     sss.dependency "FMDB/SQLCipher", "~> 2.7.2"
      sss.library = 'sqlite3'
    end
    ss.subspec 'VBFileManager' do |sss|

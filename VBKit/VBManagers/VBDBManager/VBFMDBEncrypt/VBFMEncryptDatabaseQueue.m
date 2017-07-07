@@ -38,17 +38,10 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     FMDatabase          *_db;
     NSString *_encryptKey;
 }
-@property (atomic, retain, nullable) NSString *path;
 
-/** Open flags */
-
-@property (atomic, readonly) int openFlags;
-
-/**  Custom virtual file system name */
 @end
 
 @implementation VBFMEncryptDatabaseQueue
-
 @synthesize path = _path;
 @synthesize openFlags = _openFlags;
 

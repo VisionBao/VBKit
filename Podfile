@@ -8,7 +8,7 @@ target 'VBKitExample' do
 
   # Pods for VBKit
   pod 'AFNetworking'
-  pod 'FMDB/SQLCipher'
+  pod 'FMDB/SQLCipher','2.7.2'
   pod 'MJRefresh'
   pod 'CocoaLumberjack'
   pod 'Reachability'
