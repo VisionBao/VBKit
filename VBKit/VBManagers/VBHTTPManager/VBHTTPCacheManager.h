@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YYCache.h>
+#import <YYCache/YYCache.h>
 
 #pragma mark - 网络数据缓存类
 @interface VBHTTPCacheManager : NSObject

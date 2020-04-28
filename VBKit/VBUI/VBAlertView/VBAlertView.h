@@ -6,7 +6,7 @@
 //  Copyright © 2015年 VisionBao. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import <WSProgressHUD.h>
+#import <WSProgressHUD/WSProgressHUD.h>
 
 typedef void (^choiceCompletionBlock)(NSInteger index);
 typedef void (^textCompletionBlock)(NSString *text);

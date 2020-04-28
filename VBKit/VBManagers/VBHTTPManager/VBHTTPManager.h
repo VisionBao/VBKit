@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 @class VBFileConfig;
 
 typedef NS_ENUM(NSInteger, VBNetworkStatus) {
