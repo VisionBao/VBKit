@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CocoaLumberjack (3.2.0):
     - CocoaLumberjack/Default (= 3.2.0)
@@ -37,7 +37,7 @@ PODS:
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (= 4.0.1)
   - CocoaLumberjack
   - FMDB/SQLCipher (= 2.7.2)
   - Masonry
@@ -47,8 +47,22 @@ DEPENDENCIES:
   - YYCache
   - ZipArchive
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - CocoaLumberjack
+    - FMDB
+    - Masonry
+    - MJRefresh
+    - Reachability
+    - Shimmer
+    - SQLCipher
+    - WSProgressHUD
+    - YYCache
+    - ZipArchive
+
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -60,6 +74,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: cdcd40d5d3ecaf7e0e371925ba3ab4d9c1728200
+PODFILE CHECKSUM: b2f587ec46bc6b79fc9cd99df741bbc5d4be26b7
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.9.1

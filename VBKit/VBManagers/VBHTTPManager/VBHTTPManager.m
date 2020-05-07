@@ -15,8 +15,8 @@
 @property (nonatomic, strong) AFNetworkReachabilityManager *reachabilityManager;
 
 @property (nonatomic, assign) NSTimeInterval vb_timeout; //超时
-@property (nonatomic, strong) NSDictionary *httpHeaders; //headers
-@property (nonatomic, strong) NSDictionary *httpHeaderstemp; //临时headers
+@property (nonatomic, strong) NSMutableDictionary *httpHeaders; //headers
+@property (nonatomic, strong) NSMutableDictionary *httpHeaderstemp; //临时headers
 
 @property (nonatomic, strong) NSMutableArray *taskArray;
 
@@ -43,6 +43,7 @@
         _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
         [_reachabilityManager startMonitoring];
         _taskArray = [NSMutableArray array];
+        _httpHeaders = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -58,12 +59,23 @@
 }
 //设置header
 - (void)setCommonHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders {
-    _httpHeaders = httpHeaders;
+    for (NSString *key in httpHeaders.allKeys) {
+        if (httpHeaders[key] != nil) {
+            [_httpHeaders setValue:httpHeaders[key] forKey:key];
+        }
+    }
     [self configCommonHeaders];
 }
 //设置临时header
 - (void)setTempHttpHeaders:(NSDictionary<NSString *, NSString *> *)httpHeaders {
-    _httpHeaderstemp = httpHeaders;
+    if (!_httpHeaderstemp) {
+        _httpHeaderstemp = [NSMutableDictionary dictionary];
+    }
+    for (NSString *key in httpHeaders.allKeys) {
+          if (httpHeaders[key] != nil) {
+              [_httpHeaderstemp setValue:httpHeaders[key] forKey:key];
+          }
+      }
     [self configTempHeaders];
 }
 - (void)cancelAllRequest {
@@ -117,6 +129,7 @@
     NSURLSessionTask *sessionTask =
     [self.sessionManager GET:url
                   parameters:params
+                     headers:_httpHeaderstemp ? _httpHeaderstemp : _httpHeaders
                     progress:^(NSProgress * _Nonnull downloadProgress) {
                         
                     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -164,6 +177,7 @@
     NSURLSessionTask *sessionTask =
     [self.sessionManager POST:url
                    parameters:params
+                     headers:_httpHeaderstemp ? _httpHeaderstemp : _httpHeaders
                      progress:^(NSProgress * _Nonnull uploadProgress) {
                          
                      } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -195,6 +209,7 @@
     NSURLSessionTask *sessionTask =
     [self.sessionManager PUT:url
                   parameters:params
+                     headers:_httpHeaderstemp ? _httpHeaderstemp : _httpHeaders
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                          __strong __typeof__(weakSelf) strongSelf = weakSelf;
                          [strongSelf.taskArray removeObject:task];
@@ -221,6 +236,7 @@
     NSURLSessionTask *sessionTask =
     [self.sessionManager DELETE:url
                      parameters:params
+                        headers:_httpHeaderstemp ? _httpHeaderstemp : _httpHeaders
                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                             __strong __typeof__(weakSelf) strongSelf = weakSelf;
                             [strongSelf.taskArray removeObject:task];
@@ -303,6 +319,7 @@
     NSURLSessionTask *sessionTask =
     [self.sessionManager POST:url
                    parameters:params
+                      headers:_httpHeaderstemp ? _httpHeaderstemp : _httpHeaders
     constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:fileConfig.fileData
                                     name:fileConfig.name
